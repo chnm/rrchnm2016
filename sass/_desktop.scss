@@ -1,0 +1,246 @@
+/* @group ----- 01. Container Elements ----- */
+
+/* #intro {
+    min-height: 50vh;
+} */
+
+/* @end */
+
+/* @group ----- 02. Text Elements ----- */
+
+#intro h1 {
+    font-size: 3 * $base-font-size;
+    line-height: 3 * $base-line-height;
+}
+
+/* @end */
+
+/* @group ----- 04. Navigation ----- */
+
+#content nav {
+    width: span(3 of 12);
+    float: left;
+    margin-right: gutter();
+}
+
+/* @end */
+
+/* @group ----- 05. Header ----- */
+
+header {
+    text-align: right;
+    position: relative;
+}
+
+.logo {
+    float: left;
+    height: rhythm(1.5);
+    width: rhythm(8.25);
+}
+
+nav#global {
+    display: inline-block;
+    height: rhythm(1.5);
+    vertical-align: bottom;
+    text-align: right;
+}
+
+nav#global .mobile-toggle {
+    display: none;
+}
+
+nav#global ul {
+    margin: 0;
+    display: block !important;
+}
+
+nav#global li {
+    display: inline-block;
+    margin: rhythm(.5) 0 0 rhythm(.5);
+
+    &:not(:last-child) {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+/* @end */
+
+/* @group ----- 06. Footer ----- */
+
+footer nav {
+    float: right;
+}
+
+footer nav ul {
+    margin: 0;
+}
+
+footer nav li {
+    display: inline-block;
+    margin-left: rhythm(.5);
+}
+
+footer .copyright {
+    clear: both;
+    display: block;
+    margin: rhythm(3) 0 0;
+}
+
+/* @end */
+
+/* @group ----- 07. Home ----- */
+
+.home #intro {
+    padding: rhythm(3) 0;
+}
+
+.home #intro .container > p {
+    font-size: 3 * $base-font-size;
+    line-height: 3 * $base-line-height;
+}
+
+.home #intro .container > a {
+    font-size: 2 * $base-font-size;
+    padding: rhythm(.5, 2 * $base-font-size);
+}
+
+#features {
+    overflow: hidden;
+    padding: rhythm() 0;
+    font-size: $base-font-size;
+    text-align: left;
+}
+
+.feature {
+    width: span(4 of 12);
+    float: left;
+}
+
+#features a {
+    font-size: 2.5 * $base-font-size;
+    line-height: 2 * $base-line-height;
+    display: block;
+}
+
+.feature:not(:last-child) {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+#keep-up {
+    vertical-align: top;
+}
+
+.follow {
+    width: span(4 of 12);
+    float: left;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.follow .button {
+    text-transform: none;
+    font-weight: normal;
+}
+
+#keep-up nav {
+    float: left;
+    width: span(8 of 12);
+}
+
+#keep-up nav > ul > li {
+    width: span(4 of 8);
+    display: inline-block;
+}
+
+#keep-up nav > ul > li:not(:last-child) {
+    float: left;
+    clear: left;
+}
+
+/* @end */
+
+/* @group ----- 08. Who We Are ----- */
+
+.staff {
+    width: calc(#{span(9 of 12)} - #{rhythm()});
+    float: left;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: rhythm() 0;
+}
+
+.person {
+    width: 25%;
+    display: flex;
+    text-align: center;
+    margin: 0 0 rhythm();
+    vertical-align: top;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.person img {
+    float: none;
+    margin: 0 0 rhythm(.25);
+}
+
+.person .name,
+.person .position {
+}
+/* @end */
+
+/* @group ----- 09. What We Do ----- */
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(#{span(9 of 12)} - #{gutter()});
+    margin: rhythm(2) 0;
+}
+
+.projects .project {
+    width: span(3 of 9);
+    padding: 0 gutter();
+}
+
+.project img {
+    max-width: 100%;
+}
+
+/* @end */
+
+/* @group ----- 10. Who We Work With ----- */
+
+.collaborations {
+    overflow: hidden;
+}
+
+.collab-type {
+    width: span(6 of 12);
+    padding: rhythm();
+    float: left;
+
+    &:first-of-type {
+        padding-left: 0;
+    }
+
+    &:last-of-type {
+        padding-right: 0;
+    }
+}
+
+.collab-type:last-of-type:after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 100%;
+    clear: both;
+}
+
+/* @end */

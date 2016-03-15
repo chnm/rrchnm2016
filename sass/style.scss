@@ -1,0 +1,25 @@
+/*
+Theme Name: RRCHNM
+Theme URI: http://rrchnm.org
+Author: Roy Rosenzweig Center of History and New Media
+Author URI: http://rrchnm.org
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import "normalize";
+@import "base";
+@import "compass/typography";
+@import "font-awesome/variables";
+@import "susy";
+
+/* Test output */
+
+@media screen {
+    @import "mobile";
+}
+
+@media screen and (min-width:640px) {
+    @import "desktop";
+}

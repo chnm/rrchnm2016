@@ -1,0 +1,441 @@
+/* @group ----- 01. Container elements ----- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: #656565;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#content,
+.container {
+    @include container($container-width);
+    padding: rhythm();
+}
+
+#intro {
+    padding: rhythm() 0;
+    text-shadow: 0 0 20px #fff;
+    position: relative;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+
+    &:before {
+        content: "";
+        background-size: cover;
+        background-position: top center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: .15;
+    }
+}
+
+#intro .container > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* @end */
+
+/* @group ----- 02. Text elements ----- */
+
+a {
+    color: $primary-red;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-size: 2 * $base-font-size;
+    line-height: 2 * $base-line-height;
+    margin: 0 0 0 rhythm(-.25, 2 * $base-font-size);
+    color: $primary-blue;
+    background-color: #fff;
+    padding: rhythm(.25, 2 * $base-font-size);
+    display: inline-block;
+    text-shadow: none;
+}
+
+h2 {
+    font-size: 1.75 * $base-font-size;
+    line-height: 2 * $base-line-height;
+}
+
+p {
+    margin: rhythm() 0;
+}
+
+#intro h1 em {
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+#intro p {
+    font-size: 1.5 * $base-font-size;
+    line-height: 2 * $base-line-height;
+}
+
+.preface {
+    @include bleed(rhythm() rhythm() 0 rhythm());
+    padding-bottom: rhythm();
+    margin-bottom: rhythm();
+}
+
+/* @end */
+
+/* @group ----- 03. Form elements ----- */
+
+.button,
+button,
+input[type="submit"] {
+    background-color: $primary-red;
+    padding: rhythm(.25) rhythm(.5);
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    display: inline-block;
+
+    &.big {
+        font-size: 1.5 * $base-font-size;
+        padding: rhythm(.5, 1.5 * $base-font-size);
+   }
+}
+
+    #intro .button {
+        text-shadow: none;
+        text-transform: uppercase;
+        font-size: 1.5 * $base-font-size;
+        padding: rhythm(.25, 1.5 * $base-font-size) rhythm(.5, 1.5 * $base-font-size);
+
+        &:after {
+            content: $fa-var-long-arrow-right;
+            font-family: "FontAwesome";
+            margin-left: rhythm(.25, 1.5 * $base-font-size);
+        }
+    }
+
+/* @end */
+
+/* @group ----- 04. Navigation ----- */
+
+nav ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#content nav {
+    background-color: $primary-red;
+    color: #fff;
+    padding: rhythm();
+    margin-top: rhythm();
+}
+
+#content nav h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 1.5 * $base-font-size;
+}
+
+#content nav a {
+    color: lighten($primary-red, 50%);
+}
+
+#content nav ul {
+    margin-bottom: 0;
+}
+
+#content nav > ul > li {
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.25 * $base-font-size;
+    margin-bottom: rhythm(1, 1.25 * $base-font-size);
+    font-weight: 300;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+#content nav > ul > li ul {
+    text-transform: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: $base-font-size;
+}
+
+#content nav .active a {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* @end */
+
+/* @group ----- 05. Header ----- */
+
+header {
+    overflow: hidden;
+    @include container($container-width);
+    padding: rhythm();
+}
+
+.logo {
+    height: rhythm(2);
+    width: rhythm(11);
+    background:url('img/rrchnm-logo.png') no-repeat;
+    background-size: cover;
+}
+
+.logo a {
+    height: 100%;
+    width: 100%;
+    text-indent: -9999px;
+    text-align: left;
+    display: block;
+}
+
+nav#global .mobile-toggle:before {
+    content: $fa-var-navicon;
+    font-family: "FontAwesome";
+    position: absolute;
+    top: rhythm();
+    right: rhythm();
+    color: $primary-red;
+    border: 1px solid $gray;
+    padding: rhythm(.25);
+    display: block;
+    width: rhythm();
+    text-align: center;
+}
+
+nav#global a {
+    font-weight: 700;
+}
+
+nav#global ul {
+    display: none;
+    margin: rhythm() 0 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+nav#global li:not(:last-child) {
+    border-color: $gray;
+    @include trailing-border(1px, .25, $base-font-size, solid);
+    margin-bottom: rhythm(.25);
+}
+
+/* @end */
+
+/* @group ----- 06. Footer ----- */
+
+footer {
+    @include container($container-width);
+    padding: rhythm();
+    border-top: 1px solid $gray;
+}
+
+footer img {
+    max-height: rhythm(3);
+    width: auto;
+}
+
+/* @end */
+
+/* @group ----- 07. Home ----- */
+
+.home #intro {
+    position: relative;
+
+    &:before {
+        background:url('img/intro-bg.png') top center no-repeat;
+        background-size: cover;
+    }
+}
+
+.home #intro .container > * {
+    display: inline;
+}
+
+.home #intro p {
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-size: 2 * $base-font-size;
+    line-height: 2 * $base-line-height;
+    margin: 0 auto;
+}
+
+.home #intro .container > a {
+    background-color: $primary-red;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    text-shadow: none;
+    font-size: $base-font-size;
+    padding: rhythm(.25) rhythm(.5);
+    display: inline-block;
+}
+
+#features {
+    background-color: $gray;
+    padding: rhythm();
+    text-align: center;
+}
+
+.feature:not(:last-child) {
+    margin-bottom: rhythm();
+    border-color: rgba(255,255,255,.15);
+    @include trailing-border(1px, 1, $base-font-size, solid)
+}
+
+#features a {
+    color: $primary-blue;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.75 * $base-font-size;
+    display: block;
+}
+
+.hub-link {
+    display: block;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5 * $base-font-size;
+    margin-bottom: rhythm(1, 1.5 * $base-font-size);
+    border-bottom: 1px solid $gray;
+    padding: 0 rhythm(1, 1.5 * $base-font-size) rhythm(1, 1.5 * $base-font-size);
+    font-weight: 300;
+    text-align: center;
+
+    &:after {
+        content: $fa-var-long-arrow-right;
+        font-family: "FontAwesome";
+        display: inline-block;
+        margin-left: rhythm(.25, 1.5 * $base-font-size);
+    }
+}
+
+#keep-up {
+    color: #fff;
+    overflow: hidden
+}
+
+#keep-up .twitter-icon,
+#keep-up .facebook-icon {
+    background-color: #fff;
+    color: $primary-red;
+    width: $base-line-height;
+    height: $base-line-height;
+    display: inline-block;
+    margin: rhythm(.25) 0;
+    text-align: center;
+}
+
+#keep-up .twitter-icon:before {
+    content: $fa-var-twitter;
+    font-family: "FontAwesome";
+}
+
+#keep-up .facebook-icon:before {
+    content: $fa-var-facebook;
+    font-family: "FontAwesome";
+}
+
+#keep-up .button {
+    background-color: #fff;
+    color: $primary-red;
+}
+
+#keep-up nav > ul > li {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: rhythm();
+}
+
+#keep-up nav ul > li > ul {
+    text-transform: none;
+    font-weight: normal;
+}
+
+/* @end */
+
+/* @group ----- 08. Who We Are ----- */
+
+.who-we-are #intro:before {
+    background:url('../img/whoweare-bg.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.person {
+    width: 100%;
+    text-align: left;
+    margin: rhythm() 0;
+}
+
+/* @end */
+
+/* @group ----- 09. What We Do ----- */
+
+.what-we-do #intro:before {
+    background:url('../img/whatwedo-bg.png') center no-repeat;
+    background-size: cover;
+}
+
+.projects .project .thumbnail {
+    max-height: rhythm(3.5);
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        display: inline-block;
+    }
+
+    &:empty {
+        background-color: $gray;
+        height: rhythm(3.5);
+    }
+}
+
+/* @end */
+
+/* @group ----- 10. Who We Work With ----- */
+
+
+.collab-type .entity {
+    display: block;
+    font-weight: bold;
+}
+
+.collab-type .project {
+    font-style: italic;
+}
+
+/* @end */
+
+/* @group ----- 11. Our Story ----- */
+
+.our-story #intro {
+    background-position: top;
+}
+
+.our-story .preface {
+    background-color: $gray;
+}
+
+.our-story .preface h2 {
+    margin: 0;
+}
+
+/* @end */

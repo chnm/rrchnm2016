@@ -1,0 +1,23 @@
+// Typography
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+// Colors
+
+$primary-red: #b3252d;
+$primary-blue: #3673A2;
+$primary-yellow: #dd9f1b;
+$neutral: #f6f5eb;
+$gray: rgba(0,0,0,.08);
+
+// Layout
+
+$container-width: 1280px;
+$susy: (
+  columns: 16,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
