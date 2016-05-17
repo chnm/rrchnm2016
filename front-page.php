@@ -34,15 +34,15 @@
                         <li><a href="#">Awards</a></li>
                     </ul>
                 </li>
-                <li><a href="#">DH Fellows Program</a></li>
-                <li><a href="#">Tools</a>
+                <li><a href="http://chnm.gmu.edu/courses/fellowship/">DH Fellows Program</a></li>
+                <li><a href="<?php echo site_url(); ?>/tag/video/">Tools</a>
                     <ul>
-                        <li><a href="#">Anthologize</a></li>
-                        <li><a href="#">Omeka</a></li>
-                        <li><a href="#">PressForward</a></li>
-                        <li><a href="#">Scripto</a></li>
-                        <li><a href="#">Serendip-o-Matic</a></li>
-                        <li><a href="#">Zotero</a></li>
+                        <li><a href="http://anthologize.org/">Anthologize</a></li>
+                        <li><a href="http://omeka.org">Omeka</a></li>
+                        <li><a href="http://pressforward.org">PressForward</a></li>
+                        <li><a href="http://scripto.org">Scripto</a></li>
+                        <li><a href="http://serendip-o-matic.com">Serendip-o-Matic</a></li>
+                        <li><a href="http://zotero.org">Zotero</a></li>
                     </ul>
                 </li>
             </ul>

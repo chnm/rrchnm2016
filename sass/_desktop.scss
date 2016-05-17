@@ -1,8 +1,14 @@
 /* @group ----- 01. Container Elements ----- */
 
-/* #intro {
-    min-height: 50vh;
-} */
+#intro {
+    min-height: 60vh;
+}
+
+#intro .container {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
 
 body {
     position: relative;
@@ -76,10 +82,10 @@ nav#global ul {
     position: relative;
     margin: 0;
     display: block !important;
-    border-right: 0;
     padding: 0;
     left: auto;
     right: auto;
+    border-right: 0;
 }
 
 nav#global li {

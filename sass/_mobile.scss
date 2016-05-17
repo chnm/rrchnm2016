@@ -51,7 +51,6 @@ body {
     padding: rhythm() 0;
     text-shadow: 0 0 20px #fff;
     position: relative;
-    border-top: 1px solid $gray;
     border-bottom: 1px solid $gray;
 
     &:before {
@@ -63,7 +62,8 @@ body {
         bottom: 0;
         right: 0;
         left: 0;
-        opacity: .15;
+        opacity: .25;
+        background-color: #000;
     }
 }
 
@@ -456,11 +456,6 @@ footer img {
 
 /* @group ----- 08. Who We Are ----- */
 
-.who-we-are #intro:before {
-    background:url('../img/whoweare-bg.jpg') center no-repeat;
-    background-size: cover;
-}
-
 .person {
     width: 100%;
     text-align: left;
@@ -470,11 +465,6 @@ footer img {
 /* @end */
 
 /* @group ----- 09. What We Do ----- */
-
-.what-we-do #intro:before {
-    background:url('../img/whatwedo-bg.png') center no-repeat;
-    background-size: cover;
-}
 
 .projects .project .thumbnail {
     max-height: rhythm(3.5);

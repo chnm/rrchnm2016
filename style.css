@@ -473,7 +473,6 @@ textarea {
     padding: 1.5em 0;
     text-shadow: 0 0 20px #fff;
     position: relative;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
   #intro:before {
@@ -485,7 +484,8 @@ textarea {
     bottom: 0;
     right: 0;
     left: 0;
-    opacity: .15;
+    opacity: .25;
+    background-color: #000;
   }
 
   #intro .container > * {
@@ -882,11 +882,6 @@ textarea {
 
   /* @end */
   /* @group ----- 08. Who We Are ----- */
-  .who-we-are #intro:before {
-    background: url("../img/whoweare-bg.jpg") center no-repeat;
-    background-size: cover;
-  }
-
   .person {
     width: 100%;
     text-align: left;
@@ -895,11 +890,6 @@ textarea {
 
   /* @end */
   /* @group ----- 09. What We Do ----- */
-  .what-we-do #intro:before {
-    background: url("../img/whatwedo-bg.png") center no-repeat;
-    background-size: cover;
-  }
-
   .projects .project .thumbnail {
     max-height: 5.25em;
     overflow: hidden;
@@ -942,9 +932,16 @@ textarea {
 }
 @media screen and (min-width: 640px) {
   /* @group ----- 01. Container Elements ----- */
-  /* #intro {
-      min-height: 50vh;
-  } */
+  #intro {
+    min-height: 60vh;
+  }
+
+  #intro .container {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+  }
+
   body {
     position: relative;
     padding: 0;
@@ -1008,10 +1005,10 @@ textarea {
     position: relative;
     margin: 0;
     display: block !important;
-    border-right: 0;
     padding: 0;
     left: auto;
     right: auto;
+    border-right: 0;
   }
 
   nav#global li {
