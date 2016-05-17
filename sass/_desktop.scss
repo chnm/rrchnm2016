@@ -4,6 +4,20 @@
     min-height: 50vh;
 } */
 
+body {
+    position: relative;
+    padding: 0;
+
+    &.open {
+        left: auto;
+        right: 0;
+
+        &:after {
+            content: none;
+        }
+    }
+}
+
 /* @end */
 
 /* @group ----- 02. Text Elements ----- */
@@ -32,6 +46,15 @@ header {
     position: relative;
 }
 
+.open header {
+    left: auto;
+    right: auto;
+
+    &:after {
+        content: none;
+    }
+}
+
 .logo {
     float: left;
     height: rhythm(1.5);
@@ -50,8 +73,13 @@ nav#global .mobile-toggle {
 }
 
 nav#global ul {
+    position: relative;
     margin: 0;
     display: block !important;
+    border-right: 0;
+    padding: 0;
+    left: auto;
+    right: auto;
 }
 
 nav#global li {

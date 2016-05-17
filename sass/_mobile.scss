@@ -14,6 +14,31 @@ html {
 body {
     margin: 0;
     padding: 0;
+    transition: left .5s, right .5s;
+    left: 0;
+    right: 0;
+    position: absolute;
+    overflow-x: hidden;
+    padding-top: rhythm(4);
+
+    &.open {
+        left: 75%;
+        right: -75%;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.6);
+        }
+    }
+
+    &.small {
+        padding-top: rhythm(2);
+    }
 }
 
 #content,
@@ -186,16 +211,46 @@ nav ul {
 /* @group ----- 05. Header ----- */
 
 header {
-    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     @include container($container-width);
     padding: rhythm();
+    background-color: #fff;
+    z-index: 9999;
+    border-bottom: 1px solid $gray;;
+    transition: left .5s;
+}
+
+.open header {
+    left: 75%;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: -1px;
+        background-color: rgba(0,0,0,.6);
+    }
+}
+
+.small header {
+    height: rhythm(2);
+    padding: rhythm(.5) rhythm()
 }
 
 .logo {
     height: rhythm(2);
     width: rhythm(11);
     background:url('img/rrchnm-logo.png') no-repeat;
-    background-size: cover;
+    background-size: contain;
+}
+
+.small .logo {
+    height: rhythm(1);
 }
 
 .logo a {
@@ -207,9 +262,9 @@ header {
 }
 
 nav#global .mobile-toggle:before {
+    position: absolute;
     content: $fa-var-navicon;
     font-family: "FontAwesome";
-    position: absolute;
     top: rhythm();
     right: rhythm();
     color: $primary-red;
@@ -218,6 +273,18 @@ nav#global .mobile-toggle:before {
     display: block;
     width: rhythm();
     text-align: center;
+    background-color: #fff;
+}
+
+.small nav#global .mobile-toggle:before {
+    top: rhythm(.25);
+    padding: rhythm(.125);
+}
+
+.open nav#global .mobile-toggle:before {
+    content: $fa-var-times;
+    position: fixed;
+    z-index: 10000;
 }
 
 nav#global a {
@@ -225,16 +292,32 @@ nav#global a {
 }
 
 nav#global ul {
-    display: none;
     margin: rhythm() 0 0;
-    padding-left: 0;
     list-style-type: none;
+    transition: right .5s, left .5s;
+    position: fixed;
+    top: 0;
+    left: -75%;
+    right: 100%;
+    bottom: 0;
+    background-color: rgba(255,255,255,1);
+    padding: rhythm();
+    z-index: 10000;
+    margin: 0;
+    border-right: 1px solid $gray;
 }
 
 nav#global li:not(:last-child) {
     border-color: $gray;
     @include trailing-border(1px, .25, $base-font-size, solid);
     margin-bottom: rhythm(.25);
+}
+
+nav#global ul.open {
+    right: 25%;
+    left: 0;
+    z-index: 10000;
+    border-right: 1px solid $gray;
 }
 
 /* @end */
