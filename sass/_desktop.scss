@@ -12,7 +12,7 @@
 
 body {
     position: relative;
-    padding: 0;
+    padding-top: 0;
 
     &.open {
         left: auto;
@@ -21,6 +21,10 @@ body {
         &:after {
             content: none;
         }
+    }
+
+    &.small {
+        padding-top: 0;
     }
 }
 
@@ -61,7 +65,13 @@ header {
     }
 }
 
-.logo {
+.small header {
+    height: auto;
+    position: relative;
+}
+
+.logo,
+.small .logo {
     float: left;
     height: rhythm(1.5);
     width: rhythm(8.25);

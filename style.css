@@ -944,7 +944,7 @@ textarea {
 
   body {
     position: relative;
-    padding: 0;
+    padding-top: 0;
   }
   body.open {
     left: auto;
@@ -952,6 +952,9 @@ textarea {
   }
   body.open:after {
     content: none;
+  }
+  body.small {
+    padding-top: 0;
   }
 
   /* @end */
@@ -984,7 +987,13 @@ textarea {
     content: none;
   }
 
-  .logo {
+  .small header {
+    height: auto;
+    position: relative;
+  }
+
+  .logo,
+  .small .logo {
     float: left;
     height: 2.25em;
     width: 12.375em;
