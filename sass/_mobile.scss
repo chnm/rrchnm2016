@@ -99,7 +99,8 @@ h2 {
     line-height: 2 * $base-line-height;
 }
 
-p {
+p,
+ul {
     margin: rhythm() 0;
 }
 
@@ -411,7 +412,6 @@ footer img {
 }
 
 #keep-up {
-    color: #fff;
     overflow: hidden
 }
 

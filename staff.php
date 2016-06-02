@@ -50,7 +50,7 @@
         ?>
         <div class="person">
             <?php echo get_avatar($userId); ?>
-            <span class="name"><?php echo $displayName; ?></span>
+            <span class="name"><a href="<?php echo get_author_posts_url($userId); ?>"><?php echo $displayName; ?></a></span>
         </div>
     <?php endforeach; ?>
     </div>

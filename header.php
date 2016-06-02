@@ -12,7 +12,7 @@ $slug = get_post($post)->post_name;
     <link href="<?php echo bloginfo('template_directory'); ?>/style.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="<?php echo bloginfo('template_directory'); ?>/js/globals.js"></script>
-    <?php if ( has_post_thumbnail() ): ?>
+    <?php if ( is_page() && has_post_thumbnail() ): ?>
     <?php $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ); ?>
     <style>
         <?php echo '.' . $slug; ?> #intro:before {

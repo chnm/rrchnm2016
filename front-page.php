@@ -3,15 +3,15 @@
 <div id="intro">
     <div class="container">
         <p>Democratizing history through digital media and tools.</p>
-        <a href="#">Our Story</a>
+        <a href="<?php echo get_permalink(get_page_by_path('our-story')); ?>">Our Story</a>
     </div>
 </div>
 
 <div id="features">
     <div class="container">
-        <div class="feature">We are <a href="#">innovative</a></div>
-        <div class="feature">We are <a href="#">multifaceted</a></div>
-        <div class="feature">We are <a href="#">collaborative</a></div>
+        <div class="feature">We are <a href="<?php echo get_permalink(get_page_by_path('what-we-do')); ?>">innovative</a></div>
+        <div class="feature">We are <a href="<?php echo get_permalink(get_page_by_path('who-we-are')); ?>">multifaceted</a></div>
+        <div class="feature">We are <a href="<?php echo get_permalink(get_page_by_path('who-we-work-with')); ?>">collaborative</a></div>
     </div>
 </div>
 
@@ -27,7 +27,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">About Us</a>
+                <li><a href="<?php echo get_permalink(get_page_by_path('our-story')); ?>">About Us</a>
                     <ul>
                         <li><a href="#">Mission</a></li>
                         <li><a href="#">A Brief History</a></li>

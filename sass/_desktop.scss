@@ -2,12 +2,15 @@
 
 #intro {
     min-height: 60vh;
+    position: relative;
 }
 
 #intro .container {
-    top: 50%;
-    transform: translateY(-50%);
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    width: 100%;
 }
 
 body {
