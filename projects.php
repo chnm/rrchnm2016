@@ -1,20 +1,11 @@
 <?php /* Template Name: What We Do */ ?>
 
 <?php
-$customFields = get_post_custom();
-$customKeys = get_post_custom_keys();
 $projectNav = [];
-foreach ($customKeys as $customKey) {
-    if (strpos($customKey, 'By ') !== false) {
-        $customFieldValue = $customFields[$customKey];
-        $tagsArray = [];
-        $tagsArray[$customKey] = explode(', ', $customFieldValue[key($customFieldValue)]);
-        for ($i = 0; $i < count($tagsArray[$customKey]); $i++) {
-            if ($tag = get_term_by('name', $tagsArray[$customKey][$i], 'post_tag')) {
-                $projectNav[$customKey][$i] = $tag;
-            }
-        }
-    }
+$projectCategory = get_term_by('name', 'Projects', 'category');
+$projectHeaders = get_terms('category', array('parent' => $projectCategory->term_id));
+foreach ($projectHeaders as $projectHeader) {
+    $projectNav[$projectHeader->name] = get_terms('category', array('parent' => $projectHeader->term_id));
 }
 ?>
 
@@ -37,12 +28,12 @@ foreach ($customKeys as $customKey) {
     <?php echo the_content(); ?>
     <nav>
         <ul>
-        <?php foreach($projectNav as $filter => $tags): ?>
-            <li><?php echo $filter; ?>
-                <?php if (count($tags > 0)): ?>
+        <?php foreach($projectNav as $filter => $categories): ?>
+            <li>By <?php echo $filter; ?>
+                <?php if (count($cats > 0)): ?>
                 <ul>
-                    <?php foreach ($tags as $tag): ?>
-                    <li><a href="<?php echo esc_url(get_tag_link($tag->term_id)); ?>"><?php echo $tag->name; ?></a></li>
+                    <?php foreach ($categories as $category): ?>
+                    <li><a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo $category->name; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
                 <?php endif; ?>
