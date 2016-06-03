@@ -15,6 +15,7 @@ foreach ($projectHeaders as $projectHeader) {
 
 <div id="intro">
     <div class="container">
+    <?php $customFields = get_post_custom(); ?>
     <?php if ($introTitle = $customFields['Intro title'][0]): ?>
     <h1><?php echo $introTitle; ?></h1>
     <?php endif; ?>
