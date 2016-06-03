@@ -21,7 +21,7 @@
 
 <div class="container">
     <aside id="project-meta">
-        <?php the_category(); ?>
+        <?php echo rrchnm_show_project_categories(); ?>
     </aside>
     <article id="project-description">
         <?php echo the_content(); ?>
