@@ -260,6 +260,27 @@ footer .copyright {
     max-width: 100%;
 }
 
+    /* @group ----- 09a. Project ----- */
+
+    .page-template-project #intro + .container {
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    #project-meta {
+        width: span(2 of 9);
+    }
+
+    #project-description {
+        width: span(5 of 9);
+    }
+
+    /* @end */
+
 /* @end */
 
 /* @group ----- 10. Who We Work With ----- */

@@ -903,6 +903,24 @@ textarea {
     height: 5.25em;
   }
 
+  /* @group ----- 09a. Project ----- */
+  #project-meta .post-categories {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  #project-meta .post-categories li {
+    list-style-type: none;
+  }
+
+  #project-meta .post-categories li a {
+    background-color: #3673A2;
+    color: #fff;
+    display: inline-block;
+    padding: 0.375em;
+  }
+
+  /* @end */
   /* @end */
   /* @group ----- 10. Who We Work With ----- */
   .collab-type .entity {
@@ -1170,6 +1188,25 @@ textarea {
     max-width: 100%;
   }
 
+  /* @group ----- 09a. Project ----- */
+  .page-template-project #intro + .container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  #project-meta {
+    width: 22.22222%;
+  }
+
+  #project-description {
+    width: 55.55556%;
+  }
+
+  /* @end */
   /* @end */
   /* @group ----- 10. Who We Work With ----- */
   .collaborations {

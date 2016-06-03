@@ -481,6 +481,26 @@ footer img {
     }
 }
 
+    /* @group ----- 09a. Project ----- */
+
+    #project-meta .post-categories {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    #project-meta .post-categories li {
+        list-style-type: none;
+    }
+
+    #project-meta .post-categories li a {
+        background-color: $primary-blue;
+        color: #fff;
+        display: inline-block;
+        padding: rhythm(.25);
+    }
+
+    /* @end */
+
 /* @end */
 
 /* @group ----- 10. Who We Work With ----- */
