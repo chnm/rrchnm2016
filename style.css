@@ -921,7 +921,7 @@ textarea {
   #project-meta .post-categories {
     padding-left: 0;
     list-style: none;
-    margin: 0.75em 0;
+    margin: 0.75em 0 2.25em;
   }
 
   #project-meta .post-categories li {
