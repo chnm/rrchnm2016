@@ -99,6 +99,12 @@ h2 {
     line-height: 2 * $base-line-height;
 }
 
+h3 {
+    font-size: 1.125 * $base-font-size;
+    line-height: $base-line-height;
+    margin: 0 0 rhythm(1, 1.125 * $base-font-size);
+}
+
 p,
 ul {
     margin: rhythm() 0;
@@ -483,13 +489,23 @@ footer img {
 
     /* @group ----- 09a. Project ----- */
 
+    #project-meta {
+        padding: rhythm() 0;
+    }
+
+    #project-meta h3 {
+        margin-bottom: rhythm(.5, 1.125 * $base-font-size);
+    }
+
     #project-meta .post-categories {
         padding-left: 0;
         list-style: none;
+        margin: rhythm(.5) 0;
     }
 
     #project-meta .post-categories li {
         list-style-type: none;
+        margin-bottom: rhythm(.5);
     }
 
     #project-meta .post-categories li a {

@@ -518,6 +518,12 @@ textarea {
     line-height: 48px;
   }
 
+  h3 {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 1.33333em;
+  }
+
   p,
   ul {
     margin: 1.5em 0;
@@ -904,13 +910,23 @@ textarea {
   }
 
   /* @group ----- 09a. Project ----- */
+  #project-meta {
+    padding: 1.5em 0;
+  }
+
+  #project-meta h3 {
+    margin-bottom: 0.66667em;
+  }
+
   #project-meta .post-categories {
     padding-left: 0;
     list-style: none;
+    margin: 0.75em 0;
   }
 
   #project-meta .post-categories li {
     list-style-type: none;
+    margin-bottom: 0.75em;
   }
 
   #project-meta .post-categories li a {
