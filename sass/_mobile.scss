@@ -462,10 +462,38 @@ footer img {
 
 /* @group ----- 08. Who We Are ----- */
 
+.staff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .person {
+    width: 45%;
+    text-align: center;
+    margin-bottom: rhythm(2);
+    padding: 0 gutter();
+    overflow: hidden;
+}
+
+.person .avatar {
     width: 100%;
-    text-align: left;
-    margin: rhythm() 0;
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    display: block;
+    margin-bottom: rhythm(.5);
+}
+
+.person .avatar img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+    vertical-align: top;
 }
 
 /* @end */
@@ -513,6 +541,35 @@ footer img {
         color: #fff;
         display: inline-block;
         padding: rhythm(.25);
+    }
+
+    #project-contributors {
+        margin-bottom: rhythm();
+    }
+
+    #project-contributors .avatar {
+        display: block;
+        width: 15%;
+        padding-bottom: 15%;
+        position: relative;
+        margin-right: rhythm(.5);
+    }
+
+    #project-contributors .contributor {
+        display: flex;
+        align-items: center;
+        align-content: flex-start;
+        margin-bottom: rhythm(.5);
+    }
+
+    #project-contributors img {
+        width: 100%;
+        height: auto;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     /* @end */

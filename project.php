@@ -21,6 +21,10 @@
 
 <div class="container">
     <aside id="project-meta">
+        <div id="project-contributors">
+            <h3>Contributors</h3>
+            <?php echo rrchnm_show_project_contributors(); ?>
+        </div>
         <?php echo rrchnm_show_project_categories(); ?>
     </aside>
     <article id="project-description">

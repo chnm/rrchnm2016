@@ -18,7 +18,6 @@
 </div>
 
 <div id="content">
-    <div class="container">
         <?php echo the_content(); ?>
     <nav>
         <h2>Meet Us</h2>
@@ -46,16 +45,23 @@
         <?php
         $userId = $user->id;
         $userData = get_userdata($userId);
-        $displayName = $userData->display_name;
+        $displayName = $userData->first_name . ' ' . $userData->last_name;
+        $userUrl = get_author_posts_url($userId);
         ?>
         <div class="person">
-            <?php echo get_avatar($userId); ?>
-            <span class="name"><a href="<?php echo get_author_posts_url($userId); ?>"><?php echo $displayName; ?></a></span>
+            <a href="<?php echo $userUrl; ?>" class="avatar">
+                <?php if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userId, 'picture')): ?>
+                    <?php $avatar = get_cimyFieldValue($userId, 'picture'); ?>
+                <?php else: ?>
+                    <?php $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png'; ?>
+                <?php endif; ?>
+                <img src="<?php echo $avatar; ?>" title="avatar for <?php echo $displayName; ?>">
+            </a>
+            <span class="name"><a href="<?php echo $userUrl; ?>"><?php echo $displayName; ?></a></span>
         </div>
     <?php endforeach; ?>
     </div>
 
-    </div>
 </div>
 
 <?php endwhile; else : ?>

@@ -431,6 +431,7 @@ textarea {
   body {
     margin: 0;
     padding: 0;
+    -webkit-transition: left .5s, right .5s;
     transition: left .5s, right .5s;
     left: 0;
     right: 0;
@@ -646,6 +647,7 @@ textarea {
     background-color: #fff;
     z-index: 9999;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    -webkit-transition: left .5s;
     transition: left .5s;
   }
   header:after {
@@ -724,6 +726,7 @@ textarea {
   nav#global ul {
     margin: 1.5em 0 0;
     list-style-type: none;
+    -webkit-transition: right .5s, left .5s;
     transition: right .5s, left .5s;
     position: fixed;
     top: 0;
@@ -888,10 +891,44 @@ textarea {
 
   /* @end */
   /* @group ----- 08. Who We Are ----- */
+  .staff {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
   .person {
+    width: 45%;
+    text-align: center;
+    margin-bottom: 3em;
+    padding: 0 0.625%;
+    overflow: hidden;
+  }
+
+  .person .avatar {
     width: 100%;
-    text-align: left;
-    margin: 1.5em 0;
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 0.75em;
+  }
+
+  .person .avatar img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+    vertical-align: top;
   }
 
   /* @end */
@@ -936,6 +973,41 @@ textarea {
     padding: 0.375em;
   }
 
+  #project-contributors {
+    margin-bottom: 1.5em;
+  }
+
+  #project-contributors .avatar {
+    display: block;
+    width: 15%;
+    padding-bottom: 15%;
+    position: relative;
+    margin-right: 0.75em;
+  }
+
+  #project-contributors .contributor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    margin-bottom: 0.75em;
+  }
+
+  #project-contributors img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+
   /* @end */
   /* @end */
   /* @group ----- 10. Who We Work With ----- */
@@ -974,7 +1046,8 @@ textarea {
   #intro .container {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
     left: 50%;
     width: 100%;
   }
@@ -1163,22 +1236,24 @@ textarea {
   .staff {
     width: calc(75% - 1.5em);
     float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     padding: 1.5em 0;
   }
 
   .person {
     width: 25%;
-    display: flex;
-    text-align: center;
-    margin: 0 0 1.5em;
-    vertical-align: top;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
+    padding: 0 1.5em;
   }
 
   .person img {
@@ -1189,8 +1264,11 @@ textarea {
   /* @end */
   /* @group ----- 09. What We Do ----- */
   .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: calc(75% - 0.625%);
     margin: 3em 0;
   }
@@ -1207,10 +1285,10 @@ textarea {
   /* @group ----- 09a. Project ----- */
   .page-template-project #intro + .container {
     display: -ms-flex;
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 

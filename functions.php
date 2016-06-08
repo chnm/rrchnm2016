@@ -4,6 +4,31 @@ function register_top_nav() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 
+function rrchnm_show_project_contributors() {
+    $html = '';
+    $pageID = get_the_ID();
+    if (function_exists('get_coauthors')):
+        $contributors = get_coauthors($pageID);
+        foreach ($contributors as $contributor):
+            $contributorID = $contributor->ID;
+            $contributorName = $contributor->first_name . ' ' . $contributor->last_name;
+
+            if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($contributorID, 'picture')):
+                $avatar = get_cimyFieldValue($contributorID, 'picture');
+            else:
+                $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
+            endif;
+            $html .= '<div class="contributor">';
+            $html .= '<a href="' . get_author_posts_url($contributorID) . '" class="avatar">';
+            $html .= '<img src="' . $avatar .'" title="avatar for ' . $contributorName .'">';
+            $html .= '</a>';
+            $html .= '<a href="' . get_author_posts_url($contributorID) . '" class="name">' . $contributorName . '</a>';
+            $html .= '</div>';
+        endforeach;
+    endif;
+    return $html;
+}
+
 function rrchnm_show_project_categories() {
     $html = '';
     $pageID = get_the_ID();
