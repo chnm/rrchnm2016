@@ -332,8 +332,23 @@ footer .copyright {
         @include leading-border(0px, 0, $base-font-size, solid);
     }
 
-    #staff-meta .projects {
+    #staff-projects {
         clear: both;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #staff-projects h2 {
+        width: 100%;
+    }
+
+    #staff-projects .project {
+        width: 24%;
+    }
+
+    #staff-projects .project img {
+        width: 100%;
     }
 
     /* @end */

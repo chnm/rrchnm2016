@@ -27,12 +27,21 @@ define( 'WP_USE_THEMES', false ); get_header();
                 'posts_per_page' => -1,
                 'post_type'     => 'page',
                 'post_status' => 'publish',
-                'author_name' => get_the_author_meta('user_login')
+                'author_name' => get_the_author_meta('user_login'),
+                'tax_query' => array(
+                    'relation' => 'AND',
+                    array(
+                        'taxonomy' => 'category',
+                        'field' => 'slug',
+                        'terms' => array('projects'),
+                    ),
+                ),
             );
             $projectQuery = new WP_Query($projectArgs);
         ?>
         <h2>Projects</h2>
         <?php if ( $projectQuery->have_posts() ) : while ( $projectQuery->have_posts() ) : $projectQuery->the_post(); ?>
+            <div class="project">
             <?php $projectMeta = get_post_custom(); ?>
             <?php
             if ( has_post_thumbnail() ) {
@@ -44,6 +53,7 @@ define( 'WP_USE_THEMES', false ); get_header();
             ?>
             <a href="<?php echo esc_url(get_permalink($projectID)); ?>"><div class="thumbnail"><?php echo ($imgBgUrl !== '') ? '<img src="' . $imgBgUrl . '">' : ''; ?></div></a>
             <h3><?php the_title(); ?></h3>
+            </div>
         <?php endwhile; else: ?>
         No projects
         <?php endif; ?>

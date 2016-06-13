@@ -1061,6 +1061,10 @@ textarea {
     clear: both;
   }
 
+  #staff-projects img {
+    width: 100%;
+  }
+
   /* @end */
   /* @end */
   /* @group ----- 11. Our Story ----- */
@@ -1397,8 +1401,28 @@ textarea {
     padding-top: 0em;
   }
 
-  #staff-meta .projects {
+  #staff-projects {
     clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  #staff-projects h2 {
+    width: 100%;
+  }
+
+  #staff-projects .project {
+    width: 24%;
+  }
+
+  #staff-projects .project img {
+    width: 100%;
   }
 
   /* @end */
