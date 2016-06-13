@@ -305,4 +305,37 @@ footer .copyright {
     clear: both;
 }
 
+    /* @group ----- 10a. Author page ----- */
+
+    .author h1 {
+        text-align: left;
+    }
+
+    .author .avatar {
+        width: 15%;
+        float: left;
+        margin: 0 rhythm() rhythm() 0;
+    }
+
+    #staff-meta {
+        overflow: hidden;
+        width: calc(85% - #{rhythm()});
+        float: right;
+    }
+
+    #staff-meta .field {
+        text-align: left;
+        display: block;
+    }
+
+    #staff-meta .description.field {
+        @include leading-border(0px, 0, $base-font-size, solid);
+    }
+
+    #staff-meta .projects {
+        clear: both;
+    }
+
+    /* @end */
+
 /* @end */

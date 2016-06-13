@@ -946,6 +946,10 @@ textarea {
     height: 5.25em;
   }
 
+  .projects .project h4 {
+    margin: 0.75em 0 2.25em;
+  }
+
   /* @group ----- 09a. Project ----- */
   #project-meta {
     padding: 1.5em 0;
@@ -1020,6 +1024,44 @@ textarea {
     font-style: italic;
   }
 
+  /* @group ----- 10a. Author page ----- */
+  .author .avatar {
+    width: 50%;
+    height: auto;
+    border-radius: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .author h1 {
+    text-align: center;
+    display: block;
+    padding: 0;
+  }
+
+  #staff-meta {
+    margin-bottom: 1.5em;
+  }
+
+  #staff-meta .description.field {
+    border-color: rgba(0, 0, 0, 0.08);
+    border-top-width: 0.0625em;
+    border-top-style: solid;
+    padding-top: 1.4375em;
+    margin-top: 1.5em;
+    text-align: left;
+  }
+
+  #staff-meta .field {
+    display: block;
+    text-align: center;
+  }
+
+  #staff-projects {
+    clear: both;
+  }
+
+  /* @end */
   /* @end */
   /* @group ----- 11. Our Story ----- */
   .our-story #intro {
@@ -1327,5 +1369,38 @@ textarea {
     clear: both;
   }
 
+  /* @group ----- 10a. Author page ----- */
+  .author h1 {
+    text-align: left;
+  }
+
+  .author .avatar {
+    width: 15%;
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+  }
+
+  #staff-meta {
+    overflow: hidden;
+    width: calc(85% - 1.5em);
+    float: right;
+  }
+
+  #staff-meta .field {
+    text-align: left;
+    display: block;
+  }
+
+  #staff-meta .description.field {
+    border-top-width: 0em;
+    border-top-style: solid;
+    padding-top: 0em;
+  }
+
+  #staff-meta .projects {
+    clear: both;
+  }
+
+  /* @end */
   /* @end */
 }

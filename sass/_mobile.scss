@@ -515,6 +515,10 @@ footer img {
     }
 }
 
+.projects .project h4 {
+    margin: rhythm(.5) 0 rhythm(1.5);
+}
+
     /* @group ----- 09a. Project ----- */
 
     #project-meta {
@@ -587,6 +591,44 @@ footer img {
 .collab-type .project {
     font-style: italic;
 }
+
+    /* @group ----- 10a. Author page ----- */
+
+    .author .avatar {
+        width: 50%;
+        height: auto;
+        border-radius: 100%;
+        margin: auto;
+        display: block;
+    }
+
+    .author h1 {
+        text-align: center;
+        display: block;
+        padding: 0;
+    }
+
+    #staff-meta {
+        margin-bottom: rhythm();
+    }
+
+    #staff-meta .description.field {
+        border-color: $gray;
+        @include leading-border(1px, 1, $base-font-size, solid);
+        margin-top: rhythm();
+        text-align: left;
+    }
+
+    #staff-meta .field {
+        display: block;
+        text-align: center;
+    }
+
+    #staff-projects {
+        clear: both;
+    }
+
+    /* @end */
 
 /* @end */
 
