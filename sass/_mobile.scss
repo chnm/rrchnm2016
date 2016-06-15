@@ -651,3 +651,31 @@ footer img {
 }
 
 /* @end */
+
+/* @group ----- 12. News ----- */
+
+.blog .post-meta {
+    font-family: "Oswald", sans-serif;
+    color: #676767;
+    font-weight: 300;
+}
+
+.blog .post-meta .date {
+    background-color: $gray;
+    margin-bottom: rhythm(.5);
+    padding: rhythm(.25);
+}
+
+.blog article {
+    margin-bottom: rhythm(2);
+}
+
+.blog .avatar img {
+    display: inline-block;
+    height: rhythm();
+    width: auto;
+    border-radius: rhythm();
+    vertical-align: top;
+}
+
+/* @end */
