@@ -35,7 +35,7 @@
                     </ul>
                 </li>
                 <li><a href="http://chnm.gmu.edu/courses/fellowship/">DH Fellows Program</a></li>
-                <li><a href="<?php echo site_url(); ?>/tag/video/">Tools</a>
+                <li><a href="<?php echo site_url(); ?>/category/projects/content/software">Tools</a>
                     <ul>
                         <li><a href="http://anthologize.org/">Anthologize</a></li>
                         <li><a href="http://omeka.org">Omeka</a></li>
