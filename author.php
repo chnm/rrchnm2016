@@ -52,7 +52,14 @@ define( 'WP_USE_THEMES', false ); get_header();
                         'taxonomy' => 'category',
                         'field' => 'slug',
                         'terms' => array('projects'),
+                        'operator' => 'IN'
                     ),
+                    array(
+                        'taxonomy' => 'author',
+                        'field' => 'slug',
+                        'terms' => 'cap-' . get_the_author_meta('user_login'),
+                        'operator' => 'NOT IN'
+                    )
                 ),
             ));
             $projects = array_merge($authorProjects, $coauthorProjects);
