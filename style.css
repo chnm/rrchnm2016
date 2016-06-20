@@ -1434,9 +1434,6 @@ textarea {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 
   #staff-projects h2 {
@@ -1445,6 +1442,7 @@ textarea {
 
   #staff-projects .project {
     width: 24%;
+    margin-right: 1%;
   }
 
   #staff-projects .project img {

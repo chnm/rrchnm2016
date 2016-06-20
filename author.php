@@ -23,11 +23,29 @@ define( 'WP_USE_THEMES', false ); get_header();
     </aside>
     <div id="staff-projects">
         <?php
-            $projectArgs = array(
+            $coauthorProjects = get_posts(array(
                 'posts_per_page' => -1,
                 'post_type'     => 'page',
                 'post_status' => 'publish',
-                'author_name' => get_the_author_meta('user_login'),
+                'tax_query' => array(
+                    'relation' => 'AND',
+                    array(
+                        'taxonomy' => 'category',
+                        'field' => 'slug',
+                        'terms' => array('projects'),
+                    ),
+                    array(
+                        'taxonomy' => 'author',
+                        'field' => 'slug',
+                        'terms' => 'cap-' . get_the_author_meta('user_login')
+                    )
+                ),
+            ));
+            $authorProjects = get_posts(array(
+                'posts_per_page' => -1,
+                'post_type'     => 'page',
+                'post_status' => 'publish',
+                'author_name' =>  get_the_author_meta('user_login'),
                 'tax_query' => array(
                     'relation' => 'AND',
                     array(
@@ -36,25 +54,28 @@ define( 'WP_USE_THEMES', false ); get_header();
                         'terms' => array('projects'),
                     ),
                 ),
-            );
-            $projectQuery = new WP_Query($projectArgs);
+            ));
+            $projects = array_merge($authorProjects, $coauthorProjects);
         ?>
         <h2>Projects</h2>
-        <?php if ( $projectQuery->have_posts() ) : while ( $projectQuery->have_posts() ) : $projectQuery->the_post(); ?>
-            <div class="project">
-            <?php $projectMeta = get_post_custom(); ?>
-            <?php
-            if ( has_post_thumbnail() ) {
-                $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
-                $imgBgUrl = $imgBgUrl[0];
-            } else if ($projectMeta['Image'][0]) {
-                $imgBgUrl = site_url() . '/ui/i/project-images/' . $projectMeta['Image'][0];
-            }
-            ?>
-            <a href="<?php echo esc_url(get_permalink($projectID)); ?>"><div class="thumbnail"><?php echo ($imgBgUrl !== '') ? '<img src="' . $imgBgUrl . '">' : ''; ?></div></a>
-            <h3><?php the_title(); ?></h3>
-            </div>
-        <?php endwhile; else: ?>
+        <?php if (count($projects) > 0): ?>
+            <?php foreach($projects as $project): ?>
+                <?php $projectID = $project->ID; ?>
+                <div class="project">
+                <?php $projectMeta = get_post_custom($projectID); ?>
+                <?php
+                if ( has_post_thumbnail() ) {
+                    $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($projectID), 'large' );
+                    $imgBgUrl = $imgBgUrl[0];
+                } else if ($projectMeta['Image'][0]) {
+                    $imgBgUrl = site_url() . '/ui/i/project-images/' . $projectMeta['Image'][0];
+                }
+                ?>
+                <a href="<?php echo esc_url(get_permalink($projectID)); ?>"><div class="thumbnail"><?php echo ($imgBgUrl !== '') ? '<img src="' . $imgBgUrl . '">' : ''; ?></div></a>
+                <h3><a href="<?php echo esc_url(get_permalink($projectID)); ?>"><?php echo get_the_title($projectID); ?></a></h3>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
         No projects
         <?php endif; ?>
     </div>
