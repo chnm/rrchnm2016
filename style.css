@@ -955,6 +955,10 @@ textarea {
     padding: 1.5em 0;
   }
 
+  #project-meta .meta-field {
+    margin-bottom: 1.5em;
+  }
+
   #project-meta h3 {
     margin-bottom: 0.66667em;
   }

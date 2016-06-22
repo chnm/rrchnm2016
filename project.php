@@ -21,11 +21,22 @@
 
 <div class="container">
     <aside id="project-meta">
-        <div id="project-contributors">
+        <?php if ($projectURL = $customFields['URL'][0]): ?>
+            <?php if (!strpos($projectURL, 'http://')): ?>
+            <?php $projectURL = 'http://' . $projectURL; ?>
+            <?php endif; ?>
+            <div id="project-website" class="meta-field">
+                <h3>Website</h3>
+                <a href="<?php echo $projectURL; ?>"><?php echo $projectURL; ?></a>
+            </div>
+        <?php endif; ?>
+        <div id="project-contributors" class="meta-field">
             <h3>Contributors</h3>
             <?php echo rrchnm_show_project_contributors(); ?>
         </div>
-        <?php echo rrchnm_show_project_categories(); ?>
+        <div id="project-categories" class="meta-field">
+            <?php echo rrchnm_show_project_categories(); ?>
+        </div>
     </aside>
     <article id="project-description">
         <?php echo the_content(); ?>

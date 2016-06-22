@@ -525,6 +525,10 @@ footer img {
         padding: rhythm() 0;
     }
 
+    #project-meta .meta-field {
+        margin-bottom: rhythm();
+    }
+
     #project-meta h3 {
         margin-bottom: rhythm(.5, 1.125 * $base-font-size);
     }
