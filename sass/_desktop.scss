@@ -211,7 +211,7 @@ footer .copyright {
 
 /* @group ----- 08. Who We Are ----- */
 
-.staff {
+#staff {
     width: calc(#{span(9 of 12)} - #{rhythm()});
     float: left;
     display: flex;
@@ -221,9 +221,13 @@ footer .copyright {
     padding: rhythm() 0;
 }
 
+#staff h3 {
+    width: 100%;
+}
+
 .person {
-    width: 25%;
-    padding: 0 rhythm();
+    width: 20%;
+    padding-right: rhythm();
 }
 
 .person img {
@@ -238,14 +242,14 @@ footer .copyright {
 
 /* @group ----- 09. What We Do ----- */
 
-.projects {
+#projects {
     display: flex;
     flex-wrap: wrap;
     width: calc(#{span(9 of 12)} - #{gutter()});
     margin: rhythm(2) 0;
 }
 
-.projects .project {
+#projects .project {
     width: span(3 of 9);
     padding: 0 gutter();
 }

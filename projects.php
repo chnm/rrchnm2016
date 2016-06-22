@@ -34,7 +34,7 @@ foreach ($projectHeaders as $projectHeader) {
                 <?php if (count($cats > 0)): ?>
                 <ul>
                     <?php foreach ($categories as $category): ?>
-                    <li><a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo $category->name; ?></a></li>
+                    <li><a href="<?php echo esc_url(get_category_link($category->term_id)); ?>#projects"><?php echo $category->name; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
                 <?php endif; ?>
@@ -42,7 +42,7 @@ foreach ($projectHeaders as $projectHeader) {
         <?php endforeach; ?>
         </ul>
     </nav>
-    <div class="projects">
+    <div id="projects">
         <?php
         $projectsFilters = array(
             'posts_per_page' => -1,

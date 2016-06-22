@@ -53,6 +53,30 @@ function rrchnm_show_project_categories() {
     return $html;
 }
 
+function rrchnm_get_users_by_cimy_field_value($field_name, $field_value) {
+    include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+    if (is_plugin_active('cimy-user-extra-fields/cimy_user_extra_fields.php')) {
+        global $wpdb_fields_table, $wpdb_data_table, $wpdb;
+        $sql_field_name = esc_sql($field_name);
+        $sql_field_value = esc_sql($field_value);
+        $sql = "SELECT ID FROM $wpdb_fields_table WHERE NAME='$sql_field_name'";
+        $fieldRow = $wpdb->get_results($sql, ARRAY_A);
+        $fieldID = (string) $fieldRow[0]['ID'];
+        $sql = "SELECT USER_ID FROM $wpdb_data_table WHERE FIELD_ID='$fieldID' AND VALUE='$sql_field_value'";
+        $userIDRows = $wpdb->get_results($sql, ARRAY_A);
+
+        $userIDs = '';
+        foreach ($userIDRows as $userIDRow) {
+            $userIDs .= $userIDRow['USER_ID'] . ',';
+        }
+        $userIDs = substr($userIDs, 0, strlen($userIDs) - 1);
+        $users = get_users(array('include' => $userIDs));
+        return $users;
+    } else {
+        return "CIMY User Extra fields is not installed.";
+    }
+}
+
 function show_staff_position( $user ) {
     $html = '<table class="form-table"><tr>';
     $html .= '<th><label for="staff-position">Staff Position</label></th>';

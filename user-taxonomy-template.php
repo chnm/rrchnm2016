@@ -47,7 +47,7 @@
                         <?php if ($termName == $filterName): ?>
                         <li class="active"><a href="<?php echo site_url() . "/tag/$filter/$filterSlug"; ?>"><?php echo $filterName; ?> (<?php echo count($users); ?>)</a></li>
                         <?php else: ?>
-                        <li><a href="<?php echo site_url() . "/tag/$filter/$filterSlug"; ?>"><?php echo $filterName; ?></a></li>
+                        <li><a href="<?php echo site_url() . "/tag/$filter/$filterSlug"; ?>#staff"><?php echo $filterName; ?></a></li>
                         <?php endif; ?>
                         <?php endforeach; ?>
                     </ul>
@@ -56,7 +56,7 @@
         <?php endforeach; ?>
         </ul>
     </nav>
-    <div class="staff">
+    <div id="staff">
     <?php foreach ($users as $userId): ?>
         <?php
         $userData = get_userdata($userId);

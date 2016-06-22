@@ -462,7 +462,7 @@ footer img {
 
 /* @group ----- 08. Who We Are ----- */
 
-.staff {
+#staff {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -500,7 +500,7 @@ footer img {
 
 /* @group ----- 09. What We Do ----- */
 
-.projects .project .thumbnail {
+#projects .project .thumbnail {
     max-height: rhythm(3.5);
     overflow: hidden;
 
@@ -515,7 +515,7 @@ footer img {
     }
 }
 
-.projects .project h4 {
+#projects .project h4 {
     margin: rhythm(.5) 0 rhythm(1.5);
 }
 

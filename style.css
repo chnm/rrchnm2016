@@ -891,7 +891,7 @@ textarea {
 
   /* @end */
   /* @group ----- 08. Who We Are ----- */
-  .staff {
+  #staff {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -933,20 +933,20 @@ textarea {
 
   /* @end */
   /* @group ----- 09. What We Do ----- */
-  .projects .project .thumbnail {
+  #projects .project .thumbnail {
     max-height: 5.25em;
     overflow: hidden;
   }
-  .projects .project .thumbnail img {
+  #projects .project .thumbnail img {
     width: 100%;
     display: inline-block;
   }
-  .projects .project .thumbnail:empty {
+  #projects .project .thumbnail:empty {
     background-color: rgba(0, 0, 0, 0.08);
     height: 5.25em;
   }
 
-  .projects .project h4 {
+  #projects .project h4 {
     margin: 0.75em 0 2.25em;
   }
 
@@ -1305,7 +1305,7 @@ textarea {
 
   /* @end */
   /* @group ----- 08. Who We Are ----- */
-  .staff {
+  #staff {
     width: calc(75% - 1.5em);
     float: left;
     display: -webkit-box;
@@ -1323,9 +1323,13 @@ textarea {
     padding: 1.5em 0;
   }
 
+  #staff h3 {
+    width: 100%;
+  }
+
   .person {
-    width: 25%;
-    padding: 0 1.5em;
+    width: 20%;
+    padding-right: 1.5em;
   }
 
   .person img {
@@ -1335,7 +1339,7 @@ textarea {
 
   /* @end */
   /* @group ----- 09. What We Do ----- */
-  .projects {
+  #projects {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1345,7 +1349,7 @@ textarea {
     margin: 3em 0;
   }
 
-  .projects .project {
+  #projects .project {
     width: 33.33333%;
     padding: 0 0.625%;
   }

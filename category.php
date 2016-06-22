@@ -57,14 +57,14 @@ $whatWeDoPageID = $whatWeDoPage->ID;
                     <ul>
                         <?php foreach ($categories as $category): ?>
                         <?php $active = ($category->name == $currentCategoryName) ? 'class="active"' : ''; ?>
-                        <li <?php echo $active; ?>><a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo $category->name; ?> <?php echo ($active !== '') ? '(' . $projectQuery->found_posts . ')' : ''; ?></a></li>
+                        <li <?php echo $active; ?>><a href="<?php echo esc_url(get_category_link($category->term_id)); ?>#projects"><?php echo $category->name; ?> <?php echo ($active !== '') ? '(' . $projectQuery->found_posts . ')' : ''; ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </li>
             <?php endforeach; ?>
             </ul>
         </nav>
-        <div class="projects">
+        <div id="projects">
             <?php while ($projectQuery->have_posts()) : $projectQuery->the_post(); ?>
                 <?php
                 $projectID = get_the_ID();
