@@ -71,10 +71,10 @@ define( 'WP_USE_THEMES', false ); get_header();
                 <div class="project">
                 <?php $projectMeta = get_post_custom($projectID); ?>
                 <?php
-                if ( has_post_thumbnail() ) {
+                if ( has_post_thumbnail($projectID) ) {
                     $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($projectID), 'large' );
                     $imgBgUrl = $imgBgUrl[0];
-                } else if ($projectMeta['Image'][0]) {
+                } else if (isset($projectMeta['Image'])) {
                     $imgBgUrl = site_url() . '/ui/i/project-images/' . $projectMeta['Image'][0];
                 }
                 ?>
