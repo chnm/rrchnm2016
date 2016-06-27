@@ -9,8 +9,8 @@
 
 <div id="features">
     <div class="container">
-        <div class="feature">We are <a href="<?php echo get_permalink(get_page_by_path('what-we-do')); ?>">innovative</a></div>
         <div class="feature">We are <a href="<?php echo get_permalink(get_page_by_path('who-we-are')); ?>">multifaceted</a></div>
+        <div class="feature">We are <a href="<?php echo get_permalink(get_page_by_path('what-we-do')); ?>">innovative</a></div>
         <div class="feature">We are <a href="<?php echo get_permalink(get_page_by_path('who-we-work-with')); ?>">collaborative</a></div>
     </div>
 </div>
