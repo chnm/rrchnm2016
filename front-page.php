@@ -37,11 +37,9 @@
                 <li><a href="http://chnm.gmu.edu/courses/fellowship/">DH Fellows Program</a></li>
                 <li><a href="<?php echo site_url(); ?>/category/projects/content/software">Tools</a>
                     <ul>
-                        <li><a href="http://anthologize.org/">Anthologize</a></li>
                         <li><a href="http://omeka.org">Omeka</a></li>
                         <li><a href="http://pressforward.org">PressForward</a></li>
                         <li><a href="http://scripto.org">Scripto</a></li>
-                        <li><a href="http://serendip-o-matic.com">Serendip-o-Matic</a></li>
                         <li><a href="http://zotero.org">Zotero</a></li>
                     </ul>
                 </li>
