@@ -1,8 +1,8 @@
 <?php
+get_header();
 $authorID = get_the_author_meta('ID');
 $authorName = get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name');
 $cimyFieldsTrue = function_exists('get_cimyFieldValue');
-define( 'WP_USE_THEMES', false ); get_header();
 ?>
 
 <div class="container">
