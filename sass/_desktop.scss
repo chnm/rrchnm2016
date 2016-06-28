@@ -359,36 +359,36 @@ footer .copyright {
 
 /* @end */
 
-/* @group ----- News ----- */
+/* @group ----- 12. News ----- */
 
-.blog .post {
+.post {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: space-between;
 }
 
-.blog .post h1 {
+.post h1 {
     padding: 0;
 }
 
-.blog .post-meta {
+.post-meta {
     width: span(3 of 16);
     padding: 0 gutter();
     text-align: right;
 }
 
-.blog .avatar {
+.post-meta .avatar {
     display: block;
 }
 
-.blog .avatar img {
+.post-meta .avatar img {
     width: 50%;
     height: auto;
     border-radius: 100%;
 }
 
-.blog .post-meta .date {
+.post-meta .date {
     display: block;
     font-size: 1.5 * $base-font-size;
     line-height: 2 * $base-line-height;
@@ -397,23 +397,23 @@ footer .copyright {
     padding: 0 rhythm(.25, 1.5 * $base-font-size);
 }
 
-.blog .author {
+.post-meta .author {
     font-size: 1.25 * $base-font-size;
     line-height: 2 * $base-line-height;
 }
 
-.blog article {
+.post article {
     width: span(12 of 16);
     padding: 0 gutter();
 }
 
-.blog .pagination {
+.post + .pagination {
     width: span(12 of 16);
     margin-left: span(4 of 16);
     padding: 0 gutter();
 }
 
-.blog .pagination .page-numbers {
+.post + .pagination .page-numbers {
     padding: rhythm(.25);
     min-width: rhythm(1.5);
     display: inline-block;
@@ -421,7 +421,7 @@ footer .copyright {
     background-color: $gray;
 }
 
-.blog .pagination a.page-numbers {
+.post + .pagination a.page-numbers {
     color: $primary-red;
     border: 0;
 }
