@@ -497,11 +497,13 @@ textarea {
   .alignleft {
     float: left;
     margin: 0 1.5em 1.5em 0;
+    clear: left;
   }
 
   .alignright {
     float: right;
     margin: 0 0 1.5em 1.5em;
+    clear: right;
   }
 
   /* @end */
@@ -540,6 +542,14 @@ textarea {
     margin: 1.5em 0;
   }
 
+  hr {
+    height: 0;
+    margin: 1.5em 0;
+    border: 0;
+    width: 100%;
+    clear: both;
+  }
+
   #intro h1 em {
     font-style: normal;
     text-transform: uppercase;
@@ -548,6 +558,12 @@ textarea {
   #intro p {
     font-size: 24px;
     line-height: 48px;
+  }
+
+  .wp-caption-text,
+  caption {
+    font-size: 14px;
+    margin: 0 0 1.71429em;
   }
 
   .preface {

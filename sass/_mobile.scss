@@ -75,11 +75,13 @@ body {
 .alignleft {
     float: left;
     margin: 0 rhythm() rhythm() 0;
+    clear: left;
 }
 
 .alignright {
     float: right;
     margin: 0 0 rhythm() rhythm();
+    clear: right;
 }
 
 /* @end */
@@ -120,6 +122,14 @@ ul {
     margin: rhythm() 0;
 }
 
+hr {
+    height: 0;
+    margin: rhythm() 0;
+    border: 0;
+    width: 100%;
+    clear: both;
+}
+
 #intro h1 em {
     font-style: normal;
     text-transform: uppercase;
@@ -128,6 +138,12 @@ ul {
 #intro p {
     font-size: 1.5 * $base-font-size;
     line-height: 2 * $base-line-height;
+}
+
+.wp-caption-text,
+caption {
+    font-size: .875 * $base-font-size;
+    margin: 0 0 rhythm(1, .875 * $base-font-size);
 }
 
 .preface {
