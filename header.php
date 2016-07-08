@@ -6,7 +6,7 @@ $slug = get_post($post)->post_name;
 <html lang="en">
 
 <head>
-    <title><?php wp_title(''); ?> - Roy Rosenzweig Center for History and New Media</title>
+    <title><?php wp_title(' - ', true, 'right'); ?> Roy Rosenzweig Center for History and New Media</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic,300|Oswald:400,300' rel='stylesheet' type='text/css'>
     <link href="<?php echo bloginfo('template_directory'); ?>/style.css" type="text/css" rel="stylesheet">
