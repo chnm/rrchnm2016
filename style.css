@@ -1139,7 +1139,7 @@ textarea {
   }
 
   #menu-about-us > li > ul {
-    margin: 0.375em 0;
+    margin: 0.75em 0;
   }
 
   #menu-about-us li li {
@@ -1153,8 +1153,8 @@ textarea {
     border-color: rgba(0, 0, 0, 0.08);
     border-bottom-width: 0.0625em;
     border-bottom-style: solid;
-    padding-bottom: 0.6875em;
-    margin-bottom: 0.75em;
+    padding-bottom: 0.3125em;
+    margin-bottom: 0.375em;
   }
 
   /* @end */

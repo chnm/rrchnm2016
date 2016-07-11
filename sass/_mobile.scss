@@ -710,7 +710,7 @@ footer img {
 }
 
 #menu-about-us > li > ul {
-    margin: rhythm(.25) 0;
+    margin: rhythm(.5) 0;
 }
 
 #menu-about-us li li {
@@ -722,8 +722,8 @@ footer img {
 
 #menu-about-us li li:not(:last-of-type) {
     border-color: $gray;
-    @include trailing-border(1px, .5, $base-font-size, solid);
-    margin-bottom: rhythm(.5);
+    @include trailing-border(1px, .25, $base-font-size, solid);
+    margin-bottom: rhythm(.25);
 }
 
 /* @end */
