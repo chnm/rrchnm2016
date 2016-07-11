@@ -360,6 +360,24 @@ footer .copyright {
 
 /* @end */
 
+/* @group ----- 11. Our Story ----- */
+
+.page-template-about #intro + .container {
+    display: flex;
+}
+
+#about-nav {
+    width: span(3 of 12);
+    padding-right: gutter();
+    margin-right: gutter();
+}
+
+#about-nav + section {
+    width: span(9 of 12);
+}
+
+/* @end */
+
 /* @group ----- 12. News ----- */
 
 .post {

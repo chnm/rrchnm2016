@@ -4,6 +4,10 @@ function register_top_nav() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 
+function register_about_nav() {
+    register_nav_menu( 'about-menu', 'About Us Menu');
+}
+
 function rrchnm_show_project_contributors() {
     $html = '';
     $pageID = get_the_ID();
@@ -110,5 +114,6 @@ add_filter( 'taxonomy_template', 'rrchnm_get_custom_taxonomy_template' );
 add_theme_support( 'post-thumbnails' );
 
 add_action( 'init', 'register_top_nav' );
+add_action( 'init', 'register_about_nav' );
 add_action( 'show_user_profile', 'show_staff_position' );
 add_action( 'edit_user_profile', 'show_staff_position' );

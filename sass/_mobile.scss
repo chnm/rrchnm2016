@@ -147,7 +147,6 @@ caption {
 }
 
 .preface {
-    @include bleed(rhythm() rhythm() 0 rhythm());
     padding-bottom: rhythm();
     margin-bottom: rhythm();
 }
@@ -688,10 +687,43 @@ footer img {
 
 .our-story .preface {
     background-color: $gray;
+    padding: rhythm();
 }
 
 .our-story .preface h2 {
     margin: 0;
+}
+
+#about-nav ul {
+    margin: 0;
+}
+
+#menu-about-us .current_page_item {
+    font-weight: bold;
+}
+
+#menu-about-us > li {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.25 * $base-font-size;
+    font-weight: 300;
+}
+
+#menu-about-us > li > ul {
+    margin: rhythm(.5) 0;
+}
+
+#menu-about-us li li {
+    font-family: "Open Sans", sans-serif;
+    text-transform: none;
+    font-size: $base-font-size;
+    font-weight: normal;
+}
+
+#menu-about-us li li:not(:last-of-type) {
+    border-color: $gray;
+    @include trailing-border(1px, .5, $base-font-size, solid);
+    margin-bottom: rhythm(.5);
 }
 
 /* @end */

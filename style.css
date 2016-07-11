@@ -567,12 +567,6 @@ textarea {
   }
 
   .preface {
-    margin-top: -1.5em;
-    margin-right: -1.5em;
-    margin-left: -1.5em;
-    padding-top: 1.5em;
-    padding-right: 1.5em;
-    padding-left: 1.5em;
     padding-bottom: 1.5em;
     margin-bottom: 1.5em;
   }
@@ -1122,10 +1116,45 @@ textarea {
 
   .our-story .preface {
     background-color: rgba(0, 0, 0, 0.08);
+    padding: 1.5em;
   }
 
   .our-story .preface h2 {
     margin: 0;
+  }
+
+  #about-nav ul {
+    margin: 0;
+  }
+
+  #menu-about-us .current_page_item {
+    font-weight: bold;
+  }
+
+  #menu-about-us > li {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  #menu-about-us > li > ul {
+    margin: 0.75em 0;
+  }
+
+  #menu-about-us li li {
+    font-family: "Open Sans", sans-serif;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  #menu-about-us li li:not(:last-of-type) {
+    border-color: rgba(0, 0, 0, 0.08);
+    border-bottom-width: 0.0625em;
+    border-bottom-style: solid;
+    padding-bottom: 0.6875em;
+    margin-bottom: 0.75em;
   }
 
   /* @end */
@@ -1529,6 +1558,24 @@ textarea {
   }
 
   /* @end */
+  /* @end */
+  /* @group ----- 11. Our Story ----- */
+  .page-template-about #intro + .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  #about-nav {
+    width: 25%;
+    padding-right: 0.625%;
+    margin-right: 0.625%;
+  }
+
+  #about-nav + section {
+    width: 75%;
+  }
+
   /* @end */
   /* @group ----- 12. News ----- */
   .post {
