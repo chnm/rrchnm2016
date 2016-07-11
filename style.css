@@ -1110,16 +1110,16 @@ textarea {
   /* @end */
   /* @end */
   /* @group ----- 11. Our Story ----- */
-  .our-story #intro {
+  .page-template-about #intro {
     background-position: top;
   }
 
-  .our-story .preface {
+  .page-template-about .preface {
     background-color: rgba(0, 0, 0, 0.08);
     padding: 1.5em;
   }
 
-  .our-story .preface h2 {
+  .page-template-about .preface h2 {
     margin: 0;
   }
 
