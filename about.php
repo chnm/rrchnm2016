@@ -19,7 +19,9 @@
     <nav id="about-nav">
        <?php wp_nav_menu( array( 'theme_location' => 'about-menu') ); ?>
     </nav>
-    <?php echo the_content(); ?>
+    <section>
+        <?php echo the_content(); ?>
+    </section>
 </div>
 
 <?php endwhile; else : ?>
