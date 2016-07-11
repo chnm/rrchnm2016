@@ -376,6 +376,10 @@ footer .copyright {
     width: span(9 of 12);
 }
 
+#about-nav + section > *:first-child {
+    margin-top: 0;
+}
+
 /* @end */
 
 /* @group ----- 12. News ----- */

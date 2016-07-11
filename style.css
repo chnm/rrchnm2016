@@ -1139,7 +1139,7 @@ textarea {
   }
 
   #menu-about-us > li > ul {
-    margin: 0.75em 0;
+    margin: 0.375em 0;
   }
 
   #menu-about-us li li {
@@ -1574,6 +1574,10 @@ textarea {
 
   #about-nav + section {
     width: 75%;
+  }
+
+  #about-nav + section > *:first-child {
+    margin-top: 0;
   }
 
   /* @end */
