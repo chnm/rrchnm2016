@@ -1137,6 +1137,13 @@ textarea {
     font-size: 20px;
     font-weight: 300;
   }
+  #menu-about-us > li > a {
+    color: #fff;
+    background-color: #b3252d;
+    padding: 0.3em;
+    width: 100%;
+    display: inline-block;
+  }
 
   #menu-about-us > li > ul {
     margin: 0.75em 0;
@@ -1147,6 +1154,7 @@ textarea {
     text-transform: none;
     font-size: 16px;
     font-weight: normal;
+    padding: 0.375em;
   }
 
   #menu-about-us li li:not(:last-of-type) {
@@ -1154,7 +1162,13 @@ textarea {
     border-bottom-width: 0.0625em;
     border-bottom-style: solid;
     padding-bottom: 0.3125em;
-    margin-bottom: 0.375em;
+  }
+
+  #menu-about-us .menu-item-object-custom a:after {
+    content: "";
+    font-family: "FontAwesome";
+    display: inline-block;
+    margin-left: 0.375em;
   }
 
   /* @end */

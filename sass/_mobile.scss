@@ -707,6 +707,14 @@ footer img {
     text-transform: uppercase;
     font-size: 1.25 * $base-font-size;
     font-weight: 300;
+
+    & > a {
+        color: #fff;
+        background-color: $primary-red;
+        padding: rhythm(.25, 1.25 * $base-font-size);
+        width: 100%;
+        display: inline-block;
+    }
 }
 
 #menu-about-us > li > ul {
@@ -718,12 +726,19 @@ footer img {
     text-transform: none;
     font-size: $base-font-size;
     font-weight: normal;
+    padding: rhythm(.25)
 }
 
 #menu-about-us li li:not(:last-of-type) {
     border-color: $gray;
     @include trailing-border(1px, .25, $base-font-size, solid);
-    margin-bottom: rhythm(.25);
+}
+
+#menu-about-us .menu-item-object-custom a:after {
+    content: $fa-var-external-link;
+    font-family: "FontAwesome";
+    display: inline-block;
+    margin-left: rhythm(.25);
 }
 
 /* @end */
