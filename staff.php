@@ -41,21 +41,26 @@
     </nav>
 
     <div id="staff">
-    <?php $users = rrchnm_get_users_by_cimy_field_value('ACTIVE', 'YES'); ?>
-    <?php foreach ($users as $user): ?>
-        <?php echo rrchnm_staff_member($user->ID); ?>
-    <?php endforeach; ?>
-    <h3>Affiliates</h3>
     <?php $affiliatedTerm = get_term_by('slug', 'affiliate', 'position'); ?>
-    <?php $users = get_objects_in_term( $affiliatedTerm->term_id, 'position' ); ?>
-    <?php $users = get_users(array('include' => $users)); ?>
+    <?php $affiliateIDs = get_objects_in_term( $affiliatedTerm->term_id, 'position' ); ?>
+    <?php $alumniIDs = rrchnm_get_users_by_cimy_field_value('ACTIVE', 'NO'); ?>
+    <?php $inactiveIDs = array_merge($affiliateIDs, $alumniIDs); ?>
+    <?php $users = get_users(array('exclude' => $inactiveIDs)); ?>
+
     <?php foreach ($users as $user): ?>
         <?php echo rrchnm_staff_member($user->ID); ?>
     <?php endforeach; ?>
+
+    <h3>Affiliates</h3>
+    <?php $affiliates = get_users(array('include' => $affiliateIDs)); ?>
+    <?php foreach ($affiliates as $affiliate): ?>
+        <?php echo rrchnm_staff_member($affiliate->ID); ?>
+    <?php endforeach; ?>
+
     <h3>Alumni</h3>
-    <?php $alumni = rrchnm_get_users_by_cimy_field_value('ACTIVE', 'NO'); ?>
-    <?php foreach ($alumni as $user): ?>
-        <?php echo rrchnm_staff_member($user->ID); ?>
+    <?php $alumni = get_users(array('include' => $alumniIDs)); ?>
+    <?php foreach ($alumni as $alumnus): ?>
+        <?php echo rrchnm_staff_member($alumnus->ID); ?>
     <?php endforeach; ?>
     </div>
 </div>

@@ -69,13 +69,11 @@ function rrchnm_get_users_by_cimy_field_value($field_name, $field_value) {
         $sql = "SELECT USER_ID FROM $wpdb_data_table WHERE FIELD_ID='$fieldID' AND VALUE='$sql_field_value'";
         $userIDRows = $wpdb->get_results($sql, ARRAY_A);
 
-        $userIDs = '';
+        $userIDs = [];
         foreach ($userIDRows as $userIDRow) {
-            $userIDs .= $userIDRow['USER_ID'] . ',';
+            $userIDs[] = $userIDRow['USER_ID'];
         }
-        $userIDs = substr($userIDs, 0, strlen($userIDs) - 1);
-        $users = get_users(array('include' => $userIDs));
-        return $users;
+        return $userIDs;
     } else {
         return "CIMY User Extra fields is not installed.";
     }
