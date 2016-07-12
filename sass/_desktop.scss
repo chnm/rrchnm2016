@@ -115,23 +115,34 @@ nav#global li {
 
 /* @group ----- 06. Footer ----- */
 
-footer nav {
-    float: right;
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-footer nav ul {
-    margin: 0;
-}
-
-footer nav li {
-    display: inline-block;
-    margin-left: rhythm(.5);
+footer .copyright,
+footer address {
+    width: span(3 of 12);
+    flex: 0 1 none;;
 }
 
 footer .copyright {
-    clear: both;
-    display: block;
-    margin: rhythm(3) 0 0;
+    padding-left: gutter();
+}
+
+footer address {
+    padding-right: gutter();
+}
+
+footer .neh {
+    width: 100%;
+    text-align: center;
+}
+
+footer .license {
+    width: span(6 of 12);
+    padding: 0 gutter();
 }
 
 /* @end */

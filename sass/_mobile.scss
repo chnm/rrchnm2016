@@ -426,13 +426,43 @@ nav#global ul.open {
 
 footer {
     @include container($container-width);
-    padding: rhythm();
+    padding: rhythm(1, .875 * $base-font-size);
     border-top: 1px solid $gray;
+    font-size: .875 * $base-font-size;
 }
 
 footer img {
     max-height: rhythm(3);
     width: auto;
+}
+
+footer .logo {
+    margin-bottom: rhythm(.25);
+}
+
+address {
+    font-style: normal;
+}
+
+address span {
+    display: block;
+    clear: both;
+}
+
+footer .neh {
+    margin-bottom: rhythm();
+}
+
+footer .neh img {
+    display: block;
+    margin: auto;
+}
+
+footer #description {
+    width: 100%;
+    font-style: italic;
+    text-align: center;
+    color: $primary-blue;
 }
 
 /* @end */
