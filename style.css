@@ -1047,6 +1047,7 @@ textarea {
     height: 100%;
     width: auto;
     vertical-align: top;
+    max-width: none;
   }
 
   /* @end */
