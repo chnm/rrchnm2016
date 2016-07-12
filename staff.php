@@ -41,47 +41,21 @@
     </nav>
 
     <div id="staff">
-
     <?php $users = rrchnm_get_users_by_cimy_field_value('ACTIVE', 'YES'); ?>
     <?php foreach ($users as $user): ?>
-        <?php
-        $userId = $user->ID;
-        $userData = get_userdata($userId);
-        $displayName = $userData->first_name . ' ' . $userData->last_name;
-        $userUrl = get_author_posts_url($userId);
-        ?>
-        <div class="person">
-            <a href="<?php echo $userUrl; ?>" class="avatar">
-                <?php if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userId, 'picture')): ?>
-                    <?php $avatar = get_cimyFieldValue($userId, 'picture'); ?>
-                <?php else: ?>
-                    <?php $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png'; ?>
-                <?php endif; ?>
-                <img src="<?php echo $avatar; ?>" title="avatar for <?php echo $displayName; ?>">
-            </a>
-            <span class="name"><a href="<?php echo $userUrl; ?>"><?php echo $displayName; ?></a></span>
-        </div>
+        <?php echo rrchnm_staff_member($user->ID); ?>
+    <?php endforeach; ?>
+    <h3>Affiliates</h3>
+    <?php $affiliatedTerm = get_term_by('slug', 'affiliate', 'position'); ?>
+    <?php $users = get_objects_in_term( $affiliatedTerm->term_id, 'position' ); ?>
+    <?php $users = get_users(array('include' => $users)); ?>
+    <?php foreach ($users as $user): ?>
+        <?php echo rrchnm_staff_member($user->ID); ?>
     <?php endforeach; ?>
     <h3>Alumni</h3>
     <?php $alumni = rrchnm_get_users_by_cimy_field_value('ACTIVE', 'NO'); ?>
     <?php foreach ($alumni as $user): ?>
-        <?php
-        $userId = $user->ID;
-        $userData = get_userdata($userId);
-        $displayName = $userData->first_name . ' ' . $userData->last_name;
-        $userUrl = get_author_posts_url($userId);
-        ?>
-        <div class="person">
-            <a href="<?php echo $userUrl; ?>" class="avatar">
-                <?php if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userId, 'picture')): ?>
-                    <?php $avatar = get_cimyFieldValue($userId, 'picture'); ?>
-                <?php else: ?>
-                    <?php $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png'; ?>
-                <?php endif; ?>
-                <img src="<?php echo $avatar; ?>" title="avatar for <?php echo $displayName; ?>">
-            </a>
-            <span class="name"><a href="<?php echo $userUrl; ?>"><?php echo $displayName; ?></a></span>
-        </div>
+        <?php echo rrchnm_staff_member($user->ID); ?>
     <?php endforeach; ?>
     </div>
 </div>

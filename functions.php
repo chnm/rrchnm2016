@@ -81,6 +81,22 @@ function rrchnm_get_users_by_cimy_field_value($field_name, $field_value) {
     }
 }
 
+function rrchnm_staff_member($userID) {
+    $userData = get_userdata($userID);
+    $displayName = $userData->first_name . ' ' . $userData->last_name;
+    $userUrl = get_author_posts_url($userID);
+    $html = '<div class="person">';
+    if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userID, 'picture')) {
+        $avatar = get_cimyFieldValue($userID, 'picture');
+    } else {
+        $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
+    }
+    $html .= '<a href="' . $userUrl . '" class="avatar" aria-title="staff avatar" style="background-image:url(\'' . $avatar . '\')"></a>';
+    $html .= '<span class="name"><a href="' . $userUrl . '">' . $displayName . '</a></span>';
+    $html .= '</div>';
+    return $html;
+}
+
 function show_staff_position( $user ) {
     $html = '<table class="form-table"><tr>';
     $html .= '<th><label for="staff-position">Staff Position</label></th>';

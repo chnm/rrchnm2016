@@ -607,6 +607,8 @@ footer #description {
     overflow: hidden;
     display: block;
     margin-bottom: rhythm(.5);
+    background-size: cover;
+    background-position: center center;
 }
 
 .person .avatar img {
