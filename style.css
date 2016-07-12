@@ -456,6 +456,10 @@ textarea {
     padding-top: 3em;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   #content,
   .container {
     max-width: 1280px;
@@ -506,6 +510,29 @@ textarea {
     clear: right;
   }
 
+  thead tr {
+    background-color: rgba(0, 0, 0, 0.08);
+    text-align: left;
+  }
+
+  table {
+    margin: 1.5em 0;
+  }
+
+  table caption {
+    margin-bottom: 0.75em;
+    font-weight: bold;
+  }
+
+  th,
+  td {
+    padding: 0.375em;
+  }
+
+  tbody tr:nth-of-type(2n) {
+    background-color: rgba(128, 128, 128, 0.08);
+  }
+
   /* @end */
   /* @group ----- 02. Text elements ----- */
   a {
@@ -548,6 +575,32 @@ textarea {
     border: 0;
     width: 100%;
     clear: both;
+  }
+
+  blockquote {
+    background-color: rgba(0, 0, 0, 0.08);
+    margin: 1.5em 0;
+    padding: 1.5em;
+    position: relative;
+    clear: both;
+  }
+  blockquote:before {
+    content: "";
+    font-family: "FontAwesome";
+    font-size: 48px;
+    position: absolute;
+    color: #ccc;
+    top: 0;
+    left: -0.125em;
+  }
+  blockquote:after {
+    content: "";
+    font-family: "FontAwesome";
+    font-size: 48px;
+    color: #ccc;
+    position: absolute;
+    bottom: 0;
+    right: -0.125em;
   }
 
   #intro h1 em {
@@ -1225,6 +1278,55 @@ textarea {
   }
 
   /* @end */
+  /* @group ----- 13. Essay ----- */
+  .single-essay #intro {
+    background-color: #3673A2;
+    height: auto;
+    min-height: 0;
+    padding: 1.5em 0.625%;
+    text-align: center;
+  }
+
+  .single-essay #intro h1 {
+    background-color: transparent;
+    color: #fff;
+  }
+  .single-essay #intro h1:after {
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin: 0.75em 0;
+  }
+
+  .single-essay #intro .container {
+    position: relative;
+    -webkit-transform: none;
+            transform: none;
+    left: 0;
+  }
+
+  .single-essay #intro span {
+    color: #fff;
+    text-shadow: none;
+    margin: 0;
+    display: block;
+  }
+
+  .single-essay #intro .essay-author {
+    font-size: 20px;
+    margin-bottom: 0.3em;
+  }
+
+  .single-essay .publication-note {
+    border-color: rgba(0, 0, 0, 0.08);
+    border-width: 0.0625em;
+    border-style: solid;
+    padding: 1.4375em;
+  }
+
+  /* @end */
 }
 @media screen and (min-width: 640px) {
   /* @group ----- 01. Container Elements ----- */
@@ -1668,6 +1770,12 @@ textarea {
   .post + .pagination a.page-numbers {
     color: #b3252d;
     border: 0;
+  }
+
+  /* @end */
+  /* @group ----- 13. Essays ----- */
+  .single-essay #intro + .container {
+    padding: 1.5em 20%;
   }
 
   /* @end */

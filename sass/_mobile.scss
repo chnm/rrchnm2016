@@ -41,6 +41,10 @@ body {
     }
 }
 
+img {
+    max-width: 100%;
+}
+
 #content,
 .container {
     @include container($container-width);
@@ -82,6 +86,29 @@ body {
     float: right;
     margin: 0 0 rhythm() rhythm();
     clear: right;
+}
+
+thead tr {
+    background-color: $gray;
+    text-align: left;
+}
+
+table {
+    margin: rhythm() 0;
+}
+
+table caption {
+    margin-bottom: rhythm(.5);
+    font-weight: bold;
+}
+
+th,
+td {
+    padding: rhythm(.25);
+}
+
+tbody tr:nth-of-type(2n) {
+    background-color: lighten($gray, 50%);
 }
 
 /* @end */
@@ -128,6 +155,34 @@ hr {
     border: 0;
     width: 100%;
     clear: both;
+}
+
+blockquote {
+    background-color: $gray;
+    margin: rhythm() 0;
+    padding: rhythm();
+    position: relative;
+    clear: both;
+
+    &:before {
+        content: $fa-var-quote-left;
+        font-family: "FontAwesome";
+        font-size: 3 * $base-font-size;
+        position: absolute;
+        color: #ccc;
+        top: 0;
+        left: rhythm(-.25, 3 * $base-font-size);
+    }
+
+    &:after {
+        content: $fa-var-quote-right;
+        font-family: "FontAwesome";
+        font-size: 3 * $base-font-size;
+        color: #ccc;
+        position: absolute;
+        bottom: 0;
+        right: rhythm(-.25, 3 * $base-font-size);
+    }
 }
 
 #intro h1 em {
@@ -790,6 +845,55 @@ footer img {
     float: left;
     font-size: 1.75 * $base-font-size;
     line-height: $base-line-height;
+}
+
+/* @end */
+
+/* @group ----- 13. Essay ----- */
+
+.single-essay #intro {
+    background-color: $primary-blue;
+    height: auto;
+    min-height: 0;
+    padding: rhythm() gutter();
+    text-align: center;
+}
+
+.single-essay #intro h1 {
+    background-color: transparent;
+    color: #fff;
+
+    &:after {
+        content: "";
+        background-color: #fff;
+        height: 2px;
+        width: 100%;
+        display: block;
+        margin: rhythm(.5) 0;
+    }
+}
+
+.single-essay #intro .container {
+    position: relative;
+    transform: none;
+    left: 0;
+}
+
+.single-essay #intro span {
+    color: #fff;
+    text-shadow: none;
+    margin: 0;
+    display: block;
+}
+
+.single-essay #intro .essay-author {
+    font-size: 1.25 * $base-font-size;
+    margin-bottom: rhythm(.25, 1.25 * $base-font-size);
+}
+
+.single-essay .publication-note {
+    border-color: $gray;
+    @include rhythm-borders(1px, 1, $base-font-size, solid);
 }
 
 /* @end */

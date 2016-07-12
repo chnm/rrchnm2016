@@ -108,6 +108,25 @@ function rrchnm_get_custom_taxonomy_template( $template = '' ) {
     return $template;
 }
 
+function create_essay_type() {
+  register_post_type( 'essay',
+    array(
+      'labels' => array(
+        'name' => __( 'Essays' ),
+        'singular_name' => __( 'Essay' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'taxonomies' => array(
+            'category'
+      ),
+      'supports' => array('title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','page-attributes'),
+      'rewrite' => array( 'slug' => 'essay','with_front' => FALSE),
+    )
+  );
+  flush_rewrite_rules();
+}
+
 remove_filter( 'taxonomy_template', 'get_custom_taxonomy_template' );
 add_filter( 'taxonomy_template', 'rrchnm_get_custom_taxonomy_template' );
 
@@ -115,5 +134,6 @@ add_theme_support( 'post-thumbnails' );
 
 add_action( 'init', 'register_top_nav' );
 add_action( 'init', 'register_about_nav' );
+add_action( 'init', 'create_essay_type' );
 add_action( 'show_user_profile', 'show_staff_position' );
 add_action( 'edit_user_profile', 'show_staff_position' );
