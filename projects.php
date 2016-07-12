@@ -28,6 +28,7 @@ foreach ($projectHeaders as $projectHeader) {
 <div id="content">
     <?php echo the_content(); ?>
     <nav>
+        <h2>Browse Projects</h2>
         <ul>
         <?php foreach($projectNav as $filter => $categories): ?>
             <li>By <?php echo $filter; ?>

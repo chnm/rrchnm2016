@@ -21,6 +21,7 @@
     <p class="publication-note"><?php echo $essayPubInfo; ?></p>
     <?php endif; ?>
     <?php echo the_content(); ?>
+    <a href="<?php echo get_post_type_archive_link( 'essay' ); ?>" class="button">Back to essays</a>
 </div>
 
 <?php endwhile; else : ?>

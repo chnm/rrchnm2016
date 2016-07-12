@@ -896,4 +896,15 @@ footer img {
     @include rhythm-borders(1px, 1, $base-font-size, solid);
 }
 
+.post-type-archive-essay #content nav > ul {
+    margin-top: 0;
+}
+
+.post-type-archive-essay #content nav > ul > li {
+    margin-bottom: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: $base-font-size;
+    text-transform: none;
+}
+
 /* @end */

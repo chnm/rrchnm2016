@@ -457,4 +457,10 @@ footer .copyright {
     padding: rhythm() 20%;
 }
 
+.essays {
+    width: calc(#{span(9 of 12)} - #{gutter()});
+    padding: rhythm() 0 rhythm() gutter();
+    float: right;
+}
+
 /* @end */
