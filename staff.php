@@ -46,7 +46,8 @@
     <div id="staff">
     <?php $affiliatedTerm = get_term_by('slug', 'affiliate', 'position'); ?>
     <?php $affiliateIDs = get_objects_in_term( $affiliatedTerm->term_id, 'position' ); ?>
-    <?php $alumniIDs = rrchnm_get_users_by_cimy_field_value('ACTIVE', 'NO'); ?>
+    <?php $alumniTerm = get_term_by('slug', 'alumni', 'position'); ?>
+    <?php $alumniIDs = get_objects_in_term( $alumniTerm->term_id, 'position' ); ?>
     <?php $inactiveIDs = array_merge($affiliateIDs, $alumniIDs); ?>
     <?php $users = get_users(array('exclude' => $inactiveIDs)); ?>
 
