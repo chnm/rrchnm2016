@@ -1,5 +1,6 @@
     <footer>
        <nav>
+            <a href="<?php echo get_site_url(); ?>"><img src="<?php echo bloginfo('template_directory'); ?>/img/rrchnm-logo.png" alt="George Mason University Logo" /></a>
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu') ); ?>
        </nav>
 
