@@ -67,13 +67,12 @@
         $userUrl = get_author_posts_url($userId);
         ?>
         <div class="person">
-            <a href="<?php echo $userUrl; ?>" class="avatar">
-                <?php if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userId, 'picture')): ?>
-                    <?php $avatar = get_cimyFieldValue($userId, 'picture'); ?>
-                <?php else: ?>
-                    <?php $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png'; ?>
-                <?php endif; ?>
-                <img src="<?php echo $avatar; ?>" title="avatar for <?php echo $displayName; ?>">
+            <?php if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userId, 'picture')): ?>
+                <?php $avatar = get_cimyFieldValue($userId, 'picture'); ?>
+            <?php else: ?>
+                <?php $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png'; ?>
+            <?php endif; ?>
+            <a href="<?php echo $userUrl; ?>" class="avatar" style="background-image:url('<?php echo $avatar; ?>')">
             </a>
             <span class="name"><a href="<?php echo $userUrl; ?>"><?php echo $displayName; ?></a></span>
         </div>
