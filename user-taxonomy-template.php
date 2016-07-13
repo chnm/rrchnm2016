@@ -44,10 +44,13 @@
                             $filterSlug = $filterTerm->slug;
                             $filterName = $filterTerm->name;
                         ?>
-                        <?php if ($termName == $filterName): ?>
-                        <li class="active"><a href="<?php echo site_url() . "/tag/$filter/$filterSlug"; ?>"><?php echo $filterName; ?> (<?php echo count($users); ?>)</a></li>
-                        <?php else: ?>
-                        <li><a href="<?php echo site_url() . "/tag/$filter/$filterSlug"; ?>#staff"><?php echo $filterName; ?></a></li>
+                        <?php $filterUsers = get_objects_in_term( $filterTerm->term_id, $filterTerm->taxonomy ); ?>
+                        <?php if (count($filterUsers) > 0): ?>
+                            <?php if (($termName == $filterName) && ($filter == $term->taxonomy)): ?>
+                            <li class="active"><a href="<?php echo site_url() . "/tag/$filter/$filterSlug"; ?>"><?php echo $filterName; ?> (<?php echo count($users); ?>)</a></li>
+                            <?php else: ?>
+                            <li><a href="<?php echo site_url() . "/tag/$filter/$filterSlug"; ?>#staff"><?php echo $filterName; ?></a></li>
+                            <?php endif; ?>
                         <?php endif; ?>
                         <?php endforeach; ?>
                     </ul>
