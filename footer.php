@@ -1,16 +1,7 @@
     <footer>
-        <address class="vcard" id="hcard-chnm">
-            <div class="logo"><a href="<?php echo get_site_url(); ?>">Roy Rosenzweig Center for History and New Media</a></div>
-            <span id="hisdept-org"><a href="//historyarthistory.gmu.edu/">Department of History and Art History</a></span>
-            <span class="adr" id="chnm-address">
-                <a href="//www.gmu.edu" class="university">George Mason University</a><br>
-                4400 University Drive, MSN 1E7<br>
-                Fairfax, VA 22030
-            </span>
-            <span class="tel"><a href="tel:7039939277">703-993-9277</a> T</span>
-            <span class="fax"><a href="tel:7039934585">703-993-4585</a> F</span>
-            <a href="mailto:chnm@gmu.edu" class="email">chnm@gmu.edu</a>
-        </address>
+       <nav>
+            <?php wp_nav_menu( array( 'theme_location' => 'footer-menu') ); ?>
+       </nav>
 
         <div class="license">
             <?php $requestsPage = get_page_by_title('Permission Requests'); ?>
@@ -27,7 +18,7 @@
 
         <div class="neh">
             <img src="<?php echo bloginfo('template_directory'); ?>/img/neh-logo.png" alt="NEH Logo" />
-            RRCHNM is supported in part by an endowment made possible by a National Endowment for the Humanities Challenge Grant
+            RRRCHNM is supported in part by an endowment made possible by National Endowment for the Humanities Challenge Grants
         </div>
 
         <div id="description">Building a Better Yesterday, Bit by Bit</div>

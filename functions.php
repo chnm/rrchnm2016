@@ -4,6 +4,10 @@ function register_top_nav() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 
+function register_footer_nav() {
+  register_nav_menu('footer-menu',__( 'Footer Menu' ));
+}
+
 function register_about_nav() {
     register_nav_menu( 'about-menu', 'About Us Menu');
 }
@@ -147,6 +151,7 @@ add_filter( 'taxonomy_template', 'rrchnm_get_custom_taxonomy_template' );
 add_theme_support( 'post-thumbnails' );
 
 add_action( 'init', 'register_top_nav' );
+add_action( 'init', 'register_footer_nav' );
 add_action( 'init', 'register_about_nav' );
 add_action( 'init', 'create_essay_type' );
 add_action( 'show_user_profile', 'show_staff_position' );

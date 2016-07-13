@@ -859,6 +859,10 @@ textarea {
     clear: both;
   }
 
+  footer nav ul {
+    margin: 0 0 1.5em;
+  }
+
   footer img {
     max-height: 4.5em;
     width: auto;
@@ -866,15 +870,6 @@ textarea {
 
   footer .logo {
     margin-bottom: 0.375em;
-  }
-
-  address {
-    font-style: normal;
-  }
-
-  address span {
-    display: block;
-    clear: both;
   }
 
   footer .neh {
@@ -1490,7 +1485,7 @@ textarea {
   }
 
   footer .copyright,
-  footer address {
+  footer nav {
     width: 25%;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 none;
@@ -1501,7 +1496,7 @@ textarea {
     padding-left: 0.625%;
   }
 
-  footer address {
+  footer nav {
     padding-right: 0.625%;
   }
 

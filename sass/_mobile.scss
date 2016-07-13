@@ -431,6 +431,10 @@ footer {
     font-size: .875 * $base-font-size;
 }
 
+footer nav ul {
+    margin: 0 0 rhythm();
+}
+
 footer img {
     max-height: rhythm(3);
     width: auto;
@@ -438,15 +442,6 @@ footer img {
 
 footer .logo {
     margin-bottom: rhythm(.25);
-}
-
-address {
-    font-style: normal;
-}
-
-address span {
-    display: block;
-    clear: both;
 }
 
 footer .neh {
