@@ -1484,12 +1484,8 @@ textarea {
             flex-direction: row;
   }
 
-  footer .copyright,
-  footer nav {
+  footer > * {
     width: 25%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 none;
-            flex: 0 1 none;
   }
 
   footer .copyright {

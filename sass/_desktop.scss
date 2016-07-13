@@ -121,10 +121,8 @@ footer {
     flex-direction: row;
 }
 
-footer .copyright,
-footer nav {
+footer > * {
     width: span(3 of 12);
-    flex: 0 1 none;;
 }
 
 footer .copyright {

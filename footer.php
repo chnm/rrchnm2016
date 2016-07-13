@@ -16,8 +16,12 @@
             &copy; 1996&ndash;2016, Roy Rosenzweig Center for History and New Media. (<a href="<?php echo get_page_link($copyrightPage->ID); ?>">Copyright Notice</a> &amp; <a href="<?php echo get_page_link($policyPage->ID); ?>">User Generated Content Policy</a>)
         </div>
 
+        <div class="gmu">
+            <a href="http://gmu.edu"><img src="<?php echo bloginfo('template_directory'); ?>/img/gmu-logo.png" alt="George Mason University Logo" /></a>
+        </div>
+
         <div class="neh">
-            <img src="<?php echo bloginfo('template_directory'); ?>/img/neh-logo.png" alt="NEH Logo" />
+            <a href="http://neh.gov"><img src="<?php echo bloginfo('template_directory'); ?>/img/neh-logo.png" alt="NEH Logo" /></a>
             RRRCHNM is supported in part by an endowment made possible by National Endowment for the Humanities Challenge Grants
         </div>
 
