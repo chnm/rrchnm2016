@@ -78,7 +78,7 @@ $cimyFieldsTrue = function_exists('get_cimyFieldValue');
                     $imgBgUrl = site_url() . '/ui/i/project-images/' . $projectMeta['Image'][0];
                 }
                 ?>
-                <a href="<?php echo esc_url(get_permalink($projectID)); ?>"><div class="thumbnail"><?php echo ($imgBgUrl !== '') ? '<img src="' . $imgBgUrl . '">' : ''; ?></div></a>
+                <a href="<?php echo esc_url(get_permalink($projectID)); ?>" class="thumbnail" style="background-image:url('<?php echo $imgBgUrl; ?>')"></a>
                 <h3><a href="<?php echo esc_url(get_permalink($projectID)); ?>"><?php echo get_the_title($projectID); ?></a></h3>
                 </div>
             <?php endforeach; ?>

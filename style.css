@@ -1055,18 +1055,14 @@ textarea {
   /* @group ----- 09. What We Do ----- */
   #staff-projects .project .thumbnail,
   #projects .project .thumbnail {
-    max-height: 5.25em;
-    overflow: hidden;
-  }
-  #staff-projects .project .thumbnail img,
-  #projects .project .thumbnail img {
+    display: block;
+    height: 6em;
     width: 100%;
-    display: inline-block;
-  }
-  #staff-projects .project .thumbnail:empty,
-  #projects .project .thumbnail:empty {
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.08);
-    height: 5.25em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 
   #projects .project h4 {

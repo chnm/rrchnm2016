@@ -68,6 +68,7 @@ foreach ($projectHeaders as $projectHeader) {
             ?>
             <div class="project">
                 <?php
+                $imgBgUrl = '';
                 if ( has_post_thumbnail($projectID) ) {
                     $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($projectID), 'large' );
                     $imgBgUrl = $imgBgUrl[0];
@@ -75,7 +76,7 @@ foreach ($projectHeaders as $projectHeader) {
                     $imgBgUrl = site_url() . '/ui/i/project-images/' . $projectMeta['Image'][0];
                 }
                 ?>
-                <a href="<?php echo esc_url(get_permalink($projectID)); ?>"><div class="thumbnail"><?php echo ($imgBgUrl !== '') ? '<img src="' . $imgBgUrl . '">' : ''; ?></div></a>
+                <a href="<?php echo esc_url(get_permalink($projectID)); ?>" class="thumbnail" style="background-image:url('<?php echo $imgBgUrl; ?>')"></a>
                 <h4><a href="<?php echo esc_url(get_permalink($projectID)); ?>"><?php echo $project->post_title; ?></a></h4>
             </div>
         <?php endforeach; ?>

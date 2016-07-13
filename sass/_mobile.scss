@@ -627,18 +627,14 @@ footer #description {
 
 #staff-projects .project .thumbnail,
 #projects .project .thumbnail {
-    max-height: rhythm(3.5);
+    display: block;
+    height: rhythm(4);
+    width: 100%;
     overflow: hidden;
-
-    img {
-        width: 100%;
-        display: inline-block;
-    }
-
-    &:empty {
         background-color: $gray;
-        height: rhythm(3.5);
-    }
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 #projects .project h4 {

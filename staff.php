@@ -34,8 +34,8 @@
                         <?php $filterUsers = get_objects_in_term( $filterTerm->term_id, $filterTerm->taxonomy ); ?>
                         <?php if (count($filterUsers) > 0): ?>
                             <li><a href="<?php echo site_url() . "/tag/$filter/$filterSlug"; ?>#staff"><?php echo $filterTerm->name; ?></a></li>
-                            <?php endforeach; ?>
                         <?php endif; ?>
+                        <?php endforeach; ?>
                     </ul>
                 </li>
             <?php endif; ?>
