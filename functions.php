@@ -44,7 +44,11 @@ function rrchnm_show_project_categories() {
     $postCategories = get_the_category($pageID);
     $sortedCategories = [];
     foreach ($postCategories as $postCategory) {
-        $sortedCategories[$postCategory->parent][] = $postCategory;
+        $categoryParentID = $postCategory->parent;
+        $categoryParent = get_category($categoryParentID);
+        if (in_array($categoryParent->name, $categoryHeadings)) {
+            $sortedCategories[$categoryParentID][] = $postCategory;
+        }
     }
 
     foreach ($categoryHeadings as $categoryHeading) {

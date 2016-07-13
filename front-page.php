@@ -23,17 +23,10 @@
             <a href="#" class="twitter-icon"></a>
             <a href="#" class="facebook-icon"></a>
             </p>
-            <a href="#" class="button">Support the Center</a>
         </div>
         <nav>
             <ul>
-                <li><a href="<?php echo get_permalink(get_page_by_path('our-story')); ?>">About Us</a>
-                    <ul>
-                        <li><a href="#">Mission</a></li>
-                        <li><a href="#">A Brief History</a></li>
-                        <li><a href="#">Awards</a></li>
-                    </ul>
-                </li>
+                <li><a href="https://securemason.gmu.edu/s/1564/match/index-1col.aspx?sid=1564&gid=2&pgid=651&cid=1709&dids=176&appealcode=IHM01">Support the Center</a></li>
                 <li><a href="http://chnm.gmu.edu/courses/fellowship/">DH Fellows Program</a></li>
                 <li><a href="<?php echo site_url(); ?>/category/projects/content/software">Tools</a>
                     <ul>
