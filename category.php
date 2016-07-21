@@ -53,6 +53,7 @@ $whatWeDoPageID = $whatWeDoPage->ID;
 
             ?>
             <?php foreach($projectNav as $filter => $categories): ?>
+                <?php if (count($categories) > 0): ?>
                 <li>By <?php echo $filter; ?>
                     <ul>
                         <?php foreach ($categories as $category): ?>
@@ -61,6 +62,7 @@ $whatWeDoPageID = $whatWeDoPage->ID;
                         <?php endforeach; ?>
                     </ul>
                 </li>
+                <?php endif; ?>
             <?php endforeach; ?>
             </ul>
         </nav>
