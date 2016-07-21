@@ -31,15 +31,15 @@ foreach ($projectHeaders as $projectHeader) {
         <h2>Browse Projects</h2>
         <ul>
         <?php foreach($projectNav as $filter => $categories): ?>
+            <?php if (count($categories) > 0): ?>
             <li>By <?php echo $filter; ?>
-                <?php if (count($cats > 0)): ?>
                 <ul>
                     <?php foreach ($categories as $category): ?>
                     <li><a href="<?php echo esc_url(get_category_link($category->term_id)); ?>#projects"><?php echo $category->name; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
-                <?php endif; ?>
             </li>
+            <?php endif; ?>
         <?php endforeach; ?>
         </ul>
     </nav>
