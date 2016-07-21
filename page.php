@@ -1,10 +1,10 @@
 <?php $customFields = get_post_custom(); ?>
 
-<?php define( 'WP_USE_THEMES', false ); get_header(); ?>
+<?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div id="intro" <?php echo ($imgBgAttr) ? $imgBgAttr : ''; ?>>
+<div id="intro" <?php echo (isset($imgBgAttr)) ? $imgBgAttr : ''; ?>>
     <div class="container">
     <h1><?php echo the_title(); ?></h1>
     <?php if ($introText = $customFields['Intro text'][0]): ?>

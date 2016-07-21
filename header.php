@@ -1,6 +1,10 @@
 <?php
 global $post;
-$slug = get_post($post)->post_name;
+if(is_single()) {
+    $slug = get_post($post)->post_name;
+} else {
+    $slug = '';
+}
 ?>
 <!doctype html>
 <html lang="en">

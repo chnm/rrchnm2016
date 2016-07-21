@@ -9,7 +9,7 @@ foreach ($projectHeaders as $projectHeader) {
 }
 ?>
 
-<?php define( 'WP_USE_THEMES', false ); get_header(); ?>
+<?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -54,7 +54,7 @@ foreach ($projectHeaders as $projectHeader) {
                 array(
                     'taxonomy' => 'category',
                     'field' => 'slug',
-                    'terms' => array('projects'),
+                    'terms' => array('featured'),
                 ),
             ),
         );
@@ -72,7 +72,7 @@ foreach ($projectHeaders as $projectHeader) {
                 if ( has_post_thumbnail($projectID) ) {
                     $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($projectID), 'large' );
                     $imgBgUrl = $imgBgUrl[0];
-                } else if ($projectMeta['Image']) {
+                } else if (isset($projectMeta['Image'])) {
                     $imgBgUrl = site_url() . '/ui/i/project-images/' . $projectMeta['Image'][0];
                 }
                 ?>
