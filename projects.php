@@ -7,6 +7,34 @@ $projectHeaders = get_terms('category', array('parent' => $projectCategory->term
 foreach ($projectHeaders as $projectHeader) {
     $projectNav[$projectHeader->name] = get_terms('category', array('parent' => $projectHeader->term_id));
 }
+$projectsFilters = array(
+    'posts_per_page' => -1,
+    'post_type'     => 'page',
+    'post_status' => 'publish',
+    'tax_query' => array(
+        'relation' => 'AND',
+        array(
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => array('projects'),
+        ),
+    ),
+);
+$featuredFilters = array(
+    'posts_per_page' => -1,
+    'post_type'     => 'page',
+    'post_status' => 'publish',
+    'tax_query' => array(
+        'relation' => 'AND',
+        array(
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => array('featured'),
+        ),
+    ),
+);
+$projects = get_posts($projectsFilters);
+$featured = get_posts($featuredFilters);
 ?>
 
 <?php get_header(); ?>
@@ -27,6 +55,32 @@ foreach ($projectHeaders as $projectHeader) {
 
 <div id="content">
     <?php echo the_content(); ?>
+    <div id="featured">
+        <h3>Featured Projects</h3>
+        <?php foreach ($featured as $featuredProject): ?>
+            <?php
+            $projectID = $featuredProject->ID;
+            $projectMeta = get_post_custom($projectID);
+            $imgBgUrl = '';
+            ?>
+            <div class="project">
+                <?php
+                $imgBgUrl = '';
+                if ( has_post_thumbnail($projectID) ) {
+                    $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($projectID), 'large' );
+                    $imgBgUrl = $imgBgUrl[0];
+                } else if (isset($projectMeta['Image'])) {
+                    $imgBgUrl = site_url() . '/ui/i/project-images/' . $projectMeta['Image'][0];
+                }
+                ?>
+                <a href="<?php echo esc_url(get_permalink($projectID)); ?>" class="thumbnail" style="background-image:url('<?php echo $imgBgUrl; ?>')"></a>
+                <h4><a href="<?php echo esc_url(get_permalink($projectID)); ?>"><?php echo $featuredProject->post_title; ?></a></h4>
+                <?php if (isset($projectMeta['Short Description'])): ?>
+                <?php echo $projectMeta['Short Description'][0]; ?>
+                <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
     <nav>
         <h2>Browse Projects</h2>
         <ul>
@@ -44,22 +98,6 @@ foreach ($projectHeaders as $projectHeader) {
         </ul>
     </nav>
     <div id="projects">
-        <?php
-        $projectsFilters = array(
-            'posts_per_page' => -1,
-            'post_type'     => 'page',
-            'post_status' => 'publish',
-            'tax_query' => array(
-                'relation' => 'AND',
-                array(
-                    'taxonomy' => 'category',
-                    'field' => 'slug',
-                    'terms' => array('featured'),
-                ),
-            ),
-        );
-        $projects = get_posts($projectsFilters);
-        ?>
         <?php foreach ($projects as $project): ?>
             <?php
             $projectID = $project->ID;
