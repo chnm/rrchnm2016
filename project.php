@@ -2,19 +2,19 @@
 
 <?php $customFields = get_post_custom(); ?>
 
-<?php define( 'WP_USE_THEMES', false ); get_header(); ?>
+<?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div id="intro" <?php echo ($imgBgAttr) ? $imgBgAttr : ''; ?>>
+<div id="intro">
     <div class="container">
-    <?php if ($introTitle = $customFields['Intro title'][0]): ?>
-    <h1><?php echo $introTitle; ?></h1>
+    <?php if (isset($customFields['Intro title'])): ?>
+    <h1><?php echo $customFields['Intro title'][0]; ?></h1>
     <?php else: ?>
     <h1><?php echo the_title(); ?></h1>
     <?php endif; ?>
-    <?php if ($introText = $customFields['Intro text'][0]): ?>
-    <p><?php echo $introText; ?></p>
+    <?php if (isset($customFields['Intro text'])): ?>
+    <p><?php echo $customFields['Intro text'][0]; ?></p>
     <?php endif; ?>
     </div>
 </div>

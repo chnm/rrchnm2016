@@ -21,7 +21,7 @@ if(is_single()) {
     <?php if ( is_page() && has_post_thumbnail() ): ?>
     <?php $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ); ?>
     <style>
-        <?php echo '.' . $slug; ?> #intro:before {
+        #intro:before {
             background-image: url('<?php echo $imgBgUrl[0]; ?>');
         }
     </style>
