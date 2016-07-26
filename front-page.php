@@ -10,10 +10,9 @@
 <div id="keep-up">
     <div class="container">
         <div class="follow">
-            <p><a href="#">Keep up on Center activity at the Hub</a></p>
+            <p><a href="<?php echo get_permalink(get_page_by_path('the-hub')); ?>">Keep up on Center activity at the Hub</a></p>
             <p>Follow us on<br>
-            <a href="#" class="twitter-icon"></a>
-            <a href="#" class="facebook-icon"></a>
+            <a href="http://twitter.com/chnm" class="twitter-icon"></a>
             </p>
         </div>
         <nav>
