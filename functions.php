@@ -99,6 +99,9 @@ function rrchnm_staff_member($userID) {
     }
     $html .= '<a href="' . $userUrl . '" class="avatar" aria-title="staff avatar" style="background-image:url(\'' . $avatar . '\')"></a>';
     $html .= '<span class="name"><a href="' . $userUrl . '">' . $displayName . '</a></span>';
+    if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userID, 'jobtitle')) {
+        $html .= '<span class="position">' . get_cimyFieldValue($userID, 'jobtitle') . '</span>';
+    }
     $html .= '</div>';
     return $html;
 }

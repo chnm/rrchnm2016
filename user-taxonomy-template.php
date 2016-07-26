@@ -59,21 +59,7 @@
     </nav>
     <div id="staff">
     <?php foreach ($users as $userId): ?>
-        <?php
-        $userData = get_userdata($userId);
-        $displayName = $userData->first_name . ' ' . $userData->last_name;
-        $userUrl = get_author_posts_url($userId);
-        ?>
-        <div class="person">
-            <?php if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userId, 'picture')): ?>
-                <?php $avatar = get_cimyFieldValue($userId, 'picture'); ?>
-            <?php else: ?>
-                <?php $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png'; ?>
-            <?php endif; ?>
-            <a href="<?php echo $userUrl; ?>" class="avatar" style="background-image:url('<?php echo $avatar; ?>')">
-            </a>
-            <span class="name"><a href="<?php echo $userUrl; ?>"><?php echo $displayName; ?></a></span>
-        </div>
+        <?php echo rrchnm_staff_member($userId); ?>
     <?php endforeach; ?>
     </div>
 
