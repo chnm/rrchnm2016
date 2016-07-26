@@ -210,6 +210,17 @@ caption {
 
 /* @group ----- 03. Form elements ----- */
 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+    border-color: $gray;
+    @include rhythm-borders(1px, .25, $base-font-size, solid);
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+
 .button,
 button,
 input[type="submit"] {
@@ -655,6 +666,48 @@ footer #description {
     max-width: none;
 }
 
+    /* @group ----- 08a. Author page ----- */
+
+    .author .avatar {
+        width: 50%;
+        height: auto;
+        border-radius: 100%;
+        margin: auto;
+        display: block;
+    }
+
+    .author h1 {
+        text-align: center;
+        display: block;
+        padding: 0;
+    }
+
+    #staff-meta {
+        margin-bottom: rhythm();
+    }
+
+    #staff-meta .description.field {
+        border-color: $gray;
+        @include leading-border(1px, 1, $base-font-size, solid);
+        margin-top: rhythm();
+        text-align: left;
+    }
+
+    #staff-meta .field {
+        display: block;
+        text-align: center;
+    }
+
+    #staff-projects {
+        clear: both;
+    }
+
+    #staff-projects img {
+        width: 100%;
+    }
+
+    /* @end */
+
 /* @end */
 
 /* @group ----- 09. What We Do ----- */
@@ -777,7 +830,7 @@ footer #description {
 
 /* @end */
 
-/* @group ----- 10. Who We Work With ----- */
+/* @group ----- 10. Work With Us ----- */
 
 
 .collab-type .entity {
@@ -789,47 +842,46 @@ footer #description {
     font-style: italic;
 }
 
-    /* @group ----- 10a. Author page ----- */
+form.wpcf7-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
 
-    .author .avatar {
-        width: 50%;
-        height: auto;
-        border-radius: 100%;
-        margin: auto;
-        display: block;
-    }
+.wpcf7-form .field-group {
+    width: 100%;
+    margin-bottom: rhythm();
+}
 
-    .author h1 {
-        text-align: center;
-        display: block;
-        padding: 0;
-    }
+.wpcf7-form .first-name.field-group,
+.wpcf7-form .last-name.field-group {
+    width: 49%;
+}
 
-    #staff-meta {
-        margin-bottom: rhythm();
-    }
+.wpcf7-form .field-group input[type="text"],
+.wpcf7-form .field-group input[type="email"],
+.wpcf7-form .field-group textarea {
+    width: 100%;
+    margin-bottom: rhythm(.25);
+}
 
-    #staff-meta .description.field {
-        border-color: $gray;
-        @include leading-border(1px, 1, $base-font-size, solid);
-        margin-top: rhythm();
-        text-align: left;
-    }
+.wpcf7-form .field-group textarea {
+    margin-top: rhythm(.25);
+}
 
-    #staff-meta .field {
-        display: block;
-        text-align: center;
-    }
+.wpcf7-form-control-wrap.inquiry {
+    display: inline-block;
+}
 
-    #staff-projects {
-        clear: both;
-    }
+.wpcf7-form label {
+    font-weight: bold;
+}
 
-    #staff-projects img {
-        width: 100%;
-    }
-
-    /* @end */
+.wpcf7-list-item label {
+    font-weight: normal;
+}
 
 /* @end */
 

@@ -7,14 +7,7 @@
         <div class="license">
             <?php $requestsPage = get_page_by_title('Permission Requests'); ?>
             <a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/">
-            <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />
-            <span xmlns:dct="//purl.org/dc/terms/" property="dct:title">Content on this site</span> by <a xmlns:cc="//creativecommons.org/ns#" href="<?php echo get_site_url(); ?>" property="cc:attributionName" rel="cc:attributionURL">Center for History and New Media</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>. Request permissions beyond the scope of this license <a xmlns:cc="//creativecommons.org/ns#" href="<?php echo get_page_link($requestsPage->ID); ?>" rel="cc:morePermissions">here.</a>
-        </div>
-
-        <div class="copyright">
-            <?php $copyrightPage = get_page_by_title('Copyright'); ?>
-            <?php $policyPage = get_page_by_title('RRCHNM User Generated Content Policy'); ?>
-            &copy; 1996&ndash;2016, Roy Rosenzweig Center for History and New Media. (<a href="<?php echo get_page_link($copyrightPage->ID); ?>">Copyright Notice</a> &amp; <a href="<?php echo get_page_link($policyPage->ID); ?>">User Generated Content Policy</a>)
+            <img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />Content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
         </div>
 
         <div class="gmu">

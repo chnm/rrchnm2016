@@ -626,6 +626,19 @@ textarea {
 
   /* @end */
   /* @group ----- 03. Form elements ----- */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  textarea {
+    border-color: rgba(0, 0, 0, 0.08);
+    border-width: 0.0625em;
+    border-style: solid;
+    padding: 0.3125em;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .button,
   button,
   input[type="submit"] {
@@ -1079,6 +1092,48 @@ textarea {
     max-width: none;
   }
 
+  /* @group ----- 08a. Author page ----- */
+  .author .avatar {
+    width: 50%;
+    height: auto;
+    border-radius: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .author h1 {
+    text-align: center;
+    display: block;
+    padding: 0;
+  }
+
+  #staff-meta {
+    margin-bottom: 1.5em;
+  }
+
+  #staff-meta .description.field {
+    border-color: rgba(0, 0, 0, 0.08);
+    border-top-width: 0.0625em;
+    border-top-style: solid;
+    padding-top: 1.4375em;
+    margin-top: 1.5em;
+    text-align: left;
+  }
+
+  #staff-meta .field {
+    display: block;
+    text-align: center;
+  }
+
+  #staff-projects {
+    clear: both;
+  }
+
+  #staff-projects img {
+    width: 100%;
+  }
+
+  /* @end */
   /* @end */
   /* @group ----- 09. What We Do ----- */
   #featured h3 {
@@ -1196,7 +1251,7 @@ textarea {
 
   /* @end */
   /* @end */
-  /* @group ----- 10. Who We Work With ----- */
+  /* @group ----- 10. Work With Us ----- */
   .collab-type .entity {
     display: block;
     font-weight: bold;
@@ -1206,48 +1261,52 @@ textarea {
     font-style: italic;
   }
 
-  /* @group ----- 10a. Author page ----- */
-  .author .avatar {
-    width: 50%;
-    height: auto;
-    border-radius: 100%;
-    margin: auto;
-    display: block;
+  form.wpcf7-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 75%;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
-  .author h1 {
-    text-align: center;
-    display: block;
-    padding: 0;
-  }
-
-  #staff-meta {
+  .wpcf7-form .field-group {
+    width: 100%;
     margin-bottom: 1.5em;
   }
 
-  #staff-meta .description.field {
-    border-color: rgba(0, 0, 0, 0.08);
-    border-top-width: 0.0625em;
-    border-top-style: solid;
-    padding-top: 1.4375em;
-    margin-top: 1.5em;
-    text-align: left;
+  .wpcf7-form .first-name.field-group,
+  .wpcf7-form .last-name.field-group {
+    width: 49%;
   }
 
-  #staff-meta .field {
-    display: block;
-    text-align: center;
-  }
-
-  #staff-projects {
-    clear: both;
-  }
-
-  #staff-projects img {
+  .wpcf7-form .field-group input[type="text"],
+  .wpcf7-form .field-group input[type="email"],
+  .wpcf7-form .field-group textarea {
     width: 100%;
+    margin-bottom: 0.375em;
   }
 
-  /* @end */
+  .wpcf7-form .field-group textarea {
+    margin-top: 0.375em;
+  }
+
+  .wpcf7-form-control-wrap.inquiry {
+    display: inline-block;
+  }
+
+  .wpcf7-form label {
+    font-weight: bold;
+  }
+
+  .wpcf7-list-item label {
+    font-weight: normal;
+  }
+
   /* @end */
   /* @group ----- 11. Our Story ----- */
   .page-template-about #intro {
