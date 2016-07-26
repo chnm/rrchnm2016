@@ -44,9 +44,7 @@ $featured = get_posts($featuredFilters);
 <div id="intro">
     <div class="container">
     <?php $customFields = get_post_custom(); ?>
-    <?php if ($introTitle = $customFields['Intro title'][0]): ?>
-    <h1><?php echo $introTitle; ?></h1>
-    <?php endif; ?>
+    <h1><?php echo the_title(); ?></h1>
     <?php if ($introText = $customFields['Intro text'][0]): ?>
     <p><?php echo $introText; ?></p>
     <?php endif; ?>
