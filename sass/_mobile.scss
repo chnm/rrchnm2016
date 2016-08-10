@@ -436,19 +436,37 @@ nav#global ul.open {
 /* @group ----- 06. Footer ----- */
 
 footer {
-    @include container($container-width);
-    padding: rhythm(1, .875 * $base-font-size);
     border-top: 1px solid $gray;
     font-size: .875 * $base-font-size;
 }
 
+footer nav {
+    background-color: $gray;
+    padding: rhythm(.5) rhythm();
+}
+
+footer .menu-footer-container,
+footer nav a,
+footer nav ul,
+footer nav li  {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
 footer nav ul {
-    margin: 0 0 rhythm();
+    padding: rhythm(.25) 0;
+}
+
+footer nav a,
+footer nav li {
+    margin-right: rhythm();
 }
 
 footer img {
     max-height: rhythm(3);
     width: auto;
+    vertical-align: top;
 }
 
 footer .logo {
@@ -456,7 +474,7 @@ footer .logo {
 }
 
 footer nav img {
-    height: rhythm(2);
+    height: rhythm(1.5);
 }
 
 footer .neh {
@@ -512,33 +530,33 @@ footer #description {
 }
 
 #features {
-    background-color: $gray;
+    background-color: $primary-blue;
     padding: rhythm();
     text-align: center;
+    color: #fff;
 }
 
-.feature:not(:last-child) {
-    margin-bottom: rhythm();
-    border-color: rgba(255,255,255,.15);
-    @include trailing-border(1px, 1, $base-font-size, solid)
-}
-
-#features a {
-    color: $primary-blue;
+#features p {
+    margin: 0;
+    padding: rhythm(2, 1.25 * $base-font-size) rhythm(1, 1.25 * $base-font-size);
+    border: 3px solid #fff;
     font-family: "Oswald", sans-serif;
-    text-transform: uppercase;
+    font-size: 1.25 * $base-font-size;
+    line-height: 1.5 * $base-line-height;
     font-weight: 300;
-    font-size: 1.75 * $base-font-size;
-    display: block;
+}
+
+#features .center-name {
+    text-transform: uppercase;
 }
 
 .hub-link {
+    width: 100%;
     display: block;
     font-family: "Oswald", sans-serif;
     font-size: 1.5 * $base-font-size;
-    margin-bottom: rhythm(1, 1.5 * $base-font-size);
     border-bottom: 1px solid $gray;
-    padding: 0 rhythm(1, 1.5 * $base-font-size) rhythm(1, 1.5 * $base-font-size);
+    padding: rhythm(1, 1.5 * $base-font-size);
     font-weight: 300;
     text-align: center;
 
@@ -550,45 +568,120 @@ footer #description {
     }
 }
 
-#keep-up {
-    overflow: hidden
+.feature {
+    padding: 0 rhythm() rhythm(3);
+    margin: 0;
+    position: relative;
 }
 
-#keep-up .twitter-icon,
-#keep-up .facebook-icon {
-    background-color: #fff;
-    color: $primary-red;
-    width: $base-line-height;
-    height: $base-line-height;
-    display: inline-block;
-    margin: rhythm(.25) 0;
+.news.feature {
+    border-left: 1px solid $gray;
+    border-right: 1px solid $gray;
+}
+
+.projects.feature {
+    background-size: contain;
+    background-position: center;
+    background-color: #f9f9f9;
+    background-repeat: no-repeat;
+}
+
+.essay.feature:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    right: 0;
+    bottom: 0;
+    opacity: .08;
+    background: url('img/essay-bg.png') no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.feature .avatar {
+    width: rhythm(5);
+    height: rhythm(5);
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto rhythm(.5);
+    background-size: cover;
+    background-position: center;
+}
+
+.feature h2 {
+    font-family: "Oswald", sans-serif;
+    color: $primary-blue;
+    width: 100%;
+    font-weight: 300;
+    position: relative;
+    font-size: 1.5 * $base-font-size;
+    text-shadow:
+        -3px -3px 3px #fff,
+        3px -3px 3px #fff,
+        -3px 3px 3px #fff,
+        3px 3px 3px #fff;
+    z-index: 1;
+    text-align: center;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 1px;
+        background-color: $gray;
+        z-index: -1;
+    }
+}
+
+.feature h3 {
     text-align: center;
 }
 
-#keep-up .twitter-icon:before {
-    content: $fa-var-twitter;
-    font-family: "FontAwesome";
+.feature .byline {
+    display: block;
+    margin-top: rhythm(-1);
+    text-align: center;
 }
 
-#keep-up .facebook-icon:before {
-    content: $fa-var-facebook;
-    font-family: "FontAwesome";
-}
-
-#keep-up .button {
-    background-color: #fff;
+.feature .button {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    border: 3px solid $primary-red;
     color: $primary-red;
+    font-weight: bold;
+    position: absolute;
+    bottom: rhythm();
+    left: rhythm();
+    right: rhythm();
 }
 
-#keep-up nav > ul > li {
+#support {
+    border-color: $gray;
+    @include leading-border(1px, 1, $base-font-size, solid);
+    background: url('img/support-bg.png') no-repeat center;
+    background-size: cover;
+    padding-bottom: rhythm();
+}
+
+#support .container {
+    padding: rhythm();
+    margin: rhythm();
+    border: 3px solid #fff;
+    overflow: hidden;
+}
+
+#support p {
+    margin-top: 0;
+}
+
+#support .button {
     text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: rhythm();
-}
-
-#keep-up nav ul > li > ul {
-    text-transform: none;
-    font-weight: normal;
 }
 
 /* @end */

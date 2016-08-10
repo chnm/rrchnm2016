@@ -102,22 +102,12 @@ nav#global li {
 
 /* @group ----- 06. Footer ----- */
 
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-footer > * {
-    width: span(3 of 12);
-}
-
 footer .copyright {
     padding-left: gutter();
 }
 
 footer nav {
-    padding-right: gutter();
+    width: 100%;
 }
 
 footer .neh {
@@ -128,6 +118,34 @@ footer .neh {
 footer .license {
     width: span(6 of 12);
     padding: 0 gutter();
+}
+
+footer .container {
+    height: rhythm(6);
+}
+
+footer .container > *:not(:nth-child(3)) {
+    display: inline-block;
+    max-width: 50%;
+    vertical-align: bottom;
+    margin-right: rhythm(2);
+}
+
+footer .container > a:nth-child(3) {
+    margin-right: rhythm();
+}
+
+footer .container p {
+    margin: 0;
+    font-size: .875 * $base-font-size;
+}
+
+footer .container img {
+    height: rhythm(2.5);
+}
+
+footer .container img[alt="Creative Commons License"] {
+    height: auto;
 }
 
 /* @end */
@@ -150,9 +168,8 @@ footer .license {
 
 #features {
     overflow: hidden;
-    padding: rhythm() 0;
+    padding: rhythm(.5, 1.25 * $base-font-size) 0;
     font-size: $base-font-size;
-    text-align: left;
 }
 
 .feature {
@@ -169,38 +186,12 @@ footer .license {
 .feature:not(:last-child) {
     margin-bottom: 0;
     border-bottom: 0;
-    padding-bottom: 0;
 }
 
 #keep-up {
     vertical-align: top;
-}
-
-.follow {
-    width: span(4 of 12);
-    float: left;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.follow .button {
-    text-transform: none;
-    font-weight: normal;
-}
-
-#keep-up nav {
-    float: left;
-    width: span(8 of 12);
-}
-
-#keep-up nav > ul > li {
-    width: span(4 of 8);
-    display: inline-block;
-}
-
-#keep-up nav > ul > li:not(:last-child) {
-    float: left;
-    clear: left;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* @end */

@@ -19,7 +19,7 @@
         <aside class="post-meta">
             <span class="date"><?php the_date('n/j/Y'); ?></span>
             <?php if (get_the_author_meta('user_firstname')): ?>
-                <?php $authorID = get_the_author_id(); ?>
+                <?php $authorID = get_the_author_meta('ID'); ?>
                 <?php $authorUrl = get_author_posts_url($authorID); ?>
                 <?php if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($authorID, 'picture')): ?>
                     <?php $avatar = get_cimyFieldValue($authorID, 'picture'); ?>
