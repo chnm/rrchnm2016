@@ -17,5 +17,13 @@
             e.preventDefault();
             $('#menu-top-nav, body').toggleClass('open');
         });
+
+        $('#searchform').addClass('closed');
+
+        $('.search-toggle').click(function(e) {
+            e.preventDefault();
+            $('#searchform').toggleClass('closed');
+            $('#s').focus();
+        });
     });
 })(jQuery)

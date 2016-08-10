@@ -78,6 +78,18 @@ nav#global .mobile-toggle {
     display: none;
 }
 
+#search {
+    display: inline-block;
+}
+
+.search-toggle {
+    display: inline-block;
+    position: static;
+    border: 0;
+    height: auto;
+    width: auto;
+}
+
 nav#global ul {
     position: relative;
     margin: 0;
@@ -102,17 +114,22 @@ nav#global li {
 
 /* @group ----- 06. Footer ----- */
 
-footer .copyright {
-    padding-left: gutter();
-}
-
 footer nav {
     width: 100%;
 }
 
+footer .menu-footer-container {
+    margin-top: 0;
+}
+
 footer .neh {
-    width: 100%;
-    text-align: center;
+    display: flex;
+    margin-bottom: 0;
+    align-items: flex-end;
+}
+
+footer img {
+    max-width: none;
 }
 
 footer .license {
@@ -121,23 +138,27 @@ footer .license {
 }
 
 footer .container {
-    height: rhythm(6);
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: rhythm(2);
 }
 
-footer .container > *:not(:nth-child(3)) {
+footer .container > a {
     display: inline-block;
-    max-width: 50%;
     vertical-align: bottom;
-    margin-right: rhythm(2);
+    margin: 0 rhythm(2) 0 0;
+}
+
+footer .neh > p {
+    display: inline-block;
+    margin: 0 0 0 rhythm();
+    font-size: .875 * $base-font-size;
+    vertical-align: top;
+    max-height: rhythm(2);
 }
 
 footer .container > a:nth-child(3) {
     margin-right: rhythm();
-}
-
-footer .container p {
-    margin: 0;
-    font-size: .875 * $base-font-size;
 }
 
 footer .container img {
@@ -410,13 +431,14 @@ footer .container img[alt="Creative Commons License"] {
 }
 
 .post-meta {
-    width: span(3 of 16);
-    padding: 0 gutter();
+    width: span(4 of 16);
+    padding: 0 span(.5 of 16) 0 gutter();
     text-align: right;
 }
 
 .post-meta .avatar {
     display: block;
+    margin-bottom: rhythm(.5);
 }
 
 .post-meta .avatar img {
@@ -432,11 +454,6 @@ footer .container img[alt="Creative Commons License"] {
     background-color: $gray;
     margin-bottom: rhythm(.5, 1.5 * $base-font-size);
     padding: 0 rhythm(.25, 1.5 * $base-font-size);
-}
-
-.post-meta .author {
-    font-size: 1.25 * $base-font-size;
-    line-height: 2 * $base-line-height;
 }
 
 .post article {
@@ -475,6 +492,14 @@ footer .container img[alt="Creative Commons License"] {
     width: calc(#{span(9 of 12)} - #{gutter()});
     padding: rhythm() 0 rhythm() gutter();
     float: right;
+}
+
+/* @end */
+
+/* @group ----- 14. Search Results ----- */
+
+.search-results .post {
+    margin-bottom: rhythm(2);
 }
 
 /* @end */

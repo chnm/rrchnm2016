@@ -38,4 +38,8 @@ if(is_single()) {
             <a href="#" class="mobile-toggle"></a>
            <?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?>
         </nav>
+        <div id="search">
+            <button type="button" class="search-toggle" aria-label="Open search form"></button>
+            <?php echo get_search_form(); ?>
+        </div>
     </header>

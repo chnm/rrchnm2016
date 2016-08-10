@@ -19,7 +19,7 @@ body {
     right: 0;
     position: absolute;
     overflow-x: hidden;
-    padding-top: rhythm(4);
+    padding-top: rhythm(3.5);
 
     &.open {
         left: 75%;
@@ -231,6 +231,9 @@ input[type="submit"] {
     font-size: $base-font-size;
     line-height: $base-line-height;
     display: inline-block;
+    appearance: none;
+    border: 0;
+    cursor: pointer;
 
     &.big {
         font-size: 1.5 * $base-font-size;
@@ -330,7 +333,7 @@ header {
     padding: rhythm();
     background-color: #fff;
     z-index: 9999;
-    border-bottom: 1px solid $gray;;
+    border-bottom: 1px solid $gray;
     transition: left .5s;
 }
 
@@ -350,12 +353,12 @@ header {
 
 .small header {
     height: rhythm(2);
-    padding: rhythm(.5) rhythm()
+    padding: rhythm(.5) rhythm();
 }
 
 .logo {
-    height: rhythm(2);
-    width: rhythm(11);
+    height: rhythm(1.5);
+    width: calc(100% - #{rhythm(4)});
     background:url('img/rrchnm-logo.png') no-repeat;
     background-size: contain;
 }
@@ -372,27 +375,31 @@ header {
     display: block;
 }
 
-nav#global .mobile-toggle:before {
+nav#global .mobile-toggle {
     position: absolute;
-    content: $fa-var-navicon;
-    font-family: "FontAwesome";
     top: rhythm();
     right: rhythm();
-    color: $primary-red;
+    height: rhythm(1.5);
+    width: rhythm(1.5);
     border: 1px solid $gray;
-    padding: rhythm(.25);
-    display: block;
-    width: rhythm();
-    text-align: center;
+    line-height: 1.5 * $base-line-height;
     background-color: #fff;
 }
 
-.small nav#global .mobile-toggle:before {
-    top: rhythm(.25);
-    padding: rhythm(.125);
+nav#global .mobile-toggle:before {
+    content: $fa-var-navicon;
+    font-family: "FontAwesome";
+    color: $primary-red;
+    display: block;
+    text-align: center;
 }
 
-.open nav#global .mobile-toggle:before {
+.small nav#global .mobile-toggle,
+.small .search-toggle {
+    top: rhythm(.25);
+}
+
+.open nav#global .mobile-toggle {
     content: $fa-var-times;
     position: fixed;
     z-index: 10000;
@@ -431,6 +438,51 @@ nav#global ul.open {
     border-right: 1px solid $gray;
 }
 
+.search-toggle {
+    background-color: transparent;
+    color: $primary-red;
+    margin-left: rhythm();
+    position: absolute;
+    top: rhythm();
+    padding: 0;
+    right: rhythm(3);
+    border: 1px solid $gray;
+    height: rhythm(1.5);
+    width: rhythm(1.5);
+}
+
+.search-toggle:after {
+    content: $fa-var-search;
+    font-family: "FontAwesome";
+    line-height: $base-line-height;
+}
+
+#searchform {
+    background-color: #fff;
+    padding: 0 rhythm(.25) rhythm(.25) rhythm(.25);
+    position: absolute;
+    right: rhythm(.5);
+    z-index: 1;
+    top: 100%;
+    border: 1px solid $gray;
+    border-width: 0 1px 1px 1px;
+}
+
+#searchform > div {
+    display: flex;
+}
+
+#searchform.closed {
+    display: none;
+}
+
+#searchform .screen-reader-text {
+    width: 0;
+    overflow: hidden;
+    display: inline-block;
+    height: 0;
+}
+
 /* @end */
 
 /* @group ----- 06. Footer ----- */
@@ -454,6 +506,15 @@ footer nav li  {
     margin: 0;
 }
 
+footer .container > * {
+    display: block;
+    margin-bottom: rhythm();
+}
+
+footer .menu-footer-container {
+    margin: rhythm(.5) 0 0;
+}
+
 footer nav ul {
     padding: rhythm(.25) 0;
 }
@@ -475,15 +536,6 @@ footer .logo {
 
 footer nav img {
     height: rhythm(1.5);
-}
-
-footer .neh {
-    margin-bottom: rhythm();
-}
-
-footer .neh img {
-    display: block;
-    margin: auto;
 }
 
 footer #description {
@@ -646,6 +698,10 @@ footer #description {
     display: block;
     margin-top: rhythm(-1);
     text-align: center;
+    font-size: .75 * $base-font-size;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .feature .button {
@@ -1055,6 +1111,14 @@ form.wpcf7-form {
     font-weight: 300;
 }
 
+.post-meta .author {
+    font-family: "Open Sans", sans-serif;
+    font-size: .75 * $base-font-size;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
 .post-meta .date {
     background-color: $gray;
     margin-bottom: rhythm(.5);
@@ -1153,6 +1217,26 @@ form.wpcf7-form {
     font-family: "Open Sans", sans-serif;
     font-size: $base-font-size;
     text-transform: none;
+}
+
+/* @end */
+
+/* @group ----- 14. Search Results ----- */
+
+.post-meta .post-type {
+    background-color: $gray;
+    margin-bottom: rhythm(.5);
+    padding: rhythm(.25);
+}
+
+.post-meta .post-type {
+    display: block;
+    font-size: 1.5 * $base-font-size;
+    line-height: 2 * $base-line-height;
+    background-color: $gray;
+    margin-bottom: rhythm(.5, 1.5 * $base-font-size);
+    padding: 0 rhythm(.25, 1.5 * $base-font-size);
+    text-transform: capitalize;
 }
 
 /* @end */
