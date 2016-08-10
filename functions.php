@@ -152,11 +152,19 @@ function create_essay_type() {
   flush_rewrite_rules();
 }
 
+/**
+ * Enables the Excerpt meta box in Page edit screen.
+ */
+function wpcodex_add_excerpt_support_for_pages() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+
 remove_filter( 'taxonomy_template', 'get_custom_taxonomy_template' );
 add_filter( 'taxonomy_template', 'rrchnm_get_custom_taxonomy_template' );
 
 add_theme_support( 'post-thumbnails' );
 
+add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 add_action( 'init', 'register_top_nav' );
 add_action( 'init', 'register_footer_nav' );
 add_action( 'init', 'register_about_nav' );
