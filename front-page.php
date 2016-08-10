@@ -20,7 +20,7 @@
         $essayCustom = get_post_custom($essayPost[0]->ID);
     ?>
     <div class="essay feature">
-        <h2>Essay on History and New Media</h2>
+        <h2>Classic Essay on History and New Media</h2>
         <?php foreach ($essayPost as $post): setup_postdata($post); ?>
             <h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
             <span class="byline">by <?php echo $essayCustom['Essay Author(s)'][0]; ?></span>
