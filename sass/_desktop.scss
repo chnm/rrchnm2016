@@ -239,15 +239,21 @@ footer .license {
 
 /* @group ----- 09. What We Do ----- */
 
+#featured {
+    margin-bottom: rhythm(2);
+    border-color: $gray;
+    @include trailing-border(1px, 0, $base-font-size, solid);
+}
+
 #featured,
 #projects {
     display: flex;
     flex-wrap: wrap;
-    margin: rhythm(2) 0;
 }
 
 #projects {
     width: calc(#{span(9 of 12)} - #{gutter()});
+    margin: rhythm(2) 0;
 }
 
 #featured .project,

@@ -1724,6 +1724,14 @@ textarea {
 
   /* @end */
   /* @group ----- 09. What We Do ----- */
+  #featured {
+    margin-bottom: 3em;
+    border-color: rgba(0, 0, 0, 0.08);
+    border-bottom-width: 0.0625em;
+    border-bottom-style: solid;
+    padding-bottom: -0.0625em;
+  }
+
   #featured,
   #projects {
     display: -webkit-box;
@@ -1731,11 +1739,11 @@ textarea {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 3em 0;
   }
 
   #projects {
     width: calc(75% - 0.625%);
+    margin: 3em 0;
   }
 
   #featured .project,
