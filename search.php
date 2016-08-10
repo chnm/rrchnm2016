@@ -17,7 +17,7 @@ $total_results = $wp_query->found_posts;
         <aside class="post-meta">
             <?php $postType =  get_post_type(); ?>
             <span class="post-type"><?php echo $postType; ?></span>
-            <?php if ($postType !== 'essay'): ?>
+            <?php if ($postType == 'post'): ?>
                 <?php if (get_the_author_meta('user_firstname')): ?>
                     <?php $authorID = get_the_author_meta('ID'); ?>
                     <?php $authorUrl = get_author_posts_url($authorID); ?>
@@ -29,7 +29,7 @@ $total_results = $wp_query->found_posts;
                     <a href="<?php echo $authorUrl; ?>" class="avatar"><img src="<?php echo $avatar; ?>" title="avatar for <?php echo $authorName; ?>"></a>
                     <span class="author"><a href="<?php echo $authorUrl; ?>"><?php the_author_meta('user_firstname'); ?> <?php the_author_meta('user_lastname'); ?></a></span>
                 <?php endif; ?>
-            <?php else: ?>
+            <?php elseif ($postType == 'essay'): ?>
                 <?php $postMeta = get_post_custom(); ?>
                 <?php if (isset($postMeta['Essay Author(s)'])): ?>
                 <span class="author"><?php echo $postMeta['Essay Author(s)'][0]; ?></span>
