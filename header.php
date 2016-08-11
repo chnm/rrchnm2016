@@ -18,8 +18,13 @@ if(is_single()) {
     <link href="<?php echo bloginfo('template_directory'); ?>/style.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="<?php echo bloginfo('template_directory'); ?>/js/globals.js"></script>
-    <?php if ( is_page() && has_post_thumbnail() ): ?>
-    <?php $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ); ?>
+    <?php if ( is_page()): ?>
+        <?php $customFields = get_post_custom(); ?>
+        <?php if (isset($customFields['Image'])): ?>
+            <?php $imgBgUrl = $customFields['Image']; ?>
+        <?php elseif (has_post_thumbnail()): ?>
+            <?php $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ); ?>
+        <?php endif; ?>
     <style>
         #intro:before {
             background-image: url('<?php echo $imgBgUrl[0]; ?>');
