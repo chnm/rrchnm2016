@@ -865,6 +865,10 @@ footer #description {
 
 /* @group ----- 09. What We Do ----- */
 
+.page-template-project #intro:before {
+    background-position: center;
+}
+
 #featured h3 {
     font-family: "Oswald", sans-serif;
     width: 100%;
