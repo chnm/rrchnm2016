@@ -82,7 +82,7 @@ $whatWeDoPageID = $whatWeDoPage->ID;
                         $imgBgUrl = site_url() . '/ui/i/project-images/' . $projectMeta['Image'][0];
                     }
                     ?>
-                    <a href="<?php echo esc_url(get_permalink($projectID)); ?>" class="thumbnail" style="background:url('<?php echo $imgBgUrl; ?>')"></a>
+                    <a href="<?php echo esc_url(get_permalink($projectID)); ?>" class="thumbnail" style="background-image:url('<?php echo $imgBgUrl; ?>')"></a>
                     <h4><a href="<?php echo esc_url(get_permalink($projectID)); ?>"><?php echo the_title(); ?></a></h4>
                 </div>
             <?php endwhile; ?>
