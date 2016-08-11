@@ -1163,6 +1163,7 @@ form.wpcf7-form {
 
 /* @group ----- 13. Essay ----- */
 
+.post-type-archive-essay #intro,
 .single-essay #intro {
     background-color: $primary-blue;
     height: auto;
@@ -1171,19 +1172,21 @@ form.wpcf7-form {
     text-align: center;
 }
 
+.post-type-archive-essay #intro h1,
 .single-essay #intro h1 {
     background-color: transparent;
     color: #fff;
-
-    &:after {
-        content: "";
-        background-color: #fff;
-        height: 2px;
-        width: 100%;
-        display: block;
-        margin: rhythm(.5) 0;
-    }
 }
+
+.single-essay #intro h1:after {
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin: rhythm(.5) 0;
+}
+
 
 .single-essay #intro .container {
     position: relative;

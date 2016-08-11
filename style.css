@@ -1578,6 +1578,7 @@ textarea {
 
   /* @end */
   /* @group ----- 13. Essay ----- */
+  .post-type-archive-essay #intro,
   .single-essay #intro {
     background-color: #3673A2;
     height: auto;
@@ -1586,10 +1587,12 @@ textarea {
     text-align: center;
   }
 
+  .post-type-archive-essay #intro h1,
   .single-essay #intro h1 {
     background-color: transparent;
     color: #fff;
   }
+
   .single-essay #intro h1:after {
     content: "";
     background-color: #fff;
