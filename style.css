@@ -1939,10 +1939,6 @@ textarea {
     padding: 0 0.625%;
   }
 
-  #featured .project .thumbnail {
-    height: 9em;
-  }
-
   #featured .project:nth-of-type(3n+1) {
     padding-left: 0;
   }
