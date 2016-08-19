@@ -20,16 +20,18 @@ if(is_single()) {
     <script src="<?php echo bloginfo('template_directory'); ?>/js/globals.js"></script>
     <?php if ( is_page()): ?>
         <?php $customFields = get_post_custom(); ?>
-        <?php if (get_field('header-image') !== null): ?>
-            <?php $imgBgUrl = get_field('header-image'); ?>
-        <?php elseif (isset($customFields['Image'])): ?>
+        <?php if (isset($customFields['Image'])): ?>
             <?php $imgBgUrl = $customFields['Image']; ?>
         <?php elseif (has_post_thumbnail()): ?>
             <?php $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ); ?>
         <?php endif; ?>
     <style>
         #intro:before {
+            <?php if (get_field('header-image')): ?>
+            background-image: url('<?php echo get_field('header-image'); ?>');
+            <?php else: ?>
             background-image: url('<?php echo $imgBgUrl[0]; ?>');
+            <?php endif; ?>
         }
     </style>
     <?php endif; ?>
