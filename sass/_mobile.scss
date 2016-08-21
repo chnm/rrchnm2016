@@ -925,7 +925,7 @@ footer #description {
     /* @group ----- 09a. Project ----- */
 
     #project-meta {
-        padding: rhythm() 0;
+        padding: rhythm() rhythm(.5) rhythm() 0;
     }
 
     #project-meta .meta-field {
@@ -981,6 +981,10 @@ footer #description {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    #project-website {
+        word-break: break-word;
     }
 
     /* @end */

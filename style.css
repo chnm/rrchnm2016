@@ -1334,7 +1334,7 @@ textarea {
 
   /* @group ----- 09a. Project ----- */
   #project-meta {
-    padding: 1.5em 0;
+    padding: 1.5em 0.75em 1.5em 0;
   }
 
   #project-meta .meta-field {
@@ -1396,6 +1396,10 @@ textarea {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+
+  #project-website {
+    word-break: break-word;
   }
 
   /* @end */
