@@ -1249,3 +1249,36 @@ form.wpcf7-form {
 }
 
 /* @end */
+
+/* @group ----- 15. The Hub ----- */
+
+.the-hub#intro {
+    background-color: $primary-blue;
+    height: auto;
+    min-height: 0;
+    padding: rhythm() gutter();
+    text-align: center;
+}
+
+.the-hub#intro h1 {
+    background-color: transparent;
+    color: #fff;
+}
+
+.the-hub#intro h1:after {
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin: rhythm(.5) 0;
+}
+
+
+.the-hub#intro .container {
+    position: relative;
+    transform: none;
+    left: 0;
+}
+
+/* @end */

@@ -1663,6 +1663,37 @@ textarea {
   }
 
   /* @end */
+  /* @group ----- 15. The Hub ----- */
+  .the-hub#intro {
+    background-color: #3673A2;
+    height: auto;
+    min-height: 0;
+    padding: 1.5em 0.625%;
+    text-align: center;
+  }
+
+  .the-hub#intro h1 {
+    background-color: transparent;
+    color: #fff;
+  }
+
+  .the-hub#intro h1:after {
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin: 0.75em 0;
+  }
+
+  .the-hub#intro .container {
+    position: relative;
+    -webkit-transform: none;
+            transform: none;
+    left: 0;
+  }
+
+  /* @end */
 }
 @media screen and (min-width: 640px) {
   /* @group ----- 01. Container Elements ----- */
