@@ -582,10 +582,23 @@ footer #description {
 }
 
 #features {
-    background-color: $primary-blue;
+    background-color: desaturate(lighten($primary-blue, 15%), 15%);
     padding: rhythm();
     text-align: center;
     color: #fff;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .08;
+        background: url('img/about-bg.png') center center no-repeat;
+        background-size: cover;
+    }
 }
 
 #features p {
@@ -631,24 +644,9 @@ footer #description {
     border-right: 1px solid $gray;
 }
 
+.essay.feature,
 .projects.feature {
-    background-size: contain;
-    background-position: center;
     background-color: #f9f9f9;
-    background-repeat: no-repeat;
-}
-
-.essay.feature:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50%;
-    right: 0;
-    bottom: 0;
-    opacity: .08;
-    background: url('img/essay-bg.png') no-repeat;
-    background-size: cover;
-    z-index: -1;
 }
 
 .feature .avatar {

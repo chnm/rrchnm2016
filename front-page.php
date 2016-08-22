@@ -63,13 +63,8 @@
         );
         $featuredPost = get_posts($featuredFilters);
         $featuredCustom = get_post_custom($featuredPost[0]->ID);
-        if (isset($featuredCustom['Homepage Background'])) {
-            $featuredBg = 'style="background-image:url(\'' . $featuredCustom['Homepage Background'][0] . '\')"';
-        } else {
-            $featuredBg = '';
-        }
     ?>
-    <div class="projects feature" <?php echo $featuredBg; ?>>
+    <div class="projects feature">
         <h2>Featured Project</h2>
         <?php foreach ($featuredPost as $post): setup_postdata($post); ?>
             <h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>

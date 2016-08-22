@@ -29,7 +29,7 @@ if(is_single()) {
         #intro:before {
             <?php if (get_field('header-image')): ?>
             background-image: url('<?php echo get_field('header-image'); ?>');
-            <?php else: ?>
+            <?php elseif (isset($imgBgUrl)): ?>
             background-image: url('<?php echo $imgBgUrl[0]; ?>');
             <?php endif; ?>
         }

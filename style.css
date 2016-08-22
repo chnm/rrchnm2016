@@ -1006,10 +1006,22 @@ textarea {
   }
 
   #features {
-    background-color: #3673A2;
+    background-color: #6c97b8;
     padding: 1.5em;
     text-align: center;
     color: #fff;
+    position: relative;
+  }
+  #features:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .08;
+    background: url("img/about-bg.png") center center no-repeat;
+    background-size: cover;
   }
 
   #features p {
@@ -1054,24 +1066,9 @@ textarea {
     border-right: 1px solid rgba(0, 0, 0, 0.08);
   }
 
+  .essay.feature,
   .projects.feature {
-    background-size: contain;
-    background-position: center;
     background-color: #f9f9f9;
-    background-repeat: no-repeat;
-  }
-
-  .essay.feature:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50%;
-    right: 0;
-    bottom: 0;
-    opacity: .08;
-    background: url("img/essay-bg.png") no-repeat;
-    background-size: cover;
-    z-index: -1;
   }
 
   .feature .avatar {
