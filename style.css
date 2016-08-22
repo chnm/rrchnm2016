@@ -1014,17 +1014,6 @@ textarea {
     border-bottom-style: solid;
     padding-bottom: -0.0625em;
   }
-  #features:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: .08;
-    background: url("img/about-bg.png") center center no-repeat;
-    background-size: cover;
-  }
 
   #features p {
     margin: 0;
