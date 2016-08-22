@@ -1,4 +1,4 @@
-<?php /* Template Name: Project */ ?>
+<?php /* Template Name: The Hub */ ?>
 
 <?php $customFields = get_post_custom(); ?>
 
