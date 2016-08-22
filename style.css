@@ -1006,11 +1006,13 @@ textarea {
   }
 
   #features {
-    background-color: #6c97b8;
     padding: 1.5em;
     text-align: center;
-    color: #fff;
     position: relative;
+    border-color: rgba(0, 0, 0, 0.08);
+    border-bottom-width: 0.0625em;
+    border-bottom-style: solid;
+    padding-bottom: -0.0625em;
   }
   #features:after {
     content: "";
@@ -1027,7 +1029,7 @@ textarea {
   #features p {
     margin: 0;
     padding: 2.4em 1.2em;
-    border: 3px solid #fff;
+    border: 3px solid rgba(0, 0, 0, 0.08);
     font-family: "Oswald", sans-serif;
     font-size: 20px;
     line-height: 36px;

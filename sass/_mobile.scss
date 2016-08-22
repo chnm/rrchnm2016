@@ -582,11 +582,11 @@ footer #description {
 }
 
 #features {
-    background-color: desaturate(lighten($primary-blue, 15%), 15%);
     padding: rhythm();
     text-align: center;
-    color: #fff;
     position: relative;
+    border-color: $gray;
+    @include trailing-border(1px, 0, $base-font-size, solid);
 
     &:after {
         content: "";
@@ -604,7 +604,7 @@ footer #description {
 #features p {
     margin: 0;
     padding: rhythm(2, 1.25 * $base-font-size) rhythm(1, 1.25 * $base-font-size);
-    border: 3px solid #fff;
+    border: 3px solid $gray;
     font-family: "Oswald", sans-serif;
     font-size: 1.25 * $base-font-size;
     line-height: 1.5 * $base-line-height;
