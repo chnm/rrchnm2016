@@ -1370,6 +1370,7 @@ textarea {
   #project-contributors .contributor > a {
     display: inline-block;
     vertical-align: middle;
+    margin-bottom: 0.375em;
   }
 
   #project-website {
