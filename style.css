@@ -961,10 +961,6 @@ textarea {
     margin-bottom: 0.375em;
   }
 
-  footer nav img {
-    height: 2.25em;
-  }
-
   footer #description {
     width: 100%;
     font-style: italic;
@@ -1795,6 +1791,7 @@ textarea {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    max-width: 60%;
   }
 
   footer img {
@@ -1814,12 +1811,15 @@ textarea {
         -ms-flex-align: end;
             align-items: flex-end;
     padding-bottom: 3em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   footer .container > a {
     display: inline-block;
     vertical-align: bottom;
-    margin: 0 3em 0 0;
+    margin: 0;
   }
 
   footer .neh > p {
@@ -1828,6 +1828,7 @@ textarea {
     font-size: 14px;
     vertical-align: top;
     max-height: 3em;
+    max-width: 60%;
   }
 
   footer .container > a:nth-child(3) {
@@ -1835,7 +1836,9 @@ textarea {
   }
 
   footer .container img {
-    height: 3.75em;
+    max-height: 3.75em;
+    max-width: 100%;
+    height: auto;
   }
 
   footer .container img[alt="Creative Commons License"] {

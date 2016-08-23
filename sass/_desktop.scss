@@ -126,6 +126,7 @@ footer .neh {
     display: flex;
     margin-bottom: 0;
     align-items: flex-end;
+    max-width: 60%;
 }
 
 footer img {
@@ -141,12 +142,13 @@ footer .container {
     display: flex;
     align-items: flex-end;
     padding-bottom: rhythm(2);
+    justify-content: space-between;
 }
 
 footer .container > a {
     display: inline-block;
     vertical-align: bottom;
-    margin: 0 rhythm(2) 0 0;
+    margin: 0;
 }
 
 footer .neh > p {
@@ -155,6 +157,7 @@ footer .neh > p {
     font-size: .875 * $base-font-size;
     vertical-align: top;
     max-height: rhythm(2);
+    max-width: 60%;
 }
 
 footer .container > a:nth-child(3) {
@@ -162,7 +165,9 @@ footer .container > a:nth-child(3) {
 }
 
 footer .container img {
-    height: rhythm(2.5);
+    max-height: rhythm(2.5);
+    max-width: 100%;
+    height: auto;
 }
 
 footer .container img[alt="Creative Commons License"] {
