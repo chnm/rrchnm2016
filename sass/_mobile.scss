@@ -946,28 +946,19 @@ footer #description {
     }
 
     #project-contributors .avatar {
-        display: block;
         width: 15%;
         padding-bottom: 15%;
         position: relative;
         margin-right: rhythm(.5);
-    }
-
-    #project-contributors .contributor {
-        display: flex;
-        align-items: center;
-        align-content: flex-start;
-        margin-bottom: rhythm(.5);
-    }
-
-    #project-contributors img {
-        width: 100%;
-        height: auto;
         border-radius: 100%;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #project-contributors .contributor > a {
+        display: inline-block;
+        vertical-align: middle;
     }
 
     #project-website {

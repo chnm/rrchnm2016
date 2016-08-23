@@ -27,8 +27,7 @@ function rrchnm_show_project_contributors() {
                 $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
             endif;
             $html .= '<div class="contributor">';
-            $html .= '<a href="' . get_author_posts_url($contributorID) . '" class="avatar">';
-            $html .= '<img src="' . $avatar .'" title="avatar for ' . $contributorName .'">';
+            $html .= '<a href="' . get_author_posts_url($contributorID) . '" class="avatar" style="background-image:url(\'' . $avatar . '\')">';
             $html .= '</a>';
             $html .= '<a href="' . get_author_posts_url($contributorID) . '" class="name">' . $contributorName . '</a>';
             $html .= '</div>';
