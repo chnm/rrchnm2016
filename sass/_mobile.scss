@@ -946,20 +946,26 @@ footer #description {
     }
 
     #project-contributors .avatar {
-        width: 15%;
-        padding-bottom: 15%;
+        width: rhythm(2);
+        height: rhythm(2);
         position: relative;
         margin-right: rhythm(.5);
         border-radius: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        flex-shrink: 0;
     }
 
-    #project-contributors .contributor > a {
-        display: inline-block;
-        vertical-align: middle;
+    #project-contributors .contributor {
+        display: flex;
         margin-bottom: rhythm(.25);
+        align-content: center;
+        align-items: center;
+    }
+
+    #project-contributors .contributor .name {
+        width: 85%;
     }
 
     #project-website {
