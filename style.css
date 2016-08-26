@@ -1779,6 +1779,10 @@ textarea {
     width: 100%;
   }
 
+  footer nav img {
+    max-height: 2.25em;
+  }
+
   footer .menu-footer-container {
     margin-top: 0;
   }
