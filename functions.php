@@ -51,13 +51,15 @@ function rrchnm_show_project_categories() {
     }
 
     foreach ($categoryHeadings as $categoryHeading) {
-        if ($currentCategories = $sortedCategories[get_cat_ID($categoryHeading)]) {
-            $html .= '<h3>' . $categoryHeading . '</h3>';
-            $html .= '<ul class="post-categories">';
-            foreach ($currentCategories as $currentCategory) {
-                $html .= '<li><a href="' . get_category_link($currentCategory->term_id) . '">' . $currentCategory->cat_name . '</a></li>';
+        if(array_key_exists(get_cat_ID($categoryHeading), $sortedCategories)) {
+            if ($currentCategories = $sortedCategories[get_cat_ID($categoryHeading)]) {
+                $html .= '<h3>' . $categoryHeading . '</h3>';
+                $html .= '<ul class="post-categories">';
+                foreach ($currentCategories as $currentCategory) {
+                    $html .= '<li><a href="' . get_category_link($currentCategory->term_id) . '">' . $currentCategory->cat_name . '</a></li>';
+                }
+                $html .= '</ul>';
             }
-            $html .= '</ul>';
         }
     }
 
