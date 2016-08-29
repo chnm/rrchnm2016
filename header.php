@@ -41,7 +41,7 @@ if(is_single()) {
 <body <?php body_class($slug); ?>>
 
     <header>
-        <div class="logo"><a href="<?php echo site_url(); ?>">Roy Rosenzweig Center for History and New Media</a></div>
+        <div class="logo"><a href="<?php echo home_url(); ?>">Roy Rosenzweig Center for History and New Media</a></div>
 
         <nav id="global">
             <a href="#" class="mobile-toggle"></a>

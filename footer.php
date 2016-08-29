@@ -1,6 +1,6 @@
     <footer>
        <nav>
-            <a href="<?php echo get_site_url(); ?>"><img src="<?php echo bloginfo('template_directory'); ?>/img/rrchnm-logo.png" alt="RRCHNM Logo" /></a>
+            <a href="<?php echo get_home_url(); ?>"><img src="<?php echo bloginfo('template_directory'); ?>/img/rrchnm-logo.png" alt="RRCHNM Logo" /></a>
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu') ); ?>
        </nav>
         <div class="container">
