@@ -9,7 +9,7 @@
 
 <div id="features">
     <div class="container">
-    <p>The <span class="center-name">Roy Rosenzweig Center for History and New Media</span> is a multidisciplinary organization that has spent over 20 years using technology to encourage diverse,  popular participation in presenting and preserving the past.</p>
+    <p>The <span class="center-name">Roy Rosenzweig Center for History and New Media (RRCHNM)</span> is a multi-disciplinary team that develops online teaching resources, digital collections and exhibits, open-source software, and training in digital literacy and skills.</p>
     </div>
 </div>
 
