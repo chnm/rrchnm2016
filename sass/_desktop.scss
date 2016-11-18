@@ -267,14 +267,20 @@ footer .container img[alt="Creative Commons License"] {
 }
 
 #featured,
-#projects {
+#projects,
+#labs {
     display: flex;
     flex-wrap: wrap;
 }
 
-#projects {
+#projects,
+#labs {
     width: calc(#{span(9 of 12)} - #{gutter()});
     margin: rhythm(2) 0;
+
+    & > *:first-child {
+        margin-top: 0;
+    }
 }
 
 #featured .project,
