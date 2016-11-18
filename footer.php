@@ -9,7 +9,7 @@
             <a href="http://gmu.edu"><img src="<?php echo bloginfo('template_directory'); ?>/img/gmu-logo.png" alt="George Mason University Logo" /></a>
             <div class="neh">
                 <a href="http://neh.gov"><img src="<?php echo bloginfo('template_directory'); ?>/img/neh-logo.png" alt="NEH Logo" /></a>
-                <p>RRRCHNM is supported in part by an endowment made possible by National Endowment for the Humanities Challenge Grants</p>
+                <p>RRCHNM is supported in part by an endowment made possible by National Endowment for the Humanities Challenge Grants</p>
             </div>
         </div>
     </footer>
