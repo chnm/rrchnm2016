@@ -1,7 +1,6 @@
 require 'compass/import-once/activate'
 
 # Require any additional compass plugins here.
-require 'normalize'
 require 'susy'
 require 'autoprefixer-rails'
 
