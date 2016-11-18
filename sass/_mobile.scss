@@ -309,13 +309,32 @@ nav ul {
     }
 }
 
+#content nav ul.children {
+    margin-top: 0;
+}
+
+#content nav ul.children li:before {
+    content: "— ";
+}
+
+#content nav h4 {
+    margin-bottom: 0;
+}
+
+#content nav h4 + p {
+    margin: 0;
+    font-weight: 300;
+    font-size: .875 * $base-font-size;
+}
+
 #content nav > ul > li ul {
     text-transform: none;
     font-family: "Open Sans", sans-serif;
     font-size: $base-font-size;
 }
 
-#content nav .active a {
+#content nav .active > a,
+#content nav .current_page_item > a {
     font-weight: bold;
     color: #fff;
 }
@@ -1152,6 +1171,7 @@ form.wpcf7-form {
 
 /* @group ----- 13. Essay ----- */
 
+.page-template-labs-php #intro,
 .post-type-archive-essay #intro,
 .single-essay #intro {
     background-color: $primary-blue;
@@ -1161,6 +1181,7 @@ form.wpcf7-form {
     text-align: center;
 }
 
+.page-template-labs-php #intro h1,
 .post-type-archive-essay #intro h1,
 .single-essay #intro h1 {
     background-color: transparent;

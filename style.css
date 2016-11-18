@@ -728,13 +728,32 @@ textarea {
     margin-bottom: 0;
   }
 
+  #content nav ul.children {
+    margin-top: 0;
+  }
+
+  #content nav ul.children li:before {
+    content: "— ";
+  }
+
+  #content nav h4 {
+    margin-bottom: 0;
+  }
+
+  #content nav h4 + p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
   #content nav > ul > li ul {
     text-transform: none;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
   }
 
-  #content nav .active a {
+  #content nav .active > a,
+  #content nav .current_page_item > a {
     font-weight: bold;
     color: #fff;
   }
@@ -1569,6 +1588,7 @@ textarea {
 
   /* @end */
   /* @group ----- 13. Essay ----- */
+  .page-template-labs-php #intro,
   .post-type-archive-essay #intro,
   .single-essay #intro {
     background-color: #3673A2;
@@ -1578,6 +1598,7 @@ textarea {
     text-align: center;
   }
 
+  .page-template-labs-php #intro h1,
   .post-type-archive-essay #intro h1,
   .single-essay #intro h1 {
     background-color: transparent;
@@ -1944,7 +1965,8 @@ textarea {
   }
 
   #featured,
-  #projects {
+  #projects,
+  #labs {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1952,9 +1974,14 @@ textarea {
         flex-wrap: wrap;
   }
 
-  #projects {
+  #projects,
+  #labs {
     width: calc(75% - 0.625%);
     margin: 3em 0;
+  }
+  #projects > *:first-child,
+  #labs > *:first-child {
+    margin-top: 0;
   }
 
   #featured .project,
