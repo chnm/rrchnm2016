@@ -20,12 +20,13 @@
     ?>
     <div class="event feature">
         <h2>Upcoming at RRCHNM</h2>
-        <?php foreach ($eventPost as $post): setup_postdata($post); ?>
+            <?php foreach ($eventPost as $post): setup_postdata($post); ?>
             <h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
             <?php the_post_thumbnail(); ?>
             <?php echo the_excerpt(); ?>
-        <?php endforeach; wp_reset_postdata()?>
-            <a href="events" class="button">See the full event archive</a>
+            <?php endforeach; wp_reset_postdata()?>
+            <?php $eventsCategory = get_category_by_slug('events'); ?>
+            <a href="<?php echo get_category_link($eventsCategory->term_id); ?>" class="button">See the full event archive</a>
     </div>
     <div class="news feature">
         <h2>News</h2>
