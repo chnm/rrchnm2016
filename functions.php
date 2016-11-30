@@ -134,6 +134,30 @@ function rrchnm_get_custom_taxonomy_template( $template = '' ) {
     return $template;
 }
 
+function rrchnm_exclude_events( $query ) {
+    $eventsCategory = get_category_by_slug('events');
+    $eventsID = $eventsCategory->term_id;
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'cat', '-' . $eventsID );
+    }
+}
+
+function rrchnm_find_next_event() {
+    $eventPosts = get_posts(array('category_name' => 'Events'));
+    $currentDate = date('Ymd');
+    $nextEventPost = $eventPosts[0];
+    $nextEventPostDate = get_field('event_start_date', $nextEventPost->ID);
+    foreach ($eventPosts as $eventPost) {
+        $startDate = get_field('event_start_date', $eventPost->ID);
+        if (($startDate > $currentDate) && ($startDate < $nextEventPostDate)) {
+            $nextEventPost = $eventPost;
+        }
+    }
+    return $nextEventPost;
+}
+
+add_action( 'pre_get_posts', 'rrchnm_exclude_events' );
+
 function create_essay_type() {
   register_post_type( 'essay',
     array(
@@ -165,6 +189,9 @@ add_filter( 'taxonomy_template', 'rrchnm_get_custom_taxonomy_template' );
 
 add_theme_support( 'post-thumbnails' );
 
+// Custom
+add_filter('single_template', create_function('$t', 'foreach( (array) get_the_category() as $cat ) { if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-{$cat->slug}.php"; } return $t;' ));
+
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 add_action( 'init', 'register_top_nav' );
 add_action( 'init', 'register_footer_nav' );
@@ -172,3 +199,5 @@ add_action( 'init', 'register_about_nav' );
 add_action( 'init', 'create_essay_type' );
 add_action( 'show_user_profile', 'show_staff_position' );
 add_action( 'edit_user_profile', 'show_staff_position' );
+
+

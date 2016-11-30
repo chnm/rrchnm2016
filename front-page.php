@@ -16,17 +16,16 @@
 <div id="keep-up">
     <a href="the-hub" class="hub-link">Keep up with our latest activity at The Hub</a>
     <?php
-        $essayPost = get_posts(array('posts_per_page' => 1, 'orderby' => 'rand', 'post_type' => 'essay'));
-        $essayCustom = get_post_custom($essayPost[0]->ID);
+        $eventPost = rrchnm_find_next_event();
     ?>
-    <div class="essay feature">
-        <h2>Classic Essay on History and New Media</h2>
-        <?php foreach ($essayPost as $post): setup_postdata($post); ?>
+    <div class="event feature">
+        <h2>Upcoming at RRCHNM</h2>
+        <?php foreach ($eventPost as $post): setup_postdata($post); ?>
             <h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
-            <span class="byline">by <?php echo $essayCustom['Essay Author(s)'][0]; ?></span>
+            <?php the_post_thumbnail(); ?>
             <?php echo the_excerpt(); ?>
         <?php endforeach; wp_reset_postdata()?>
-            <a href="essay" class="button">See the full essay archive</a>
+            <a href="events" class="button">See the full event archive</a>
     </div>
     <div class="news feature">
         <h2>News</h2>
