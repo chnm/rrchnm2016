@@ -19,7 +19,7 @@
         $eventPost = rrchnm_find_next_event();
     ?>
     <div class="event feature">
-        <h2>Upcoming at RRCHNM</h2>
+        <h2>Upcoming RRCHNM Events</h2>
             <?php foreach ($eventPost as $post): setup_postdata($post); ?>
             <h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
             <?php the_post_thumbnail(); ?>
