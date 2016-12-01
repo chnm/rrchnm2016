@@ -26,7 +26,7 @@
             <?php echo the_excerpt(); ?>
             <?php endforeach; wp_reset_postdata()?>
             <?php $eventsCategory = get_category_by_slug('events'); ?>
-            <a href="<?php echo get_category_link($eventsCategory->term_id); ?>" class="button">See the full event archive</a>
+            <a href="<?php echo get_category_link($eventsCategory->term_id); ?>" class="button">See all events at RRCHNM</a>
     </div>
     <div class="news feature">
         <h2>News</h2>
