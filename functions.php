@@ -134,11 +134,22 @@ function rrchnm_get_custom_taxonomy_template( $template = '' ) {
     return $template;
 }
 
-function rrchnm_exclude_events( $query ) {
+function rrchnm_events_query( $query ) {
     $eventsCategory = get_category_by_slug('events');
     $eventsID = $eventsCategory->term_id;
+
+    if (is_admin()) {
+        return $query;
+    }
+
     if ( $query->is_home() && $query->is_main_query() ) {
         $query->set( 'cat', '-' . $eventsID );
+    }
+
+    if ($query->is_category('Events')) {
+        $query->set('orderby', 'meta_value_num');
+        $query->set('meta_key', 'event_start_date');
+        $query->set('order', 'DESC');
     }
 }
 
@@ -156,7 +167,6 @@ function rrchnm_find_next_event() {
     return $nextEventPost;
 }
 
-add_action( 'pre_get_posts', 'rrchnm_exclude_events' );
 
 function create_essay_type() {
   register_post_type( 'essay',
@@ -199,5 +209,4 @@ add_action( 'init', 'register_about_nav' );
 add_action( 'init', 'create_essay_type' );
 add_action( 'show_user_profile', 'show_staff_position' );
 add_action( 'edit_user_profile', 'show_staff_position' );
-
-
+add_action( 'pre_get_posts', 'rrchnm_events_query' );

@@ -1,4 +1,6 @@
-<?php $customFields = get_post_custom(); ?>
+<?php
+$customFields = get_post_custom();
+?>
 
 <?php get_header(); ?>
 
@@ -8,7 +10,8 @@
     <h1>Events</h1>
 </aside>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ): ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
     <div class="post">
         <aside class="post-meta">
@@ -20,13 +23,15 @@
         </article>
     </div>
 
-<?php endwhile; else : ?>
-	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>
+    <?php endwhile; ?>
 
-<nav class="pagination">
-    <?php echo paginate_links(); ?>
-</nav>
+    <nav class="pagination">
+        <?php echo paginate_links(); ?>
+    </nav>
+
+<?php else: ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
 
 </div>
 
