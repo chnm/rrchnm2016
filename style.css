@@ -1694,7 +1694,7 @@ textarea {
 
   /* @end */
   /* @group ----- 16. Events ----- */
-  .category_events h3,
+  .category-events h3,
   .post-type-archive-event h3 {
     background-color: #eee;
     padding: 0.75em;

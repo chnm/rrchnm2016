@@ -11,7 +11,14 @@ $customFields = get_post_custom();
 </aside>
 
 <?php if ( have_posts() ): ?>
+    <?php $currentMonth = ''; ?>
     <?php while ( have_posts() ) : the_post(); ?>
+    <?php $eventDate = new DateTime(get_field('event_start_date')); ?>
+    <?php $eventDate = $eventDate->format('F Y'); ?>
+    <?php if ($eventDate !== $currentMonth): ?>
+    <h3><?php echo $eventDate; ?></h3>
+    <?php $currentMonth = $eventDate; ?>
+    <?php endif; ?>
 
     <div class="post">
         <aside class="post-meta">
