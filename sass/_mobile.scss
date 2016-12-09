@@ -1281,9 +1281,31 @@ form.wpcf7-form {
 /* @group ----- 16. Events ----- */
 
 .category-events h3,
-.post-type-archive-event h3 {
+.post-type-archive-event h3,
+.tag-rrchnm-at h3,
+.tag-at-rrchnm h3 {
     background-color: #eee;
     padding: rhythm(.5);
+}
+
+a.tag,
+.back-link {
+    display: inline-block;
+    padding: rhythm(.25);
+}
+
+.back-link {
+    background-color: $gray;
+}
+
+.at-rrchnm {
+    background-color: $primary-red;
+    color: #fff;
+}
+
+.rrchnm-at {
+    background-color: $primary-blue;
+    color: #fff;
 }
 
 /* @end */
