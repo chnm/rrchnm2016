@@ -146,7 +146,7 @@ function rrchnm_events_query( $query ) {
         $query->set( 'cat', '-' . $eventsID );
     }
 
-    if ($query->is_category('Events')) {
+    if ($query->is_category('Events') || $query->is_tag('rrchnm-at','at-rrchnm')) {
         $query->set('orderby', 'meta_value_num');
         $query->set('meta_key', 'event_start_date');
         $query->set('order', 'DESC');
