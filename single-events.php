@@ -7,7 +7,7 @@
 <aside id="blog-meta">
     <h1>Events</h1>
     <?php $eventsCategory = get_category_by_slug('events'); ?>
-    <a class="button" href="<?php get_category_link($eventsCategory->term_id); ?>">Full events list</a>
+    <a class="back-link" href="<?php echo get_category_link($eventsCategory->term_id); ?>">Back to all events</a>
 </aside>
 
 
