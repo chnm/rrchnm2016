@@ -12,7 +12,7 @@ $atRrchnmTag = get_term_by('slug', 'at-rrchnm', 'post_tag');
 <aside id="blog-meta">
     <h1>Events: RRCHNM@</h1>
 
-    <a href="<?php echo get_tag_link($rrchnmAtTag->term_id); ?>" class="at-rrchnm tag">@RRCHNM</a>
+    <a href="<?php echo get_tag_link($atRrchnmTag->term_id); ?>" class="at-rrchnm tag">@RRCHNM</a>
     <a href="<?php echo get_category_link($eventCategory->term_id); ?>" class="back-link">Back to all events</a>
 </aside>
 
