@@ -154,7 +154,7 @@ function rrchnm_events_query( $query ) {
 }
 
 function rrchnm_find_next_event() {
-    $eventPosts = get_posts(array('category_name' => 'Events'));
+    $eventPosts = get_posts(array('category_name' => 'Events', 'posts_per_page' => -1));
     $currentDate = date('Ymd');
     $nextEventPost = $eventPosts[0];
     $nextEventPostDate = get_field('event_start_date', $nextEventPost->ID);

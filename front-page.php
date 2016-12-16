@@ -15,18 +15,14 @@
 
 <div id="keep-up">
     <a href="the-hub" class="hub-link">Keep up with our latest activity at The Hub</a>
-    <?php
-        $eventPost = rrchnm_find_next_event();
-    ?>
     <div class="event feature">
         <h2>Upcoming RRCHNM Events</h2>
-            <?php foreach ($eventPost as $post): setup_postdata($post); ?>
-            <h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
-            <?php the_post_thumbnail(); ?>
-            <?php echo the_excerpt(); ?>
-            <?php endforeach; wp_reset_postdata()?>
-            <?php $eventsCategory = get_category_by_slug('events'); ?>
-            <a href="<?php echo get_category_link($eventsCategory->term_id); ?>" class="button">See all events</a>
+        <?php $eventPost = rrchnm_find_next_event(); ?>
+        <h3><a href="<?php echo get_the_permalink($eventPost); ?>"><?php echo get_the_title($eventPost); ?></a></h3>
+        <?php echo get_the_post_thumbnail($eventPost); ?>
+        <?php echo $eventPost->post_content; ?>
+        <?php $eventsCategory = get_category_by_slug('events'); ?>
+        <a href="<?php echo get_category_link($eventsCategory->term_id); ?>" class="button">See all events</a>
     </div>
     <div class="news feature">
         <h2>News</h2>
