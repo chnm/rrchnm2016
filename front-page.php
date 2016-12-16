@@ -30,7 +30,7 @@
     </div>
     <div class="news feature">
         <h2>News</h2>
-        <?php $newsPosts = get_posts(array('posts_per_page' => 1)); ?>
+        <?php $newsPosts = get_posts(array('posts_per_page' => 1, 'category__not_in' => array($eventsCategory->term_id))); ?>
         <?php foreach ($newsPosts as $post): setup_postdata($post); ?>
             <?php
             $authorID = get_the_author_meta('ID');
