@@ -32,6 +32,7 @@ $whatWeDoPageID = $whatWeDoPage->ID;
             $projectsFilters = array(
                 'post_type' => 'page',
                 'posts_per_page' => -1,
+                'orderby' => 'menu_order',
                 'post_status' => 'publish',
                 'tax_query'	=> array(
                     array(
