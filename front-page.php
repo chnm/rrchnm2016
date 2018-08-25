@@ -72,7 +72,7 @@
 
 <div id="support">
     <div class="container">
-        <p>Each year, the Roy Rosenzweig Center for History and New Media’s many project websites receive over 16 million visitors, and more than a million people rely on its digital tools to teach, learn, and conduct research. Donations help us sustain these resources.</p>
+        <p>Each year, the Roy Rosenzweig Center for History and New Media’s many project websites receive over 16 million visitors, and more than a million people rely on its digital tools to teach, learn, and conduct research. <a href="supporters">Donations from supporters help us sustain those resources.</a></p>
         <a href="http://advancement.gmu.edu/ihm02" class="button">Support the center today</a>
     </div>
 </div>
