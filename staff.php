@@ -47,6 +47,8 @@
     <?php $alumniTerm = get_term_by('slug', 'alumni', 'position'); ?>
     <?php $alumniIDs = get_objects_in_term( $alumniTerm->term_id, 'position' ); ?>
     <?php $inactiveIDs = array_merge($affiliateIDs, $alumniIDs); ?>
+    <?php $chnmadmin = get_user_by('login', 'chnmadmin'); ?>
+    <?php array_push($inactiveIDs, $chnmadmin->ID); ?>
     <?php $users = get_users(array('exclude' => $inactiveIDs)); ?>
 
     <?php foreach ($users as $user): ?>
