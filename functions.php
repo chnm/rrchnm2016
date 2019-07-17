@@ -201,6 +201,7 @@ add_theme_support( 'post-thumbnails' );
 
 // Custom
 add_filter('single_template', create_function('$t', 'foreach( (array) get_the_category() as $cat ) { if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-{$cat->slug}.php"; } return $t;' ));
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 add_action( 'init', 'register_top_nav' );
