@@ -119,7 +119,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -604,16 +605,6 @@ textarea {
     right: -0.125em;
   }
 
-  #intro h1 em {
-    font-style: normal;
-    text-transform: uppercase;
-  }
-
-  #intro p {
-    font-size: 24px;
-    line-height: 48px;
-  }
-
   .wp-caption-text,
   caption {
     font-size: 14px;
@@ -676,18 +667,6 @@ textarea {
     background: #fff url("img/select-arrow.svg") no-repeat;
     background-position: right 6px center;
     background-size: 8px;
-  }
-
-  #intro .button {
-    text-shadow: none;
-    text-transform: uppercase;
-    font-size: 24px;
-    padding: 0.25em 0.5em;
-  }
-  #intro .button:after {
-    content: "";
-    font-family: "FontAwesome";
-    margin-left: 0.25em;
   }
 
   /* @end */
@@ -803,8 +782,9 @@ textarea {
   .logo {
     height: 2.25em;
     width: calc(100% - 6em);
-    background: url("img/rrchnm-logo.png") no-repeat;
+    background: url("img/hashtag-logo.png") no-repeat;
     background-size: contain;
+    background-position: bottom;
   }
 
   .small .logo {
@@ -917,7 +897,6 @@ textarea {
 
   #searchform > div {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -992,17 +971,28 @@ textarea {
   /* @group ----- 07. Home ----- */
   .home #intro {
     position: relative;
+    text-align: center;
   }
   .home #intro:before {
     background: url("img/intro-bg.jpg") top center no-repeat;
     background-size: cover;
+  }
+  .home #intro .button {
+    text-shadow: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: 0.25em 0.5em;
+  }
+  .home #intro > p {
+    font-size: 24px;
+    line-height: 48px;
   }
 
   .home #intro .container > * {
     display: inline;
   }
 
-  .home #intro p {
+  .home #intro .container > p {
     font-family: "Oswald", sans-serif;
     font-weight: 300;
     font-size: 32px;
@@ -1018,7 +1008,8 @@ textarea {
     text-shadow: none;
     font-size: 16px;
     padding: 0.375em 0.75em;
-    display: inline-block;
+    display: table;
+    margin-top: 12px;
   }
 
   #features {
@@ -1141,18 +1132,16 @@ textarea {
   }
 
   #support {
-    border-color: rgba(0, 0, 0, 0.08);
-    border-top-width: 0.0625em;
-    border-top-style: solid;
-    padding-top: 1.4375em;
     background: url("img/support-bg.png") no-repeat center;
     background-size: cover;
-    padding-bottom: 1.5em;
+    padding: 1.5em;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
   }
 
   #support .container {
     padding: 1.5em;
-    margin: 1.5em;
     border: 3px solid #fff;
     overflow: hidden;
   }
@@ -1163,18 +1152,34 @@ textarea {
 
   #support .button {
     text-transform: uppercase;
+    font-size: 24px;
+    line-height: 48px;
+  }
+
+  .home .anniversary {
+    display: inline-block;
+    color: #ffcf00;
+    text-shadow: 1px 1px 10px #644301;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 60px;
+  }
+
+  #anniversary-row h2 {
+    margin-top: 0;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    color: #3673A2;
   }
 
   /* @end */
   /* @group ----- 08. Who We Are ----- */
   #staff {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
             justify-content: space-between;
   }
 
@@ -1381,19 +1386,15 @@ textarea {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
+    flex-shrink: 0;
   }
 
   #project-contributors .contributor {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 0.375em;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
             align-items: center;
   }
 
@@ -1419,14 +1420,11 @@ textarea {
 
   form.wpcf7-form {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 75%;
     margin: 0 auto;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
             justify-content: space-between;
   }
 
@@ -1789,6 +1787,11 @@ textarea {
     vertical-align: bottom;
     text-align: right;
   }
+  nav#global li:last-child a {
+    background-color: #b3252d;
+    color: #fff;
+    padding: 0.375em 0.75em;
+  }
 
   nav#global .mobile-toggle {
     display: none;
@@ -1841,11 +1844,9 @@ textarea {
 
   footer .neh {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 0;
     -webkit-box-align: end;
-        -ms-flex-align: end;
             align-items: flex-end;
     max-width: 60%;
   }
@@ -1861,14 +1862,11 @@ textarea {
 
   footer .container {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: end;
-        -ms-flex-align: end;
             align-items: flex-end;
     padding-bottom: 3em;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
             justify-content: space-between;
   }
 
@@ -1904,7 +1902,7 @@ textarea {
   /* @end */
   /* @group ----- 07. Home ----- */
   .home #intro {
-    padding: 4.5em 0;
+    padding: 3em 0;
   }
 
   .home #intro .container > p {
@@ -1921,6 +1919,7 @@ textarea {
     overflow: hidden;
     padding: 0.6em 0;
     font-size: 16px;
+    width: 100%;
   }
 
   .feature {
@@ -1942,10 +1941,62 @@ textarea {
   #keep-up {
     vertical-align: top;
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .home .container > #anniversary-row {
+    display: -webkit-box;
+    display: flex;
+    margin: 3em 0;
+  }
+  .home .container > #anniversary-row > div {
+    background-color: #fff;
+    width: 33.33333%;
+    padding: 2.25em;
+    position: relative;
+    z-index: 0;
+  }
+  .home .container > #anniversary-row > div:before {
+    content: "";
+    position: absolute;
+    top: 0.75em;
+    bottom: 0.75em;
+    left: 0.75em;
+    right: 0.75em;
+    box-shadow: 0 0 0 3px #3673A2 inset;
+    opacity: .7;
+    z-index: -1;
+  }
+  .home .container > #anniversary-row > div:after {
+    content: "";
+    position: absolute;
+    top: 0.75em;
+    bottom: 0.75em;
+    left: 0.75em;
+    right: 0.75em;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, #ffffff));
+    background: linear-gradient(rgba(255, 255, 255, 0), #ffffff 80%);
+    z-index: -1;
+  }
+  .home .container > #anniversary-row > div p {
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .home .container > #anniversary-row .story {
+    background: url("img/roy.png") #fff no-repeat;
+    background-size: contain;
+  }
+  .home .container > #anniversary-row .people {
+    background: url("img/staff.jpeg") #fff no-repeat;
+    background-size: contain;
+  }
+  .home .container > #anniversary-row .projects {
+    background: url("img/projects.png") #fff no-repeat;
+    background-size: contain;
+  }
+  .home .container > #anniversary-row > div:not(:last-child) {
+    margin: 0 5% 0 0;
   }
 
   /* @end */
@@ -1954,19 +2005,14 @@ textarea {
     width: calc(75% - 1.5em);
     float: left;
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-        -ms-flex-align: start;
             align-items: flex-start;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
             justify-content: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
             flex-direction: row;
     padding: 1.5em 0;
   }
@@ -1999,10 +2045,8 @@ textarea {
   #projects,
   #labs {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   #projects,
@@ -2041,9 +2085,7 @@ textarea {
   .page-template-project #intro + .container {
     display: -ms-flex;
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
@@ -2113,10 +2155,8 @@ textarea {
   #staff-projects {
     clear: both;
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   #staff-projects h2 {
@@ -2137,7 +2177,6 @@ textarea {
   /* @group ----- 11. Our Story ----- */
   .page-template-about #intro + .container {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -2159,14 +2198,10 @@ textarea {
   /* @group ----- 12. News ----- */
   .post {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
             justify-content: space-between;
   }
 

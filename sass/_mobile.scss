@@ -186,16 +186,6 @@ blockquote {
     }
 }
 
-#intro h1 em {
-    font-style: normal;
-    text-transform: uppercase;
-}
-
-#intro p {
-    font-size: 1.5 * $base-font-size;
-    line-height: 2 * $base-line-height;
-}
-
 .wp-caption-text,
 caption {
     font-size: .875 * $base-font-size;
@@ -253,19 +243,6 @@ select {
     background: #fff url("img/select-arrow.svg") no-repeat;
     background-position: right 6px center;
     background-size: .5 * $base-font-size;
-}
-
-#intro .button {
-    text-shadow: none;
-    text-transform: uppercase;
-    font-size: 1.5 * $base-font-size;
-    padding: rhythm(.25, 1.5 * $base-font-size) rhythm(.5, 1.5 * $base-font-size);
-
-    &:after {
-        content: $fa-var-long-arrow-right;
-        font-family: "FontAwesome";
-        margin-left: rhythm(.25, 1.5 * $base-font-size);
-    }
 }
 
 /* @end */
@@ -379,8 +356,9 @@ header {
 .logo {
     height: rhythm(1.5);
     width: calc(100% - #{rhythm(4)});
-    background:url('img/rrchnm-logo.png') no-repeat;
+    background:url('img/hashtag-logo.png') no-repeat;
     background-size: contain;
+    background-position: bottom;
 }
 
 .small .logo {
@@ -567,10 +545,23 @@ footer #description {
 
 .home #intro {
     position: relative;
-
+    text-align: center;
+    
     &:before {
         background:url('img/intro-bg.jpg') top center no-repeat;
         background-size: cover;
+    }
+
+    .button {
+        text-shadow: none;
+        text-transform: uppercase;
+        font-size: 1.5 * $base-font-size;
+        padding: rhythm(.25, 1.5 * $base-font-size) rhythm(.5, 1.5 * $base-font-size);
+    }
+
+    & > p {
+        font-size: 1.5 * $base-font-size;
+        line-height: 2 * $base-line-height;
     }
 }
 
@@ -578,7 +569,7 @@ footer #description {
     display: inline;
 }
 
-.home #intro p {
+.home #intro .container > p {
     font-family: "Oswald", sans-serif;
     font-weight: 300;
     font-size: 2 * $base-font-size;
@@ -594,7 +585,9 @@ footer #description {
     text-shadow: none;
     font-size: $base-font-size;
     padding: rhythm(.25) rhythm(.5);
-    display: inline-block;
+    //display: inline-block;
+    display: table;
+    margin-top: .5 * $base-line-height;
 }
 
 #features {
@@ -721,16 +714,16 @@ footer #description {
 }
 
 #support {
-    border-color: $gray;
-    @include leading-border(1px, 1, $base-font-size, solid);
     background: url('img/support-bg.png') no-repeat center;
     background-size: cover;
-    padding-bottom: rhythm();
+    padding: rhythm();
+    font-size: 1.5 * $base-font-size;
+    line-height: 2 * $base-line-height;
+    text-align: center;
 }
 
 #support .container {
     padding: rhythm();
-    margin: rhythm();
     border: 3px solid #fff;
     overflow: hidden;
 }
@@ -741,6 +734,25 @@ footer #description {
 
 #support .button {
     text-transform: uppercase;
+    font-size: 1.5 * $base-font-size;
+    line-height: 2 * $base-line-height;
+}
+
+.home .anniversary {
+    display: inline-block;
+    color: #ffcf00;
+    text-shadow: 1px 1px 10px #644301;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+#anniversary-row h2 {
+    margin-top: 0;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    color: $primary-blue;
 }
 
 /* @end */

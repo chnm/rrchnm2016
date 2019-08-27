@@ -72,6 +72,12 @@ nav#global {
     height: rhythm(1.5);
     vertical-align: bottom;
     text-align: right;
+
+    li:last-child a {
+        background-color: $primary-red;
+        color: #fff;
+        padding: rhythm(.25) rhythm(.5);
+    }
 }
 
 nav#global .mobile-toggle {
@@ -183,7 +189,7 @@ footer .container img[alt="Creative Commons License"] {
 /* @group ----- 07. Home ----- */
 
 .home #intro {
-    padding: rhythm(3) 0;
+    padding: rhythm(2) 0;
 }
 
 .home #intro .container > p {
@@ -200,6 +206,7 @@ footer .container img[alt="Creative Commons License"] {
     overflow: hidden;
     padding: rhythm(.5, 1.25 * $base-font-size) 0;
     font-size: $base-font-size;
+    width: 100%;
 }
 
 .feature {
@@ -222,6 +229,66 @@ footer .container img[alt="Creative Commons License"] {
     vertical-align: top;
     display: flex;
     flex-wrap: wrap;
+}
+
+.home .container > #anniversary-row {
+    display: flex;
+    margin: rhythm(2) 0;
+
+    & > div {
+        background-color: #fff;
+        width: span(4 of 12);
+        padding: rhythm(1.5);
+        position: relative;
+        z-index: 0;
+        
+        &:before {
+            content: "";
+            position: absolute;
+            top: rhythm(.5);
+            bottom: rhythm(.5);
+            left: rhythm(.5);
+            right: rhythm(.5);
+            box-shadow: 0 0 0 3px $primary-blue inset;
+            opacity: .7;
+            z-index: -1;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: rhythm(.5);
+            bottom: rhythm(.5);
+            left: rhythm(.5);
+            right: rhythm(.5);
+            background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1) 80%);
+            z-index: -1;
+        }
+        
+        p {
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+    
+    .story {
+        background: url('img/roy.png') #fff no-repeat;
+        background-size: contain;
+    }
+
+    .people {
+        background: url('img/staff.jpeg') #fff no-repeat;
+        background-size: contain;
+    }
+
+    .projects {
+        background: url('img/projects.png') #fff no-repeat;
+        background-size: contain;
+    }
+    
+    & > div:not(:last-child) {
+        margin: 0 gutter(2) 0 0;
+    }
 }
 
 /* @end */
