@@ -188,10 +188,6 @@ footer .container img[alt="Creative Commons License"] {
 
 /* @group ----- 07. Home ----- */
 
-.home #intro {
-    padding: rhythm(2) 0;
-}
-
 .home #intro .container > p {
     font-size: 3 * $base-font-size;
     line-height: 3 * $base-line-height;
@@ -233,9 +229,9 @@ footer .container img[alt="Creative Commons License"] {
 
 .home .container > #anniversary-row {
     display: flex;
-    margin: rhythm(2) 0;
+    margin: rhythm(2) 0 0;
 
-    & > div {
+    & > a {
         background-color: #fff;
         width: span(4 of 12);
         padding: rhythm(1.5);
@@ -286,7 +282,7 @@ footer .container img[alt="Creative Commons License"] {
         background-size: contain;
     }
     
-    & > div:not(:last-child) {
+    & > a:not(:last-child) {
         margin: 0 gutter(2) 0 0;
     }
 }

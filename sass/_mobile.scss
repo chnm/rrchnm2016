@@ -330,7 +330,7 @@ header {
     padding: rhythm();
     background-color: #fff;
     z-index: 9999;
-    border-bottom: 1px solid $gray;
+    //border-bottom: 1px solid $gray;
     transition: left .5s;
 }
 
@@ -546,10 +546,13 @@ footer #description {
 .home #intro {
     position: relative;
     text-align: center;
+    padding: 0 rhythm();
     
     &:before {
-        background:url('img/intro-bg.jpg') top center no-repeat;
-        background-size: cover;
+        /* background:url('img/intro-bg.jpg') top center no-repeat;
+        background-size: cover; */
+        background: #fff;
+        opacity: 1;
     }
 
     .button {
@@ -560,8 +563,8 @@ footer #description {
     }
 
     & > p {
-        font-size: 1.5 * $base-font-size;
-        line-height: 2 * $base-line-height;
+        font-size: 1.25 * $base-font-size;
+        line-height: 1.5 * $base-line-height;
     }
 }
 
@@ -736,12 +739,13 @@ footer #description {
     text-transform: uppercase;
     font-size: 1.5 * $base-font-size;
     line-height: 2 * $base-line-height;
+    margin-bottom: rhythm();
 }
 
 .home .anniversary {
     display: inline-block;
-    color: #ffcf00;
-    text-shadow: 1px 1px 10px #644301;
+    color: #faaf40;
+    //text-shadow: 1px 1px 10px #644301;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 60px;
@@ -753,6 +757,10 @@ footer #description {
     font-family: "Oswald", sans-serif;
     font-weight: 300;
     color: $primary-blue;
+}
+
+#anniversary-row a {
+    color: #656565;
 }
 
 /* @end */

@@ -751,7 +751,6 @@ textarea {
     padding: 1.5em;
     background-color: #fff;
     z-index: 9999;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     -webkit-transition: left .5s;
     transition: left .5s;
   }
@@ -972,10 +971,13 @@ textarea {
   .home #intro {
     position: relative;
     text-align: center;
+    padding: 0 1.5em;
   }
   .home #intro:before {
-    background: url("img/intro-bg.jpg") top center no-repeat;
-    background-size: cover;
+    /* background:url('img/intro-bg.jpg') top center no-repeat;
+    background-size: cover; */
+    background: #fff;
+    opacity: 1;
   }
   .home #intro .button {
     text-shadow: none;
@@ -984,8 +986,8 @@ textarea {
     padding: 0.25em 0.5em;
   }
   .home #intro > p {
-    font-size: 24px;
-    line-height: 48px;
+    font-size: 20px;
+    line-height: 36px;
   }
 
   .home #intro .container > * {
@@ -1154,12 +1156,12 @@ textarea {
     text-transform: uppercase;
     font-size: 24px;
     line-height: 48px;
+    margin-bottom: 1.5em;
   }
 
   .home .anniversary {
     display: inline-block;
-    color: #ffcf00;
-    text-shadow: 1px 1px 10px #644301;
+    color: #faaf40;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 60px;
@@ -1171,6 +1173,10 @@ textarea {
     font-family: "Oswald", sans-serif;
     font-weight: 300;
     color: #3673A2;
+  }
+
+  #anniversary-row a {
+    color: #656565;
   }
 
   /* @end */
@@ -1901,10 +1907,6 @@ textarea {
 
   /* @end */
   /* @group ----- 07. Home ----- */
-  .home #intro {
-    padding: 3em 0;
-  }
-
   .home #intro .container > p {
     font-size: 48px;
     line-height: 72px;
@@ -1948,16 +1950,16 @@ textarea {
   .home .container > #anniversary-row {
     display: -webkit-box;
     display: flex;
-    margin: 3em 0;
+    margin: 3em 0 0;
   }
-  .home .container > #anniversary-row > div {
+  .home .container > #anniversary-row > a {
     background-color: #fff;
     width: 33.33333%;
     padding: 2.25em;
     position: relative;
     z-index: 0;
   }
-  .home .container > #anniversary-row > div:before {
+  .home .container > #anniversary-row > a:before {
     content: "";
     position: absolute;
     top: 0.75em;
@@ -1968,7 +1970,7 @@ textarea {
     opacity: .7;
     z-index: -1;
   }
-  .home .container > #anniversary-row > div:after {
+  .home .container > #anniversary-row > a:after {
     content: "";
     position: absolute;
     top: 0.75em;
@@ -1979,7 +1981,7 @@ textarea {
     background: linear-gradient(rgba(255, 255, 255, 0), #ffffff 80%);
     z-index: -1;
   }
-  .home .container > #anniversary-row > div p {
+  .home .container > #anniversary-row > a p {
     margin-bottom: 0;
     text-align: left;
   }
@@ -1995,7 +1997,7 @@ textarea {
     background: url("img/projects.png") #fff no-repeat;
     background-size: contain;
   }
-  .home .container > #anniversary-row > div:not(:last-child) {
+  .home .container > #anniversary-row > a:not(:last-child) {
     margin: 0 5% 0 0;
   }
 

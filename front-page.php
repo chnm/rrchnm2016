@@ -5,28 +5,27 @@
         <p><span class="anniversary">25 years</span> of making a better yesterday</p>
 
         <div id="anniversary-row">
-            <div class="story">
+            <a href="<?php echo get_permalink(get_page_by_path('our-story')); ?>" class="story">
                 <h2>Our Story</h2>
                 <p>Roy Rosenzweig founded the Center in 1994 with early support from the National Endowment for the Humanities, creating digital projects that pushed the boundaries of history and the humanities. We have since produced almost 100 different projects,  used by tens of millions of people every year. Though Roy passed away in 2007, his vision continues to drive everything we do.</p>
-            </div>
-            <div class="people">
-                <div class="thumbnail"></div>
+            </a>
+            <a href="<?php echo get_permalink(get_page_by_path('who-we-are')); ?>" class="people">              
                 <h2>Our People</h2>
                 <p>Our greatest strength is our people. More than 130 individuals have worked here over
 the past 25 years, including multi-disciplinary humanities scholars, researchers, software developers, designers, and media producers. We are proud that our collaborators span many academic fields and technical specialties, both in the United States and around the world.</p>
-            </div>
-            <div class="projects">
+            </a>
+            <a href="<?php echo get_permalink(get_page_by_path('what-we-do')); ?>" class="projects">
                 <h2>Our Work</h2>
                 <p>Since our inception, we have pushed the boundaries of digital humanities by using technology to democratize history: to incorporate multiple voices, reach diverse audiences, and encourage popular participation in preserving the past. In 2018, our projects attracted over 35 million visits from more than 20 million individuals. Our work is always open source and open access, available to all.</p>
-            </div>
+            </a>
         </div>
     </div>
 </div>
 
 <div id="support">
     <div class="container">
-        <p>Each year, the Roy Rosenzweig Center for History and New Media’s many project websites receive over 16 million visitors, and more than a million people rely on its digital tools to teach, learn, and conduct research. <a href="supporters">Donations from supporters help us sustain those resources.</a></p>
         <a href="http://advancement.gmu.edu/ihm02" class="button">Support the center today</a>
+        <p>Each year, the Roy Rosenzweig Center for History and New Media’s many project websites receive over 16 million visitors, and more than a million people rely on its digital tools to teach, learn, and conduct research. <a href="supporters">Donations from supporters help us sustain those resources.</a></p>
     </div>
 </div>
 
