@@ -720,8 +720,6 @@ footer #description {
     background: url('img/support-bg.png') no-repeat center;
     background-size: cover;
     padding: rhythm();
-    font-size: 1.5 * $base-font-size;
-    line-height: 2 * $base-line-height;
     text-align: center;
 }
 
@@ -737,8 +735,6 @@ footer #description {
 
 #support .button {
     text-transform: uppercase;
-    font-size: 1.5 * $base-font-size;
-    line-height: 2 * $base-line-height;
     margin-bottom: rhythm();
 }
 
@@ -759,9 +755,67 @@ footer #description {
     color: $primary-blue;
 }
 
-#anniversary-row a {
-    color: #656565;
+.home .container > #anniversary-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rhythm(2) 0 0;
+
+    & > a {
+        color: #656565;
+        background-color: #fff;
+        padding: rhythm(1.5);
+        position: relative;
+        z-index: 0;
+        
+        &:before {
+            content: "";
+            position: absolute;
+            top: rhythm(.5);
+            bottom: rhythm(.5);
+            left: rhythm(.5);
+            right: rhythm(.5);
+            box-shadow: 0 0 0 3px $primary-blue inset;
+            opacity: .7;
+            z-index: -1;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: rhythm(.5);
+            bottom: rhythm(.5);
+            left: rhythm(.5);
+            right: rhythm(.5);
+            background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1) 80%);
+            z-index: -1;
+        }
+        
+        p {
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+    
+    .story {
+        background: url('img/roy.png') #fff no-repeat;
+        background-size: contain;
+    }
+
+    .people {
+        background: url('img/staff.jpeg') #fff no-repeat;
+        background-size: contain;
+    }
+
+    .projects {
+        background: url('img/projects.png') #fff no-repeat;
+        background-size: contain;
+    }
+    
+    & > a:not(:last-child) {
+        margin: 0 gutter(2) 0 0;
+    }
 }
+
 
 /* @end */
 

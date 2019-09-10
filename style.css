@@ -1137,8 +1137,6 @@ textarea {
     background: url("img/support-bg.png") no-repeat center;
     background-size: cover;
     padding: 1.5em;
-    font-size: 24px;
-    line-height: 48px;
     text-align: center;
   }
 
@@ -1154,8 +1152,6 @@ textarea {
 
   #support .button {
     text-transform: uppercase;
-    font-size: 24px;
-    line-height: 48px;
     margin-bottom: 1.5em;
   }
 
@@ -1175,8 +1171,59 @@ textarea {
     color: #3673A2;
   }
 
-  #anniversary-row a {
+  .home .container > #anniversary-row {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em 0 0;
+  }
+  .home .container > #anniversary-row > a {
     color: #656565;
+    background-color: #fff;
+    padding: 2.25em;
+    position: relative;
+    z-index: 0;
+  }
+  .home .container > #anniversary-row > a:before {
+    content: "";
+    position: absolute;
+    top: 0.75em;
+    bottom: 0.75em;
+    left: 0.75em;
+    right: 0.75em;
+    box-shadow: 0 0 0 3px #3673A2 inset;
+    opacity: .7;
+    z-index: -1;
+  }
+  .home .container > #anniversary-row > a:after {
+    content: "";
+    position: absolute;
+    top: 0.75em;
+    bottom: 0.75em;
+    left: 0.75em;
+    right: 0.75em;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, #ffffff));
+    background: linear-gradient(rgba(255, 255, 255, 0), #ffffff 80%);
+    z-index: -1;
+  }
+  .home .container > #anniversary-row > a p {
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .home .container > #anniversary-row .story {
+    background: url("img/roy.png") #fff no-repeat;
+    background-size: contain;
+  }
+  .home .container > #anniversary-row .people {
+    background: url("img/staff.jpeg") #fff no-repeat;
+    background-size: contain;
+  }
+  .home .container > #anniversary-row .projects {
+    background: url("img/projects.png") #fff no-repeat;
+    background-size: contain;
+  }
+  .home .container > #anniversary-row > a:not(:last-child) {
+    margin: 0 5% 0 0;
   }
 
   /* @end */
@@ -1947,58 +1994,17 @@ textarea {
     flex-wrap: wrap;
   }
 
-  .home .container > #anniversary-row {
-    display: -webkit-box;
-    display: flex;
-    margin: 3em 0 0;
-  }
   .home .container > #anniversary-row > a {
-    background-color: #fff;
     width: 33.33333%;
-    padding: 2.25em;
-    position: relative;
-    z-index: 0;
   }
-  .home .container > #anniversary-row > a:before {
-    content: "";
-    position: absolute;
-    top: 0.75em;
-    bottom: 0.75em;
-    left: 0.75em;
-    right: 0.75em;
-    box-shadow: 0 0 0 3px #3673A2 inset;
-    opacity: .7;
-    z-index: -1;
+
+  #support {
+    font-size: 24px;
+    line-height: 48px;
   }
-  .home .container > #anniversary-row > a:after {
-    content: "";
-    position: absolute;
-    top: 0.75em;
-    bottom: 0.75em;
-    left: 0.75em;
-    right: 0.75em;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, #ffffff));
-    background: linear-gradient(rgba(255, 255, 255, 0), #ffffff 80%);
-    z-index: -1;
-  }
-  .home .container > #anniversary-row > a p {
-    margin-bottom: 0;
-    text-align: left;
-  }
-  .home .container > #anniversary-row .story {
-    background: url("img/roy.png") #fff no-repeat;
-    background-size: contain;
-  }
-  .home .container > #anniversary-row .people {
-    background: url("img/staff.jpeg") #fff no-repeat;
-    background-size: contain;
-  }
-  .home .container > #anniversary-row .projects {
-    background: url("img/projects.png") #fff no-repeat;
-    background-size: contain;
-  }
-  .home .container > #anniversary-row > a:not(:last-child) {
-    margin: 0 5% 0 0;
+  #support .button {
+    font-size: 24px;
+    line-height: 48px;
   }
 
   /* @end */
