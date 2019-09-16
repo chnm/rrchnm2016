@@ -971,7 +971,6 @@ textarea {
   .home #intro {
     position: relative;
     text-align: center;
-    padding: 0 1.5em;
   }
   .home #intro:before {
     /* background:url('img/intro-bg.jpg') top center no-repeat;
@@ -1954,6 +1953,10 @@ textarea {
 
   /* @end */
   /* @group ----- 07. Home ----- */
+  .home #intro {
+    padding: 0 1.5em;
+  }
+
   .home #intro .container > p {
     font-size: 48px;
     line-height: 72px;
@@ -1992,6 +1995,10 @@ textarea {
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .home .container > #anniversary-row {
+    flex-wrap: nowrap;
   }
 
   .home .container > #anniversary-row > a {

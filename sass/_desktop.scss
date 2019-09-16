@@ -188,6 +188,10 @@ footer .container img[alt="Creative Commons License"] {
 
 /* @group ----- 07. Home ----- */
 
+.home #intro {
+    padding: 0 rhythm();
+}
+
 .home #intro .container > p {
     font-size: 3 * $base-font-size;
     line-height: 3 * $base-line-height;
@@ -225,6 +229,10 @@ footer .container img[alt="Creative Commons License"] {
     vertical-align: top;
     display: flex;
     flex-wrap: wrap;
+}
+
+.home .container > #anniversary-row {
+    flex-wrap: nowrap;
 }
 
 .home .container > #anniversary-row > a {
