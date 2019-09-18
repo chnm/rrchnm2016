@@ -32,7 +32,7 @@ the past 25 years, including multi-disciplinary humanities scholars, researchers
 <div id="keep-up">
     <a href="the-hub" class="hub-link">Keep up with our latest activity at The Hub</a>
     <div class="event feature">
-        <h2>Upcoming RRCHNM Events</h2>
+        <h2>RRCHNM Events</h2>
         <?php $eventPost = rrchnm_find_next_event(); ?>
         <h3><a href="<?php echo get_the_permalink($eventPost); ?>"><?php echo get_the_title($eventPost); ?></a></h3>
         <?php echo get_the_post_thumbnail($eventPost); ?>
@@ -44,6 +44,7 @@ the past 25 years, including multi-disciplinary humanities scholars, researchers
         <h2>News</h2>
         <?php $newsPosts = get_posts(array('posts_per_page' => 1, 'category__not_in' => array($eventsCategory->term_id))); ?>
         <?php foreach ($newsPosts as $post): setup_postdata($post); ?>
+            <h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
             <?php
             $authorID = get_the_author_meta('ID');
             if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($authorID, 'picture')) {
@@ -52,8 +53,9 @@ the past 25 years, including multi-disciplinary humanities scholars, researchers
                 $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
             }
             ?>
-            <div class="avatar" style="background-image:url('<?php echo $avatar; ?>')"></div>
-            <h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
+            <?php if ( has_post_thumbnail()): ?>
+            <?php the_post_thumbnail(); ?>
+            <?php endif; ?>
             <?php echo the_excerpt(); ?>
             <a href="news" class="button">Read more of the news</a>
         <?php endforeach; wp_reset_postdata(); ?>
@@ -80,6 +82,9 @@ the past 25 years, including multi-disciplinary humanities scholars, researchers
         <h2>Featured Project</h2>
         <?php foreach ($featuredPost as $post): setup_postdata($post); ?>
             <h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
+            <?php if ( has_post_thumbnail()): ?>
+            <?php the_post_thumbnail(); ?>
+            <?php endif; ?>
             <?php echo the_excerpt(); ?>
         <?php endforeach; ?>
         <a href="what-we-do" class="button">Explore more projects</a>

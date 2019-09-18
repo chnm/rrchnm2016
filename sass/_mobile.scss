@@ -546,7 +546,7 @@ footer #description {
 .home #intro {
     position: relative;
     text-align: center;
-    
+
     &:before {
         /* background:url('img/intro-bg.jpg') top center no-repeat;
         background-size: cover; */
@@ -650,13 +650,13 @@ footer #description {
 }
 
 .feature .avatar {
-    width: rhythm(5);
-    height: rhythm(5);
+    width: rhythm(2);
+    height: rhythm(2);
     position: relative;
     border-radius: 100%;
     overflow: hidden;
     display: block;
-    margin: 0 auto rhythm(.5);
+    margin: 0 rhythm(.5) 0 0;
     background-size: cover;
     background-position: center;
 }
@@ -693,13 +693,29 @@ footer #description {
 }
 
 .feature .byline {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: rhythm(-1);
     text-align: center;
     font-size: .75 * $base-font-size;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+.feature.projects .attachment-post-thumbnail,
+.feature.event .attachment-post-thumbnail {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.feature.news .attachment-post-thumbnail {
+    float: left;
+    margin: 0 rhythm(.5) rhythm(.5) 0;
+    max-width: 50%;
+    height: auto;
 }
 
 .feature .button {
@@ -720,10 +736,11 @@ footer #description {
     background-size: cover;
     padding: rhythm();
     text-align: center;
+    border-bottom: 1px solid $gray;
 }
 
 #support .container {
-    padding: rhythm();
+    padding: rhythm() rhythm() 0;
     border: 3px solid #fff;
     overflow: hidden;
 }

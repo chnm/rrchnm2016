@@ -1072,13 +1072,13 @@ textarea {
   }
 
   .feature .avatar {
-    width: 7.5em;
-    height: 7.5em;
+    width: 3em;
+    height: 3em;
     position: relative;
     border-radius: 100%;
     overflow: hidden;
     display: block;
-    margin: 0 auto 0.75em;
+    margin: 0 0.75em 0 0;
     background-size: cover;
     background-position: center;
   }
@@ -1110,13 +1110,32 @@ textarea {
   }
 
   .feature .byline {
-    display: block;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     margin-top: -1.5em;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
+  }
+
+  .feature.projects .attachment-post-thumbnail,
+  .feature.event .attachment-post-thumbnail {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .feature.news .attachment-post-thumbnail {
+    float: left;
+    margin: 0 0.75em 0.75em 0;
+    max-width: 50%;
+    height: auto;
   }
 
   .feature .button {
@@ -1137,10 +1156,11 @@ textarea {
     background-size: cover;
     padding: 1.5em;
     text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   #support .container {
-    padding: 1.5em;
+    padding: 1.5em 1.5em 0;
     border: 3px solid #fff;
     overflow: hidden;
   }
