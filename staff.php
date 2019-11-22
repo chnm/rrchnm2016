@@ -21,7 +21,7 @@
     <nav>
         <h2>Meet Us</h2>
         <ul>
-        <?php $filters = ['division', 'role', 'position']; ?>
+        <?php $filters = ['role', 'position']; ?>
         <?php foreach ($filters as $filter): ?>
             <?php $filterTerms = get_terms($filter); ?>
             <?php if (count($filterTerms) > 0): ?>
@@ -48,7 +48,9 @@
     <?php $alumniIDs = get_objects_in_term( $alumniTerm->term_id, 'position' ); ?>
     <?php $inactiveIDs = array_merge($affiliateIDs, $alumniIDs); ?>
     <?php $chnmadmin = get_user_by('login', 'chnmadmin'); ?>
+    <?php $chnmeditor = get_user_by('login', 'rrchnm-editor'); ?>
     <?php array_push($inactiveIDs, $chnmadmin->ID); ?>
+    <?php array_push($inactiveIDs, $chnmeditor->ID); ?>
     <?php $users = get_users(array('exclude' => $inactiveIDs)); ?>
 
     <?php foreach ($users as $user): ?>

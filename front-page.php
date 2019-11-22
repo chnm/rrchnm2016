@@ -25,7 +25,7 @@ the past 25 years, including multi-disciplinary humanities scholars, researchers
 <div id="support">
     <div class="container">
         <a href="http://advancement.gmu.edu/ihm02" class="button">Support the center today</a>
-        <p>Each year, the Roy Rosenzweig Center for History and New Media’s many project websites receive over 16 million visitors, and more than a million people rely on its digital tools to teach, learn, and conduct research. <a href="supporters">Donations from supporters help us sustain those resources.</a></p>
+        <p>Each year, the Roy Rosenzweig Center for History and New Media’s many project websites receive over 16 million visitors, and more than a million people rely on its digital tools to teach, learn, and conduct research. <a href="our-story/supporters">Donations from supporters help us sustain those resources.</a></p>
     </div>
 </div>
 
