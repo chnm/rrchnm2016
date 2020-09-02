@@ -119,7 +119,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -431,7 +432,6 @@ textarea {
   body {
     margin: 0;
     padding: 0;
-    -webkit-transition: left .5s, right .5s;
     transition: left .5s, right .5s;
     left: 0;
     right: 0;
@@ -773,7 +773,6 @@ textarea {
     background-color: #fff;
     z-index: 9999;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    -webkit-transition: left .5s;
     transition: left .5s;
   }
   header:after {
@@ -856,7 +855,6 @@ textarea {
   nav#global ul {
     margin: 1.5em 0 0;
     list-style-type: none;
-    -webkit-transition: right .5s, left .5s;
     transition: right .5s, left .5s;
     position: fixed;
     top: 0;
@@ -916,8 +914,6 @@ textarea {
   }
 
   #searchform > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -1168,14 +1164,9 @@ textarea {
   /* @end */
   /* @group ----- 08. Who We Are ----- */
   #staff {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   #staff h3 {
@@ -1234,8 +1225,7 @@ textarea {
     position: absolute;
     top: 0;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     height: 100%;
     width: auto;
     vertical-align: top;
@@ -1290,7 +1280,7 @@ textarea {
     background-position: center;
   }
 
-  #featured h3 {
+  #projects .section h3 {
     font-family: "Oswald", sans-serif;
     width: 100%;
     color: #3673A2;
@@ -1300,7 +1290,7 @@ textarea {
     text-shadow: -3px -3px 3px #fff, 3px -3px 3px #fff, -3px 3px 3px #fff, 3px 3px 3px #fff;
     z-index: 1;
   }
-  #featured h3:before {
+  #projects .section h3:before {
     content: "";
     position: absolute;
     left: 0;
@@ -1310,7 +1300,7 @@ textarea {
     background-color: rgba(0, 0, 0, 0.08);
     z-index: -1;
   }
-  #featured h3:after {
+  #projects .section h3:after {
     content: "";
     display: inline-block;
     height: 24px;
@@ -1381,20 +1371,14 @@ textarea {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
+    flex-shrink: 0;
   }
 
   #project-contributors .contributor {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 0.375em;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-content: center;
+    align-items: center;
   }
 
   #project-contributors .contributor .name {
@@ -1418,16 +1402,11 @@ textarea {
   }
 
   form.wpcf7-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 75%;
     margin: 0 auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 
   .wpcf7-form .field-group {
@@ -1617,8 +1596,7 @@ textarea {
 
   .single-essay #intro .container {
     position: relative;
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
     left: 0;
   }
 
@@ -1687,8 +1665,7 @@ textarea {
 
   .the-hub#intro .container {
     position: relative;
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
     left: 0;
   }
 
@@ -1840,13 +1817,9 @@ textarea {
   }
 
   footer .neh {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 0;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
     max-width: 60%;
   }
 
@@ -1860,16 +1833,10 @@ textarea {
   }
 
   footer .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
     padding-bottom: 3em;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 
   footer .container > a {
@@ -1941,11 +1908,8 @@ textarea {
 
   #keep-up {
     vertical-align: top;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   /* @end */
@@ -1953,21 +1917,11 @@ textarea {
   #staff {
     width: calc(75% - 1.5em);
     float: left;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
     padding: 1.5em 0;
   }
 
@@ -1987,7 +1941,12 @@ textarea {
 
   /* @end */
   /* @group ----- 09. What We Do ----- */
-  #featured {
+  #projects {
+    float: right;
+    margin: 1.5rem 0;
+  }
+
+  #projects .section {
     margin-bottom: 3em;
     border-color: rgba(0, 0, 0, 0.08);
     border-bottom-width: 0.0625em;
@@ -1995,14 +1954,11 @@ textarea {
     padding-bottom: -0.0625em;
   }
 
-  #featured,
-  #projects,
+  #projects .section,
   #labs {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
   }
 
   #projects,
@@ -2015,17 +1971,16 @@ textarea {
     margin-top: 0;
   }
 
-  #featured .project,
   #projects .project {
     width: 33.33333%;
     padding: 0 0.625%;
   }
 
-  #featured .project:nth-of-type(3n+1) {
+  #projects .project:nth-of-type(3n+1) {
     padding-left: 0;
   }
 
-  #featured .project:nth-of-type(3n) {
+  #projects .project:nth-of-type(3n) {
     padding-right: 0;
   }
 
@@ -2033,17 +1988,10 @@ textarea {
     max-width: 100%;
   }
 
-  #featured + nav {
-    margin-top: 0;
-  }
-
   /* @group ----- 09a. Project ----- */
   .page-template-project #intro + .container {
     display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
@@ -2112,11 +2060,8 @@ textarea {
 
   #staff-projects {
     clear: both;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   #staff-projects h2 {
@@ -2136,8 +2081,6 @@ textarea {
   /* @end */
   /* @group ----- 11. Our Story ----- */
   .page-template-about #intro + .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -2158,16 +2101,10 @@ textarea {
   /* @end */
   /* @group ----- 12. News ----- */
   .post {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
   }
 
   .post h1 {
