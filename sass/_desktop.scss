@@ -285,17 +285,22 @@ footer .container img[alt="Creative Commons License"] {
 
 /* @group ----- 09. What We Do ----- */
 
-#featured {
+#projects {
+    float: right;
+    margin: 1.5rem 0;
+}
+
+#projects .section {
     margin-bottom: rhythm(2);
     border-color: $gray;
     @include trailing-border(1px, 0, $base-font-size, solid);
 }
 
-#featured,
-#projects,
+#projects .section,
 #labs {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 #projects,
@@ -308,26 +313,21 @@ footer .container img[alt="Creative Commons License"] {
     }
 }
 
-#featured .project,
 #projects .project {
     width: span(3 of 9);
     padding: 0 gutter();
 }
 
-#featured .project:nth-of-type(3n+1) {
+#projects .project:nth-of-type(3n+1) {
     padding-left: 0;
 }
 
-#featured .project:nth-of-type(3n) {
+#projects .project:nth-of-type(3n) {
     padding-right: 0;
 }
 
 .project img {
     max-width: 100%;
-}
-
-#featured + nav {
-    margin-top: 0;
 }
 
     /* @group ----- 09a. Project ----- */
