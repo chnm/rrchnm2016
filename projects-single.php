@@ -11,8 +11,8 @@
     }
     ?>
     <a href="<?php echo esc_url(get_permalink($projectID)); ?>" class="thumbnail" style="background-image:url('<?php echo $imgBgUrl; ?>')"></a>
-    <h4><a href="<?php echo esc_url(get_permalink($projectID)); ?>"><?php echo $featuredProject->post_title; ?></a></h4>
-    <?php if (isset($projectMeta['Short Description'])): ?>
+    <h4><a href="<?php echo esc_url(get_permalink($projectID)); ?>"><?php echo get_the_title($projectID); ?></a></h4>
+    <?php if (isset($projectMeta['Short Description']) && ($args['isFeatured'] == true)): ?>
     <?php echo $projectMeta['Short Description'][0]; ?>
     <?php endif; ?>
 </div>
