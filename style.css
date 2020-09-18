@@ -750,11 +750,6 @@ textarea {
     padding: 1.5em;
     background-color: #fff;
     z-index: 9999;
-<<<<<<< HEAD
-    -webkit-transition: left .5s;
-=======
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
->>>>>>> master
     transition: left .5s;
   }
   header:after {
@@ -897,10 +892,6 @@ textarea {
   }
 
   #searchform > div {
-<<<<<<< HEAD
-    display: -webkit-box;
-=======
->>>>>>> master
     display: flex;
   }
 
@@ -1115,12 +1106,9 @@ textarea {
   }
 
   .feature .byline {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     margin-top: -1.5em;
     text-align: center;
     font-size: 12px;
@@ -1196,7 +1184,6 @@ textarea {
   }
 
   .home .container > #anniversary-row {
-    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
     margin: 3em 0 0;
@@ -1226,7 +1213,6 @@ textarea {
     bottom: 0.75em;
     left: 0.75em;
     right: 0.75em;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, #ffffff));
     background: linear-gradient(rgba(255, 255, 255, 0), #ffffff 80%);
     z-index: -1;
   }
@@ -1253,17 +1239,9 @@ textarea {
   /* @end */
   /* @group ----- 08. Who We Are ----- */
   #staff {
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-=======
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
->>>>>>> master
   }
 
   #staff h3 {
@@ -1472,19 +1450,10 @@ textarea {
   }
 
   #project-contributors .contributor {
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: flex;
-    margin-bottom: 0.375em;
-    align-content: center;
-    -webkit-box-align: center;
-            align-items: center;
-=======
     display: flex;
     margin-bottom: 0.375em;
     align-content: center;
     align-items: center;
->>>>>>> master
   }
 
   #project-contributors .contributor .name {
@@ -1508,20 +1477,11 @@ textarea {
   }
 
   form.wpcf7-form {
-<<<<<<< HEAD
-    display: -webkit-box;
-=======
->>>>>>> master
     display: flex;
     flex-wrap: wrap;
     width: 75%;
     margin: 0 auto;
-<<<<<<< HEAD
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-=======
     justify-content: space-between;
->>>>>>> master
   }
 
   .wpcf7-form .field-group {
@@ -1937,17 +1897,9 @@ textarea {
   }
 
   footer .neh {
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: flex;
-    margin-bottom: 0;
-    -webkit-box-align: end;
-            align-items: flex-end;
-=======
     display: flex;
     margin-bottom: 0;
     align-items: flex-end;
->>>>>>> master
     max-width: 60%;
   }
 
@@ -1961,20 +1913,10 @@ textarea {
   }
 
   footer .container {
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: end;
-            align-items: flex-end;
-    padding-bottom: 3em;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-=======
     display: flex;
     align-items: flex-end;
     padding-bottom: 3em;
     justify-content: space-between;
->>>>>>> master
   }
 
   footer .container > a {
@@ -2047,8 +1989,6 @@ textarea {
 
   #keep-up {
     vertical-align: top;
-<<<<<<< HEAD
-    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
   }
@@ -2068,10 +2008,6 @@ textarea {
   #support .button {
     font-size: 24px;
     line-height: 48px;
-=======
-    display: flex;
-    flex-wrap: wrap;
->>>>>>> master
   }
 
   /* @end */
@@ -2079,24 +2015,11 @@ textarea {
   #staff {
     width: calc(75% - 1.5em);
     float: left;
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: start;
-            justify-content: flex-start;
-    flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-=======
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
->>>>>>> master
     padding: 1.5em 0;
   }
 
@@ -2131,15 +2054,9 @@ textarea {
 
   #projects .section,
   #labs {
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-=======
     display: flex;
     flex-wrap: wrap;
     width: 100%;
->>>>>>> master
   }
 
   #projects,
@@ -2172,10 +2089,6 @@ textarea {
   /* @group ----- 09a. Project ----- */
   .page-template-project #intro + .container {
     display: -ms-flex;
-<<<<<<< HEAD
-    display: -webkit-box;
-=======
->>>>>>> master
     display: flex;
     flex-wrap: wrap;
   }
@@ -2245,10 +2158,6 @@ textarea {
 
   #staff-projects {
     clear: both;
-<<<<<<< HEAD
-    display: -webkit-box;
-=======
->>>>>>> master
     display: flex;
     flex-wrap: wrap;
   }
@@ -2270,10 +2179,6 @@ textarea {
   /* @end */
   /* @group ----- 11. Our Story ----- */
   .page-template-about #intro + .container {
-<<<<<<< HEAD
-    display: -webkit-box;
-=======
->>>>>>> master
     display: flex;
   }
 
@@ -2294,19 +2199,10 @@ textarea {
   /* @end */
   /* @group ----- 12. News ----- */
   .post {
-<<<<<<< HEAD
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-=======
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: space-between;
->>>>>>> master
   }
 
   .post h1 {
