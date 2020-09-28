@@ -98,7 +98,7 @@ function rrchnm_staff_member($userID) {
     } else {
         $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
     }
-    $html .= '<a href="' . $userUrl . '" class="avatar" aria-title="staff avatar" style="background-image:url(\'' . $avatar . '\')"></a>';
+    $html .= '<a href="' . $userUrl . '" class="avatar" style="background-image:url(\'' . $avatar . '\')"><img class="sr-only" src="' . $avatar . '" alt="profile picture for '. $displayName . '"></a>';
     $html .= '<span class="name"><a href="' . $userUrl . '">' . $displayName . '</a></span>';
     if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userID, 'jobtitle')) {
         $html .= '<span class="position">' . get_cimyFieldValue($userID, 'jobtitle') . '</span>';
