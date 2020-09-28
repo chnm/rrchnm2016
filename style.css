@@ -1904,7 +1904,7 @@ textarea {
   footer .neh {
     display: flex;
     margin-bottom: 0;
-    align-items: flex-end;
+    align-items: center;
     max-width: 60%;
   }
 
@@ -1919,7 +1919,7 @@ textarea {
 
   footer .container {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     padding-bottom: 3em;
     justify-content: space-between;
   }
@@ -1944,7 +1944,7 @@ textarea {
   }
 
   footer .container img {
-    max-height: 3.75em;
+    max-height: 5.25em;
     max-width: 100%;
     height: auto;
   }

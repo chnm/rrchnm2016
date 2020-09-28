@@ -135,7 +135,7 @@ footer .menu-footer-container {
 footer .neh {
     display: flex;
     margin-bottom: 0;
-    align-items: flex-end;
+    align-items: center;
     max-width: 60%;
 }
 
@@ -150,7 +150,7 @@ footer .license {
 
 footer .container {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     padding-bottom: rhythm(2);
     justify-content: space-between;
 }
@@ -175,7 +175,7 @@ footer .container > a:nth-child(3) {
 }
 
 footer .container img {
-    max-height: rhythm(2.5);
+    max-height: rhythm(3.5);
     max-width: 100%;
     height: auto;
 }
