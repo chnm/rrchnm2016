@@ -1518,6 +1518,10 @@ textarea {
     font-weight: normal;
   }
 
+  .grecaptcha-badge {
+    visibility: hidden;
+  }
+
   /* @end */
   /* @group ----- 11. Our Story ----- */
   .page-template-about #intro {
