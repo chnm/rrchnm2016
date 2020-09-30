@@ -11,7 +11,7 @@
         $imgBgUrl = site_url() . '/ui/i/project-images/' . $projectMeta['Image'][0];
     }
     ?>
-    <a href="<?php echo esc_url(get_permalink($projectID)); ?>" class="thumbnail" style="background-image:url('<?php echo $imgBgUrl; ?>')" role="presentation">Logo for <?php echo $projectTitle; ?></a>
+    <a href="<?php echo esc_url(get_permalink($projectID)); ?>" class="thumbnail" style="background-image:url('<?php echo $imgBgUrl; ?>')"><img src="<?php echo $imgBgUrl; ?>" alt="Logo for <?php echo $projectTitle; ?>" class="sr-only"></a>
     <h4><a href="<?php echo esc_url(get_permalink($projectID)); ?>"><?php echo $projectTitle; ?></a></h4>
     <?php if (isset($projectMeta['Short Description']) && ($args['isFeatured'] == true)): ?>
     <?php echo $projectMeta['Short Description'][0]; ?>
