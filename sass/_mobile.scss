@@ -565,6 +565,10 @@ footer #description {
         font-size: 1.25 * $base-font-size;
         line-height: 1.5 * $base-line-height;
     }
+    
+    h1 {
+        color: #656565;
+    }
 }
 
 .home #intro .container > * {

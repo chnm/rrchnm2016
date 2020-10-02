@@ -2,7 +2,7 @@
 
 <div id="intro">
     <div class="container">
-        <p><span class="anniversary">25 years</span> of making better yesterdays</p>
+        <h1><span class="anniversary">25 years</span> of making better yesterdays</h1>
 
         <div id="anniversary-row">
             <a href="<?php echo get_permalink(get_page_by_path('our-story')); ?>" class="story">
