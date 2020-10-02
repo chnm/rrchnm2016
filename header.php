@@ -48,7 +48,10 @@ if(is_single()) {
            <?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?>
         </nav>
         <div id="search">
-            <button type="button" class="search-toggle" aria-label="Open search form"></button>
+            <button type="button" class="search-toggle">
+                <span class="search-toggle-icon" aria-hidden="true"></span>
+                <span class="sr-only">Toggle search form</span>
+            </button>
             <?php echo get_search_form(); ?>
         </div>
     </header>

@@ -460,7 +460,8 @@ textarea {
     max-width: 100%;
     height: auto;
   }
-  img.sr-only {
+
+  .sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -884,7 +885,7 @@ textarea {
     width: 2.25em;
   }
 
-  .search-toggle:after {
+  .search-toggle-icon:after {
     content: "";
     font-family: "FontAwesome";
     line-height: 24px;
