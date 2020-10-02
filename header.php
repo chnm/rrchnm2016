@@ -41,6 +41,7 @@ if(is_single()) {
 <body <?php body_class($slug); ?>>
 
     <header>
+        <a id="skipnav" href="#content">Skip to content</a>
         <div class="logo"><a href="<?php echo home_url(); ?>">Roy Rosenzweig Center for History and New Media</a></div>
 
         <nav id="global">
@@ -58,3 +59,4 @@ if(is_single()) {
             <?php echo get_search_form(); ?>
         </div>
     </header>
+    <div id="content" role="main">

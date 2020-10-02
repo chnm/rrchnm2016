@@ -1,3 +1,4 @@
+    </div>
     <footer>
        <nav>
             <a href="<?php echo get_home_url(); ?>"><img src="<?php echo bloginfo('template_directory'); ?>/img/rrchnm-logo.png" alt="Roy Rosenzweig Center for History and New Media Logo" /></a>

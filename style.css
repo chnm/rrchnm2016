@@ -746,6 +746,23 @@ textarea {
 
   /* @end */
   /* @group ----- 05. Header ----- */
+  #skipnav {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    border: 1px solid #ababab;
+    transform: translateX(-50%);
+    z-index: -5;
+    padding: 7.5px;
+    background-color: #fff;
+    opacity: 0;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.08);
+  }
+  #skipnav:focus {
+    z-index: 30000;
+    opacity: 1;
+  }
+
   header {
     position: fixed;
     top: 0;
