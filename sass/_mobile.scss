@@ -14,26 +14,21 @@ html {
 body {
     margin: 0;
     padding: 0;
-    transition: left .5s, right .5s;
     left: 0;
     right: 0;
     position: absolute;
     overflow-x: hidden;
     padding-top: rhythm(3.5);
 
-    &.open {
-        left: 75%;
-        right: -75%;
-
-        &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background-color: rgba(0,0,0,.6);
-        }
+    &.open:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,.6);
+        z-index: 1;
     }
 
     &.small {
@@ -342,22 +337,16 @@ header {
     padding: rhythm();
     background-color: #fff;
     z-index: 9999;
-    //border-bottom: 1px solid $gray;
-    transition: left .5s;
 }
 
-.open header {
-    left: 75%;
-
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: -1px;
-        background-color: rgba(0,0,0,.6);
-    }
+.open header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: -1px;
+    background-color: rgba(0,0,0,.6);
 }
 
 .small header {
@@ -396,7 +385,7 @@ nav#global .mobile-toggle {
     background-color: #fff;
 }
 
-nav#global .mobile-toggle:before {
+nav#global .mobile-toggle-icon:before {
     content: $fa-var-navicon;
     font-family: "FontAwesome";
     color: $primary-red;
@@ -412,7 +401,7 @@ nav#global .mobile-toggle:before {
 .open nav#global .mobile-toggle {
     content: $fa-var-times;
     position: fixed;
-    z-index: 10000;
+    z-index: 20000;
 }
 
 nav#global a {
@@ -422,7 +411,6 @@ nav#global a {
 nav#global ul {
     margin: rhythm() 0 0;
     list-style-type: none;
-    transition: right .5s, left .5s;
     position: fixed;
     top: 0;
     left: -75%;
@@ -442,7 +430,7 @@ nav#global li:not(:last-child) {
 }
 
 nav#global ul.open {
-    right: 25%;
+    right: rhythm();
     left: 0;
     z-index: 10000;
     border-right: 1px solid $gray;

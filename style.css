@@ -432,16 +432,11 @@ textarea {
   body {
     margin: 0;
     padding: 0;
-    transition: left .5s, right .5s;
     left: 0;
     right: 0;
     position: absolute;
     overflow-x: hidden;
     padding-top: 5.25em;
-  }
-  body.open {
-    left: 75%;
-    right: -75%;
   }
   body.open:after {
     content: "";
@@ -451,6 +446,7 @@ textarea {
     left: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
   }
   body.small {
     padding-top: 3em;
@@ -761,7 +757,6 @@ textarea {
     padding: 1.5em;
     background-color: #fff;
     z-index: 9999;
-    transition: left .5s;
   }
   header:after {
     content: " ";
@@ -769,9 +764,6 @@ textarea {
     clear: both;
   }
 
-  .open header {
-    left: 75%;
-  }
   .open header:after {
     content: "";
     position: absolute;
@@ -818,7 +810,7 @@ textarea {
     background-color: #fff;
   }
 
-  nav#global .mobile-toggle:before {
+  nav#global .mobile-toggle-icon:before {
     content: "";
     font-family: "FontAwesome";
     color: #b3252d;
@@ -834,7 +826,7 @@ textarea {
   .open nav#global .mobile-toggle {
     content: "";
     position: fixed;
-    z-index: 10000;
+    z-index: 20000;
   }
 
   nav#global a {
@@ -844,7 +836,6 @@ textarea {
   nav#global ul {
     margin: 1.5em 0 0;
     list-style-type: none;
-    transition: right .5s, left .5s;
     position: fixed;
     top: 0;
     left: -75%;
@@ -866,7 +857,7 @@ textarea {
   }
 
   nav#global ul.open {
-    right: 25%;
+    right: 1.5em;
     left: 0;
     z-index: 10000;
     border-right: 1px solid rgba(0, 0, 0, 0.08);

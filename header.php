@@ -44,7 +44,10 @@ if(is_single()) {
         <div class="logo"><a href="<?php echo home_url(); ?>">Roy Rosenzweig Center for History and New Media</a></div>
 
         <nav id="global">
-            <a href="#" class="mobile-toggle"></a>
+            <a href="#" class="mobile-toggle" role="button">
+              <span class="mobile-toggle-icon" aria-hidden="true"></span>
+              <span class="sr-only">Toggle mobile navigation</span>
+            </a>
            <?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?>
         </nav>
         <div id="search">
