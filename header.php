@@ -59,4 +59,4 @@ if(is_single()) {
             <?php echo get_search_form(); ?>
         </div>
     </header>
-    <div id="content" role="main">
+    <div id="content" role="main" tabindex="-1">
