@@ -20,17 +20,6 @@ body {
     overflow-x: hidden;
     padding-top: rhythm(3.5);
 
-    &.open:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: rgba(0,0,0,.6);
-        z-index: 1;
-    }
-
     &.small {
         padding-top: rhythm(2);
     }
@@ -329,20 +318,22 @@ nav ul {
 /* @group ----- 05. Header ----- */
 
 #skipnav {
-    position: fixed;
-    top: 30px;
-    left: 50%;
-    border: 1px solid #ababab;
-    transform: translateX(-50%);
-    z-index: -5;
-    padding: 7.5px;
+    padding: rhythm(.5);
     background-color: #fff;
     opacity: 0;
     box-shadow: 0 0 10px 10px $gray;
+    height: 1px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    margin: rhythm(-1) 0 rhythm();
+    width: auto;
+    width: max-content;
     
     &:focus {
         z-index: 30000;
         opacity: 1;
+        height: auto;
     }  
 }
 
@@ -357,7 +348,7 @@ header {
     z-index: 9999;
 }
 
-.open header:after {
+.header:after {
     content: "";
     position: absolute;
     top: 0;
@@ -411,6 +402,11 @@ nav#global .mobile-toggle-icon:before {
     text-align: center;
 }
 
+.open nav#global .mobile-toggle-icon:before {
+    content: $fa-var-times;
+}
+
+
 .small nav#global .mobile-toggle,
 .small .search-toggle {
     top: rhythm(.25);
@@ -436,7 +432,6 @@ nav#global ul {
     bottom: 0;
     background-color: rgba(255,255,255,1);
     padding: rhythm();
-    z-index: 10000;
     margin: 0;
     border-right: 1px solid $gray;
 }
@@ -448,9 +443,10 @@ nav#global li:not(:last-child) {
 }
 
 nav#global ul.open {
-    right: rhythm();
+    right: 0;
     left: 0;
-    z-index: 10000;
+    top: rhythm(3);
+    z-index: 1000;
     border-right: 1px solid $gray;
 }
 

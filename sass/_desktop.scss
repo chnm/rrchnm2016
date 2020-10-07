@@ -72,6 +72,10 @@ nav#global {
     height: rhythm(1.5);
     vertical-align: bottom;
     text-align: right;
+    
+    ul {
+        background-color: transparent;
+    }
 
     li:last-child a {
         background-color: $primary-red;
