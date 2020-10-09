@@ -895,7 +895,7 @@ footer #description {
     }
 }
 
-.person {
+#staff .person {
     width: 45%;
     text-align: center;
     margin-bottom: rhythm(2);
@@ -907,7 +907,7 @@ footer #description {
     display: block;
 }
 
-.person .avatar {
+#staff .person .avatar {
     width: 100%;
     padding-bottom: 100%;
     position: relative;
@@ -919,7 +919,7 @@ footer #description {
     background-position: center center;
 }
 
-.person .avatar img {
+#staff .person .avatar img {
     position: absolute;
     top: 0;
     left: 50%;
@@ -1082,14 +1082,18 @@ footer #description {
         flex-shrink: 0;
     }
 
-    #project-contributors .contributor {
+    #project-contributors .person a {
         display: flex;
         margin-bottom: rhythm(.25);
         align-content: center;
         align-items: center;
     }
+    
+    #project-contributors .avatar {
+        display: block;
+    }
 
-    #project-contributors .contributor .name {
+    #project-contributors .person .name {
         width: 85%;
     }
 

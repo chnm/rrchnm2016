@@ -1292,7 +1292,7 @@ textarea {
     background-color: #fff;
   }
 
-  .person {
+  #staff .person {
     width: 45%;
     text-align: center;
     margin-bottom: 3em;
@@ -1304,7 +1304,7 @@ textarea {
     display: block;
   }
 
-  .person .avatar {
+  #staff .person .avatar {
     width: 100%;
     padding-bottom: 100%;
     position: relative;
@@ -1316,7 +1316,7 @@ textarea {
     background-position: center center;
   }
 
-  .person .avatar img {
+  #staff .person .avatar img {
     position: absolute;
     top: 0;
     left: 50%;
@@ -1470,14 +1470,18 @@ textarea {
     flex-shrink: 0;
   }
 
-  #project-contributors .contributor {
+  #project-contributors .person a {
     display: flex;
     margin-bottom: 0.375em;
     align-content: center;
     align-items: center;
   }
 
-  #project-contributors .contributor .name {
+  #project-contributors .avatar {
+    display: block;
+  }
+
+  #project-contributors .person .name {
     width: 85%;
   }
 
@@ -2055,12 +2059,12 @@ textarea {
     width: 100%;
   }
 
-  .person {
+  #staff .person {
     width: 20%;
     padding-right: 1.5em;
   }
 
-  .person img {
+  #staff .person img {
     float: none;
     margin: 0 0 0.375em;
   }

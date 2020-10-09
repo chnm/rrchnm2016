@@ -13,7 +13,6 @@ function register_about_nav() {
 }
 
 function rrchnm_show_project_contributors() {
-    $html = '';
     $pageID = get_the_ID();
     if (function_exists('get_coauthors')):
         $contributors = get_coauthors($pageID);
@@ -26,14 +25,14 @@ function rrchnm_show_project_contributors() {
             else:
                 $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
             endif;
-            $html .= '<div class="contributor">';
-            $html .= '<a href="' . get_author_posts_url($contributorID) . '" class="avatar" style="background-image:url(\'' . $avatar . '\')">';
-            $html .= '</a>';
-            $html .= '<a href="' . get_author_posts_url($contributorID) . '" class="name">' . $contributorName . '</a>';
-            $html .= '</div>';
+            get_template_part('staff-single', null, array(
+                'personName' => $contributorName, 
+                'personID' => $contributorID,
+                'avatar' => $avatar,
+                'jobTitle' => null,
+            ));
         endforeach;
     endif;
-    return $html;
 }
 
 function rrchnm_show_project_categories() {
@@ -92,19 +91,20 @@ function rrchnm_staff_member($userID) {
     $userData = get_userdata($userID);
     $displayName = $userData->first_name . ' ' . $userData->last_name;
     $userUrl = get_author_posts_url($userID);
-    $html = '<div class="person">';
     if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userID, 'picture')) {
         $avatar = get_cimyFieldValue($userID, 'picture');
     } else {
         $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
     }
-    $html .= '<a href="' . $userUrl . '" class="avatar" style="background-image:url(\'' . $avatar . '\')"><img class="sr-only" src="' . $avatar . '" alt="profile picture for '. $displayName . '"></a>';
-    $html .= '<span class="name"><a href="' . $userUrl . '">' . $displayName . '</a></span>';
     if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userID, 'jobtitle')) {
-        $html .= '<span class="position">' . get_cimyFieldValue($userID, 'jobtitle') . '</span>';
+        ($jobTitle = get_cimyFieldValue($userID, 'jobtitle')) || ($jobTitle = null);
     }
-    $html .= '</div>';
-    return $html;
+    get_template_part('staff-single', null, array(
+        'personName' => $displayName, 
+        'contributorID' => $userID,
+        'avatar' => $avatar,
+        'jobTitle' => $jobTitle,
+    ));
 }
 
 function show_staff_position( $user ) {
