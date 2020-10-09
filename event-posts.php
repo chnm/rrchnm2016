@@ -13,7 +13,7 @@
         <?php echo the_post_thumbnail(); ?>
         </aside>
         <article>
-        <h1><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h1>
+        <h2><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <?php echo the_content(); ?>
         <?php if (has_tag('rrchnm-at')): ?>
         <a href="<?php echo get_tag_link($rrchnmAtTag->term_id); ?>" class="rrchnm-at tag">RRCHNM@</a>

@@ -17,7 +17,7 @@
 </div>
 
 <div class="container">
-    <nav id="about-nav">
+    <nav id="about-nav" class="side">
        <?php wp_nav_menu( array( 'theme_location' => 'about-menu') ); ?>
     </nav>
     <section>

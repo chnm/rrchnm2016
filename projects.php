@@ -84,7 +84,7 @@ $sections = array(
 
 <div id="content">
     <?php echo the_content(); ?>
-    <nav>
+    <nav class="side">
         <h2>Browse Projects</h2>
         <ul>
         <?php foreach($projectNav as $filter => $categories): ?>

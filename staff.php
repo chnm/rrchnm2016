@@ -18,7 +18,7 @@
 <div id="content">
         <?php echo the_content(); ?>
 
-    <nav>
+    <nav class="side">
         <h2>Meet Us</h2>
         <ul>
         <?php $filters = ['role', 'position']; ?>
