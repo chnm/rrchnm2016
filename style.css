@@ -2222,6 +2222,7 @@ textarea {
 
   #about-nav + section {
     width: 75%;
+    margin-top: 1.5em;
   }
 
   #about-nav + section > *:first-child {
