@@ -101,7 +101,7 @@ function rrchnm_staff_member($userID) {
     }
     get_template_part('staff-single', null, array(
         'personName' => $displayName, 
-        'contributorID' => $userID,
+        'personID' => $userID,
         'avatar' => $avatar,
         'jobTitle' => $jobTitle,
     ));
