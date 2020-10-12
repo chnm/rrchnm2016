@@ -1780,7 +1780,7 @@ textarea {
 
   /* @end */
   /* @group ----- 16. Events ----- */
-  .category .post h2 {
+  .category .post h3 {
     font-family: "Oswald", sans-serif;
     font-weight: 300;
     font-size: 32px;
@@ -1788,12 +1788,14 @@ textarea {
     margin: 0 0 0 -0.1875em;
   }
 
-  .category-events h3,
-  .post-type-archive-event h3,
-  .tag-rrchnm-at h3,
-  .tag-at-rrchnm h3 {
+  .category-events h2,
+  .post-type-archive-event h2,
+  .tag-rrchnm-at h2,
+  .tag-at-rrchnm h2 {
     background-color: #eee;
     padding: 0.75em;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   a.tag,

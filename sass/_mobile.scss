@@ -1402,7 +1402,7 @@ form.wpcf7-form {
 
 /* @group ----- 16. Events ----- */
 
-.category .post h2 {
+.category .post h3 {
     font-family: "Oswald", sans-serif;
     font-weight: 300;
     font-size: 2 * $base-font-size;
@@ -1410,12 +1410,14 @@ form.wpcf7-form {
     margin: 0 0 0 rhythm(-.25, 2 * $base-font-size);
 }
 
-.category-events h3,
-.post-type-archive-event h3,
-.tag-rrchnm-at h3,
-.tag-at-rrchnm h3 {
+.category-events h2,
+.post-type-archive-event h2,
+.tag-rrchnm-at h2,
+.tag-at-rrchnm h2 {
     background-color: #eee;
     padding: rhythm(.5);
+    font-size: 1.125 * $base-font-size;
+    line-height: $base-line-height;
 }
 
 a.tag,
