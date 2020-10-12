@@ -68,19 +68,7 @@ $cimyFieldsTrue = function_exists('get_cimyFieldValue');
         <?php if (count($projects) > 0): ?>
             <?php foreach($projects as $project): ?>
                 <?php $projectID = $project->ID; ?>
-                <div class="project">
-                <?php $projectMeta = get_post_custom($projectID); ?>
-                <?php
-                if ( has_post_thumbnail($projectID) ) {
-                    $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id($projectID), 'large' );
-                    $imgBgUrl = $imgBgUrl[0];
-                } else if (isset($projectMeta['Image'])) {
-                    $imgBgUrl = site_url() . '/ui/i/project-images/' . $projectMeta['Image'][0];
-                }
-                ?>
-                <a href="<?php echo esc_url(get_permalink($projectID)); ?>" class="thumbnail" style="background-image:url('<?php echo $imgBgUrl; ?>')"></a>
-                <h3><a href="<?php echo esc_url(get_permalink($projectID)); ?>"><?php echo get_the_title($projectID); ?></a></h3>
-                </div>
+                <?php get_template_part('projects-single', null, array('projectID' => $projectID, 'isFeatured' => false)); ?>
             <?php endforeach; ?>
         <?php else: ?>
         No projects
