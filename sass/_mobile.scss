@@ -1,4 +1,4 @@
-/* @group ----- 01. Container elements ----- */
+/* @group ----- 01. Global/Reusable elements ----- */
 
 * {
     box-sizing: border-box;
@@ -83,6 +83,29 @@ img {
     float: right;
     margin: 0 0 rhythm() rhythm();
     clear: right;
+}
+
+.person .avatar {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    display: block;
+    margin-bottom: rhythm(.5);
+    background-size: cover;
+    background-position: center center;
+}
+
+.person .avatar img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+    vertical-align: top;
+    max-width: none;
 }
 
 thead tr {
@@ -911,29 +934,6 @@ footer #description {
     display: block;
 }
 
-#staff .person .avatar {
-    width: 100%;
-    padding-bottom: 100%;
-    position: relative;
-    border-radius: 100%;
-    overflow: hidden;
-    display: block;
-    margin-bottom: rhythm(.5);
-    background-size: cover;
-    background-position: center center;
-}
-
-#staff .person .avatar img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: auto;
-    vertical-align: top;
-    max-width: none;
-}
-
     /* @group ----- 08a. Author page ----- */
 
     .author .avatar {
@@ -1077,8 +1077,9 @@ footer #description {
     #project-contributors .avatar {
         width: rhythm(2);
         height: rhythm(2);
+        padding-bottom: 0;
         position: relative;
-        margin-right: rhythm(.5);
+        margin: 0 rhythm(.5) 0 0;
         border-radius: 100%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -1241,7 +1242,7 @@ form.wpcf7-form {
     font-weight: 300;
 }
 
-.post-meta .author {
+.post-meta .name {
     font-family: "Open Sans", sans-serif;
     font-size: .75 * $base-font-size;
     text-transform: uppercase;
@@ -1260,12 +1261,11 @@ form.wpcf7-form {
     margin-bottom: rhythm(2);
 }
 
-.post-meta .avatar img {
+.post-meta .avatar {
     display: inline-block;
-    height: rhythm();
-    width: auto;
-    border-radius: rhythm();
-    vertical-align: top;
+    width: 50%;
+    padding-bottom: 50%;
+    margin-bottom: rhythm(.25);
 }
 
 #blog-meta {

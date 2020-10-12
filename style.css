@@ -417,7 +417,7 @@ textarea {
 
 /* Test output */
 @media screen {
-  /* @group ----- 01. Container elements ----- */
+  /* @group ----- 01. Global/Reusable elements ----- */
   * {
     box-sizing: border-box;
   }
@@ -506,6 +506,29 @@ textarea {
     float: right;
     margin: 0 0 1.5em 1.5em;
     clear: right;
+  }
+
+  .person .avatar {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 0.75em;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .person .avatar img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+    vertical-align: top;
+    max-width: none;
   }
 
   thead tr {
@@ -1308,29 +1331,6 @@ textarea {
     display: block;
   }
 
-  #staff .person .avatar {
-    width: 100%;
-    padding-bottom: 100%;
-    position: relative;
-    border-radius: 100%;
-    overflow: hidden;
-    display: block;
-    margin-bottom: 0.75em;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  #staff .person .avatar img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: auto;
-    vertical-align: top;
-    max-width: none;
-  }
-
   /* @group ----- 08a. Author page ----- */
   .author .avatar {
     width: 50%;
@@ -1465,8 +1465,9 @@ textarea {
   #project-contributors .avatar {
     width: 3em;
     height: 3em;
+    padding-bottom: 0;
     position: relative;
-    margin-right: 0.75em;
+    margin: 0 0.75em 0 0;
     border-radius: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1624,7 +1625,7 @@ textarea {
     font-weight: 300;
   }
 
-  .post-meta .author {
+  .post-meta .name {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     text-transform: uppercase;
@@ -1643,12 +1644,11 @@ textarea {
     margin-bottom: 3em;
   }
 
-  .post-meta .avatar img {
+  .post-meta .avatar {
     display: inline-block;
-    height: 1.5em;
-    width: auto;
-    border-radius: 1.5em;
-    vertical-align: top;
+    width: 50%;
+    padding-bottom: 50%;
+    margin-bottom: 0.375em;
   }
 
   #blog-meta {
@@ -2261,17 +2261,6 @@ textarea {
     width: 25%;
     padding: 0 3.125% 0 0.625%;
     text-align: right;
-  }
-
-  .post-meta .avatar {
-    display: block;
-    margin-bottom: 0.75em;
-  }
-
-  .post-meta .avatar img {
-    width: 50%;
-    height: auto;
-    border-radius: 100%;
   }
 
   .post-meta .date {

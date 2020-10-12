@@ -86,7 +86,7 @@ function rrchnm_get_users_by_cimy_field_value($field_name, $field_value) {
         return "CIMY User Extra fields is not installed.";
     }
 }
-
+ 
 function rrchnm_staff_member($userID) {
     $userData = get_userdata($userID);
     $displayName = $userData->first_name . ' ' . $userData->last_name;
