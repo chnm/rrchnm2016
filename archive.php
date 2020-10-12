@@ -1,4 +1,9 @@
-<?php $customFields = get_post_custom(); ?>
+<?php
+if (isset($_POST['blog_archives'])) {
+	 header("Location: $_POST[blog_archives]");
+}
+$customFields = get_post_custom(); 
+?>
 
 <?php get_header(); ?>
 
@@ -6,11 +11,14 @@
 
 <aside id="blog-meta">
     <h1>Archives: <?php single_month_title(' '); ?></h1>
-    <label for="blog-archives">Archives</label>
-    <select id="blog-archives" name="blog-archives" onchange="document.location.href=this.options[this.selectedIndex].value;">
+    <form action="" method="post">
+    <label for="blog_archives">Archives</label>
+    <select id="blog_archives" name="blog_archives">
         <option>Select by month</option>
         <?php wp_get_archives(array('format' => 'option')); ?>
     </select>
+    <button type="submit">Go</button>
+    </form>
 </aside>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
