@@ -11,7 +11,7 @@ $cimyFieldsTrue = function_exists('get_cimyFieldValue');
     <?php else: ?>
         <?php $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png'; ?>
     <?php endif; ?>
-    <img src="<?php echo $avatar; ?>" title="avatar for <?php echo $authorName; ?>" alt="Profile picture for <?php echo $authorName; ?>" class="avatar">
+    <img src="<?php echo $avatar; ?>" title="Profile picture for <?php echo $authorName; ?>" alt="Profile picture for <?php echo $authorName; ?>" class="avatar">
     <h1><?php echo $authorName; ?></h1>
     <aside id="staff-meta">
         <?php if ($cimyFieldsTrue): ?>
