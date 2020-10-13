@@ -453,6 +453,17 @@ footer .container img[alt="Creative Commons License"] {
     margin-top: 0;
 }
 
+.supporters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.supporters .name {
+    display: block;
+    width: 33.33%;
+}
+
 /* @end */
 
 /* @group ----- 12. News ----- */
