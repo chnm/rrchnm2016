@@ -20,17 +20,13 @@
         <aside class="post-meta">
             <span class="date"><?php the_date('n/j/Y'); ?></span>
             <?php if (get_the_author_meta('user_firstname')): ?>
-                <?php $authorID = get_the_author_id(); ?>
-                <?php $authorUrl = get_author_posts_url($authorID); ?>
-                <?php if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($authorID, 'picture')): ?>
-                    <?php $avatar = get_cimyFieldValue($authorID, 'picture'); ?>
-                <?php else: ?>
-                    <?php $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png'; ?>
-                <?php endif; ?>
-                <a href="<?php echo $authorUrl; ?>" class="avatar">
-                    <img src="<?php echo $avatar; ?>" title="avatar for <?php echo $authorName; ?>">
-                    <span class="author"><?php the_author_meta('user_firstname'); ?> <?php the_author_meta('user_lastname'); ?></span>
-                </a>
+                <?php 
+                    $authorID = get_the_author_id(); 
+                    get_template_part('staff-single', null, array(
+                        'userID' => $authorID,
+                        'jobTitle' => null,
+                    ));
+                ?>
             <?php endif; ?>
         </aside>
         <article>

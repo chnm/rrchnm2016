@@ -29,17 +29,8 @@ $customFields = get_post_custom();
             <?php if (get_the_author_meta('user_firstname')): ?>
                 <?php 
                     $authorID = get_the_author_id(); 
-                    $authorUrl = get_author_posts_url($authorID); 
-                    $displayName = get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name');
-                    if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($authorID, 'picture')) {
-                        $avatar = get_cimyFieldValue($authorID, 'picture'); 
-                    } else {
-                        $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
-                    }
                     get_template_part('staff-single', null, array(
-                        'personName' => $displayName, 
-                        'personID' => $authorID,
-                        'avatar' => $avatar,
+                        'userID' => $authorID,
                         'jobTitle' => null,
                     ));
                 ?>

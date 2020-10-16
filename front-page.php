@@ -45,14 +45,6 @@ the past 25 years, including multi-disciplinary humanities scholars, researchers
         <?php $newsPosts = get_posts(array('posts_per_page' => 1, 'category__not_in' => array($eventsCategory->term_id))); ?>
         <?php foreach ($newsPosts as $post): setup_postdata($post); ?>
             <h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
-            <?php
-            $authorID = get_the_author_meta('ID');
-            if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($authorID, 'picture')) {
-                $avatar = get_cimyFieldValue($authorID, 'picture');
-            } else {
-                $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
-            }
-            ?>
             <?php if ( has_post_thumbnail()): ?>
             <?php the_post_thumbnail(); ?>
             <?php endif; ?>

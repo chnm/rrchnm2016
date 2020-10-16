@@ -18,17 +18,8 @@ function rrchnm_show_project_contributors() {
         $contributors = get_coauthors($pageID);
         foreach ($contributors as $contributor):
             $contributorID = $contributor->ID;
-            $contributorName = $contributor->first_name . ' ' . $contributor->last_name;
-
-            if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($contributorID, 'picture')):
-                $avatar = get_cimyFieldValue($contributorID, 'picture');
-            else:
-                $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
-            endif;
             get_template_part('staff-single', null, array(
-                'personName' => $contributorName, 
-                'personID' => $contributorID,
-                'avatar' => $avatar,
+                'userID' => $contributorID,
                 'jobTitle' => null,
             ));
         endforeach;
@@ -88,21 +79,11 @@ function rrchnm_get_users_by_cimy_field_value($field_name, $field_value) {
 }
  
 function rrchnm_staff_member($userID) {
-    $userData = get_userdata($userID);
-    $displayName = $userData->first_name . ' ' . $userData->last_name;
-    $userUrl = get_author_posts_url($userID);
-    if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userID, 'picture')) {
-        $avatar = get_cimyFieldValue($userID, 'picture');
-    } else {
-        $avatar = get_bloginfo('template_directory') . '/img/blank_staff.png';
-    }
     if (function_exists('get_cimyFieldValue') && get_cimyFieldValue($userID, 'jobtitle')) {
         ($jobTitle = get_cimyFieldValue($userID, 'jobtitle')) || ($jobTitle = null);
     }
     get_template_part('staff-single', null, array(
-        'personName' => $displayName, 
-        'personID' => $userID,
-        'avatar' => $avatar,
+        'userID' => $userID,
         'jobTitle' => $jobTitle,
     ));
 }
