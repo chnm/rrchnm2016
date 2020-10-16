@@ -1046,8 +1046,10 @@ footer #description {
     margin: 0 0 rhythm(1.5);
 }
 
-.project h4 {
+.project .project-title {
     margin: rhythm(.5) 0;
+    font-weight: bold;
+    display: block;
 }
 
     /* @group ----- 09a. Project ----- */

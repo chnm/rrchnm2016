@@ -1435,8 +1435,10 @@ textarea {
     margin: 0 0 2.25em;
   }
 
-  .project h4 {
+  .project .project-title {
     margin: 0.75em 0;
+    font-weight: bold;
+    display: block;
   }
 
   /* @group ----- 09a. Project ----- */

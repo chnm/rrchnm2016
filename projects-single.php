@@ -13,7 +13,7 @@
     ?>
     <a href="<?php echo esc_url(get_permalink($projectID)); ?>">
         <span class="thumbnail" style="background-image:url('<?php echo $imgBgUrl; ?>')"><img src="<?php echo $imgBgUrl; ?>" alt="Logo for <?php echo $projectTitle; ?>" class="sr-only"></span>
-        <h4><?php echo $projectTitle; ?></h4>
+        <span class="project-title"><?php echo $projectTitle; ?></span>
     </a>
     <?php if (isset($projectMeta['Short Description']) && ($args['isFeatured'] == true)): ?>
     <?php echo $projectMeta['Short Description'][0]; ?>
