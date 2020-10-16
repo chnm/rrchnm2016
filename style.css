@@ -813,6 +813,15 @@ textarea {
     padding: 0.75em 1.5em;
   }
 
+  .search-open header {
+    height: 9em;
+    overflow: hidden;
+  }
+
+  .small.search-open header {
+    height: 6em;
+  }
+
   .logo {
     height: 2.25em;
     width: calc(100% - 6em);
@@ -905,6 +914,10 @@ textarea {
     top: 3em;
   }
 
+  .search-open nav#global ul.open {
+    top: 7.5em;
+  }
+
   .search-toggle {
     background-color: transparent;
     color: #b3252d;
@@ -926,17 +939,16 @@ textarea {
 
   #searchform {
     background-color: #fff;
-    padding: 0 0.375em 0.375em 0.375em;
-    position: absolute;
-    right: 0.75em;
-    z-index: 1;
-    top: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-width: 0 1px 1px 1px;
+    padding: 0.75em 0;
   }
 
   #searchform > div {
     display: flex;
+    width: 100%;
+  }
+
+  #s {
+    width: 100%;
   }
 
   #searchform.closed {
@@ -1900,6 +1912,16 @@ textarea {
 
   #search {
     display: inline-block;
+  }
+
+  #searchform {
+    position: absolute;
+    right: 0.75em;
+    z-index: 1;
+    top: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-width: 0 1px 1px 1px;
+    padding: 0 0.375em 0.375em 0.375em;
   }
 
   .search-toggle {

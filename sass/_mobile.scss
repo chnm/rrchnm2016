@@ -386,6 +386,15 @@ header {
     padding: rhythm(.5) rhythm();
 }
 
+.search-open header {
+    height: rhythm(6);
+    overflow: hidden;
+}
+
+.small.search-open header {
+    height: rhythm(4);
+}
+
 .logo {
     height: rhythm(1.5);
     width: calc(100% - #{rhythm(4)});
@@ -477,6 +486,10 @@ nav#global ul.open {
     top: rhythm(2);
 }
 
+.search-open nav#global ul.open {
+    top: rhythm(5);
+}
+
 .search-toggle {
     background-color: transparent;
     color: $primary-red;
@@ -498,17 +511,16 @@ nav#global ul.open {
 
 #searchform {
     background-color: #fff;
-    padding: 0 rhythm(.25) rhythm(.25) rhythm(.25);
-    position: absolute;
-    right: rhythm(.5);
-    z-index: 1;
-    top: 100%;
-    border: 1px solid $gray;
-    border-width: 0 1px 1px 1px;
+    padding: rhythm(.5) 0;
 }
 
 #searchform > div {
     display: flex;
+    width: 100%;
+}
+
+#s {
+    width: 100%;
 }
 
 #searchform.closed {

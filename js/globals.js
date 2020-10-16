@@ -23,6 +23,7 @@
         $('.search-toggle').click(function(e) {
             e.preventDefault();
             $('#searchform').toggleClass('closed');
+            $('body').toggleClass('search-open');
             $('#s').focus();
         });
         
