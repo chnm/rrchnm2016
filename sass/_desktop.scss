@@ -102,6 +102,11 @@ nav#global .mobile-toggle {
     padding: 0 rhythm(.25) rhythm(.25) rhythm(.25);
 }
 
+.search-open header {
+    height: auto;
+    overflow: visible;
+}
+
 .search-toggle {
     display: inline-block;
     position: static;

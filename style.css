@@ -1924,6 +1924,11 @@ textarea {
     padding: 0 0.375em 0.375em 0.375em;
   }
 
+  .search-open header {
+    height: auto;
+    overflow: visible;
+  }
+
   .search-toggle {
     display: inline-block;
     position: static;
