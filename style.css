@@ -642,7 +642,7 @@ textarea {
   input[type="password"],
   input[type="date"],
   textarea {
-    border-color: rgba(0, 0, 0, 0.08);
+    border-color: gray;
     border-width: 0.0625em;
     border-style: solid;
     padding: 0.3125em;
