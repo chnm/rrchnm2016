@@ -25,7 +25,7 @@ $whatWeDoPageID = $whatWeDoPage->ID;
             $whatWeDoContent = apply_filters('the_content', $whatWeDoContent);
             echo $whatWeDoContent;
         ?>
-        <nav>
+        <nav class="side">
             <ul>
             <?php
             wp_reset_postdata();
@@ -68,6 +68,7 @@ $whatWeDoPageID = $whatWeDoPage->ID;
             </ul>
         </nav>
         <div id="projects">
+            <div class="section">
             <?php while ($projectQuery->have_posts()) : $projectQuery->the_post(); ?>
                 <?php
                 $projectID = get_the_ID();
@@ -87,6 +88,7 @@ $whatWeDoPageID = $whatWeDoPage->ID;
                     <h4><a href="<?php echo esc_url(get_permalink($projectID)); ?>"><?php echo the_title(); ?></a></h4>
                 </div>
             <?php endwhile; ?>
+            </div>
         </div>
 
     </div>
