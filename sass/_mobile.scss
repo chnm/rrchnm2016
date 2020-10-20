@@ -1177,6 +1177,28 @@ form.wpcf7-form {
     font-weight: normal;
 }
 
+.inquiry fieldset {
+    border: 0;
+    padding: 0;
+    margin: rhythm() 0;
+}
+
+.inquiry legend {
+    float: left;
+    font-weight: bold;
+    margin: 0;
+}
+
+.inquiry p {
+    display: inline-block;
+    margin: 0;
+}
+
+.inquiry input {
+    display: inline-block;
+    margin-right: rhythm(.25);
+}
+
 .grecaptcha-badge { 
     visibility: hidden; 
 }

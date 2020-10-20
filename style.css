@@ -1561,6 +1561,28 @@ textarea {
     font-weight: normal;
   }
 
+  .inquiry fieldset {
+    border: 0;
+    padding: 0;
+    margin: 1.5em 0;
+  }
+
+  .inquiry legend {
+    float: left;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .inquiry p {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .inquiry input {
+    display: inline-block;
+    margin-right: 0.375em;
+  }
+
   .grecaptcha-badge {
     visibility: hidden;
   }
