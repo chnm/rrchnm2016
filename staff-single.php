@@ -13,7 +13,7 @@
 
 <div class="person">
     <a href="<?php echo get_author_posts_url($args['userID']); ?>">
-        <span class="avatar" style="background-image:url('<?php echo $avatar; ?>')"><img src="<?php echo $avatar; ?>" alt="Profile picture for <?php echo $args['personName']; ?>" class="sr-only"></span>
+        <span class="avatar" style="background-image:url('<?php echo $avatar; ?>')"><img src="<?php echo $avatar; ?>" alt="Profile picture for <?php echo $displayName; ?>" class="sr-only"></span>
         <span class="name"><?php echo $displayName; ?></span>
     </a>
     <?php if ($jobTitle !== null): ?>
