@@ -1,5 +1,7 @@
 <?php
 
+$GLOBALS['rrchnm'] = array();
+
 function register_top_nav() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }

@@ -1,22 +1,20 @@
-<?php get_header(); ?>
-
 <?php
 $currentCategoryName = single_cat_title("", false);
-
 $whatWeDoPage = get_page_by_path('what-we-do');
 $whatWeDoPageID = $whatWeDoPage->ID;
+$customFields = get_post_custom($whatWeDoPageID);
+if (has_post_thumbnail($whatWeDoPageID)) {
+    $GLOBALS['rrchnm'] = array();
+    $GLOBALS['rrchnm']['headerImgBgUrl'] = wp_get_attachment_image_src( get_post_thumbnail_id($whatWeDoPageID), 'large' );
+}
 ?>
 
+<?php get_header(); ?>
+
 <div class="what-we-do">
-    <?php $customFields = get_post_custom($whatWeDoPage->ID); ?>
-    <div id="intro">
+    <div id="intro" <?php echo (isset($imgBgAttr)) ? $imgBgAttr : ''; ?>>
         <div class="container">
-        <?php if ($introTitle = $customFields['Intro title'][0]): ?>
-        <h1><?php echo $introTitle; ?></h1>
-        <?php endif; ?>
-        <?php if ($introText = $customFields['Intro text'][0]): ?>
-        <p><?php echo $introText; ?></p>
-        <?php endif; ?>
+            <h1><?php echo get_the_title($whatWeDoPageID); ?></h1>
         </div>
     </div>
     <div id="content">
@@ -69,6 +67,7 @@ $whatWeDoPageID = $whatWeDoPage->ID;
         </nav>
         <div id="projects">
             <div class="section">
+              <?php echo $imgBgUrl[0]; ?>
             <?php while ($projectQuery->have_posts()) : $projectQuery->the_post(); ?>
                 <?php
                 $projectID = get_the_ID();

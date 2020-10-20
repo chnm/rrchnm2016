@@ -21,20 +21,22 @@ if(is_single()) {
     <?php if ( is_page()): ?>
         <?php $customFields = get_post_custom(); ?>
         <?php if (isset($customFields['Image'])): ?>
-            <?php $imgBgUrl = $customFields['Image']; ?>
+            <?php $headerImgBgUrl = $customFields['Image']; ?>
         <?php elseif (has_post_thumbnail()): ?>
-            <?php $imgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ); ?>
+            <?php $headerImgBgUrl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ); ?>
         <?php endif; ?>
+    <?php else: ?>
+        <?php $headerImgBgUrl = $GLOBALS['rrchnm']['headerImgBgUrl']; ?> 
+    <?php endif; ?>
     <style>
         #intro:before {
-            <?php if (get_field('header-image')): ?>
+            <?php if (isset($headerImgBgUrl)): ?>
+            background-image: url('<?php echo $headerImgBgUrl[0]; ?>');
+            <?php elseif (get_field('header-image')): ?>
             background-image: url('<?php echo get_field('header-image'); ?>');
-            <?php elseif (isset($imgBgUrl)): ?>
-            background-image: url('<?php echo $imgBgUrl[0]; ?>');
             <?php endif; ?>
         }
     </style>
-    <?php endif; ?>
     <?php wp_head(); ?>
 </head>
 

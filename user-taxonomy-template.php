@@ -1,10 +1,19 @@
-<?php define( 'WP_USE_THEMES', false ); get_header(); ?>
+<?php 
+$whoWeArePage = get_page_by_path('who-we-are');
+$whoWeArePageID = $whoWeArePage->ID;
+$customFields = get_post_custom($whoWeArePageID);
+if (has_post_thumbnail($whoWeArePageID)) {
+    $GLOBALS['rrchnm'] = array();
+    $GLOBALS['rrchnm']['headerImgBgUrl'] = wp_get_attachment_image_src( get_post_thumbnail_id($whoWeArePageID), 'large' );
+}
+  
+define( 'WP_USE_THEMES', false ); get_header(); 
+?>
 
 <?php $whoWeArePage = new WP_Query( 'pagename=who-we-are' ); ?>
 
 <div class="who-we-are">
 <?php while ( $whoWeArePage->have_posts() ) : $whoWeArePage->the_post(); ?>
-<?php $customFields = get_post_custom($whoWeArePage->ID); ?>
 
 <div id="intro">
     <div class="container">
@@ -17,7 +26,7 @@
 
 <div id="content">
     <?php echo the_content(); ?>
-    <nav>
+    <nav class="side">
         <h2>Meet Us</h2>
         <ul>
         <?php
