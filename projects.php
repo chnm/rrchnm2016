@@ -62,9 +62,9 @@ $archivedFilters = array(
 );
 $sections = array(
   'Featured' => get_posts($featuredFilters),
-  'Active' => get_posts($activeFilters),
-  'Archived' => get_posts($archivedFilters),
-  'Full Listing' => get_posts($projectsFilters)
+  'Current' => get_posts($activeFilters),
+  'Legacy' => get_posts($archivedFilters),
+  'Other' => get_posts($projectsFilters)
 );
 ?>
 
