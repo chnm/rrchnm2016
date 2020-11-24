@@ -17,7 +17,7 @@ $projectsFilters = array(
         array(
             'taxonomy' => 'category',
             'field' => 'slug',
-            'terms' => array('projects'),
+            'terms' => array('other'),
         ),
     ),
 );
@@ -43,7 +43,7 @@ $activeFilters = array(
         array(
             'taxonomy' => 'category',
             'field' => 'slug',
-            'terms' => array('active'),
+            'terms' => array('current'),
         ),
     ),
 );
@@ -56,7 +56,7 @@ $archivedFilters = array(
         array(
             'taxonomy' => 'category',
             'field' => 'slug',
-            'terms' => array('archived'),
+            'terms' => array('legacy'),
         ),
     ),
 );
