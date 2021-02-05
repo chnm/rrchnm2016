@@ -30,10 +30,10 @@ if(is_single()) {
     <?php endif; ?>
     <style>
         #intro:before {
-            <?php if (isset($headerImgBgUrl)): ?>
-            background-image: url('<?php echo $headerImgBgUrl[0]; ?>');
-            <?php elseif (get_field('header-image')): ?>
+            <?php if (get_field('header-image')): ?>
             background-image: url('<?php echo get_field('header-image'); ?>');
+            <?php elseif (isset($headerImgBgUrl)): ?>
+            background-image: url('<?php echo $headerImgBgUrl[0]; ?>');
             <?php endif; ?>
         }
     </style>
