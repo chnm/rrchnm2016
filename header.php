@@ -33,7 +33,7 @@ if(is_single()) {
             <?php if (get_field('header-image')): ?>
             background-image: url('<?php echo get_field('header-image'); ?>');
             <?php elseif (isset($headerImgBgUrl)): ?>
-            background-image: url('<?php echo $headerImgBgUrl[0]; ?>');
+            background-image: url('//rrchnm.org/wordpress/ui/i/project-images/<?php echo $headerImgBgUrl[0]; ?>');
             <?php endif; ?>
         }
     </style>
