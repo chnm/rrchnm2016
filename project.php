@@ -18,12 +18,10 @@
 <div class="container">
     <aside id="project-meta">
         <?php if ($projectURL = $customFields['URL'][0]): ?>
-            <?php if (!strpos($projectURL, 'http://')): ?>
-            <?php $projectURL = 'http://' . $projectURL; ?>
-            <?php endif; ?>
+
             <div id="project-website" class="meta-field">
                 <h3>Website</h3>
-                <a href="<?php echo $projectURL; ?>"><?php echo $projectURL; ?></a>
+                <a href="<?php echo '//' . $projectURL; ?>"><?php echo $projectURL; ?></a>
             </div>
         <?php endif; ?>
         <div id="project-contributors" class="meta-field">
